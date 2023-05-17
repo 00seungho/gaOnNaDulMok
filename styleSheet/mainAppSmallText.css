@@ -1,5 +1,4 @@
 #abody {
-    background-color: rosybrown;
     width: 414px;
     height: 786p;
 }
@@ -45,4 +44,21 @@ header > h1 {
     right: 0;
     height: 110px;
     float: left;
+}
+.bottom_bar > button {
+    margin: 23px 0 0 6%;
+    border: none;
+    
+    height: 44px;
+    border-radius: 150px;
+    padding: 0 15px;
+    background-color: rebeccapurple;
+}
+button > div {
+    height: 44px;
+    line-height: 44px;
+    float: left;
+}
+.hi1 {
+    display: none;
 }
