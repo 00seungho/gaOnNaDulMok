@@ -20,7 +20,7 @@ header > h1 {
     width: 394px;
     height: 394px;
     margin: 101px 10px 0 10px;
-    background-color: royalblue;
+    background-color: #f5f5f5;
 }
 
 
@@ -32,7 +32,7 @@ header > h1 {
 #side_bar > div {
     width: 30px;
     height: 30px;
-    background-color: royalblue;
+    background-color: #4169e1;
 }
 
 
@@ -46,18 +46,25 @@ header > h1 {
     float: left;
 }
 .bottom_bar > button {
-    margin: 23px 0 0 6%;
+    margin: 23px 0 0 4.5%;
     border: none;
-    
+    display: block;
+    float: left;
     height: 44px;
     border-radius: 150px;
     padding: 0 15px;
-    background-color: rebeccapurple;
 }
 button > div {
     height: 44px;
     line-height: 44px;
-    float: left;
+    float: right;
+    width: 60px;
+    margin: 0 auto;
+    text-align:center;
+    color: white;
+}
+#subway {
+    background-color: #4169e1;
 }
 .hi1 {
     display: none;
