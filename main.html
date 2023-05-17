@@ -8,17 +8,30 @@
     
     <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="styleSheet/mainAppBigText.css">
     <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="styleSheet/mainAppSmallText.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
     <div id="abody">
-        <header>
-            <img src="">
-            <button type="button">|||</button>
-        </header>
         <abody>
+            <header>
+                <img src="">
+                <button type="button">|||</button>
+            </header>
             <div id="map"></div>
         </abody>
-        <bottom></bottom>
+        
     </div>
+    <bottom class="bottom_bar">
+        <button id="station" class="bottom_bar_button"><img src="imgs/app/50724.png" style="width: 24px; height:24px">지하철</button>
+        <button id="bus" class="bottom_bar_button"><img src="imgs/app/7577293.png" style="width: 24px; height:24px">버스</button>
+        <button id="texi" class="bottom_bar_button"><img src="imgs/app/3514593.png" style="width: 24px; height:24px">택시</button>
+        <button id="sidewalk" class="bottom_bar_button"><img src="imgs/app/76865.png" style="width: 24px; height:24px">도보</button>
+    </bottom>
 </body>
 </html>
