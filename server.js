@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path')
 var cors = require('cors');
 var request = require('request');
 var nodeschedule = require('node-schedule');
@@ -10,7 +11,10 @@ const startIndex = 1;
 const endIndex=999;
 const apiUrl = 'http://openapi.seoul.go.kr:8088/'+GONGGONGAPIKEY+"/json/SeoulMetroFaciInfo/"+startIndex+"/"+endIndex;
 const app = express();
-app.use(express.static('js'));
+app.use('/a',express.static(__dirname));
+
+
+  
 
 app.use(cors())
 function processPS(ps)
@@ -35,7 +39,7 @@ app.listen(PORT, function(){
 
 // });
 app.get('/', function(req,res){ // '/'는 홈임
-  const name = req.query.seauch
+  // const name = req.query.seauch
   
   // request({
   //   url: apiUrl,
@@ -46,7 +50,7 @@ app.get('/', function(req,res){ // '/'는 홈임
   //   // console.log(parsedBody.SeoulMetroFaciInfo.row[998]); //객체 접근방법, ps.SeoulMetroFaciInfo.row[인덱스번호].STATION_ID
   //   processPS(parsedBody.SeoulMetroFaciInfo.row[998]);
   // });
-  res.sendFile(__dirname+'/js/main.html')
+  res.sendFile(__dirname+'/main.html')
 
   
 });
