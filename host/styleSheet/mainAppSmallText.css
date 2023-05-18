@@ -37,7 +37,7 @@ header > h1 {
 
 
 .bottom_bar {
-    background-color: bisque;
+    background-color: rgb(255, 255, 255);
     position: fixed;
     top: 786px;
     left: 0;
