@@ -16,7 +16,7 @@ app.use('/a',express.static(__dirname));
 
 app.use(cors())
 function processPS(ps)
-{
+{ 
   console.log(ps);
   return ps;
 }
