@@ -1,18 +1,15 @@
 #abody {
-    width: 414px;
-    height: 786px;
+    /*width: 414px;
+    height: 786px;*/
 }
 header {
     width: 100%;
     height: 40px;
     margin: 60px 0 0 0;
 }
-header > h1 {
-    margin: 0 90px 0 110px;
-    line-height: 40px;
-    font-family: TAEBAEKmilkyway;
-    font-size: 33px;
-    float: left;
+
+#webMenu { /* 여기는 웹페이지 메뉴 안보이게 하는곳 */
+    display: none;
 }
 
 h3 {
@@ -41,18 +38,28 @@ h3 {
     background-color: #4169e1;
 }
 
+
+#sideMenu {
+    width: 50%;
+    height: 100px;
+    position: relative;
+}
+
+
+
 .bottom_bar {
     background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px #dddddd;
     position: fixed;
-    bottom:30px;
+    bottom: 0;
     left: 0;
     right: 0;
-    height: 110px;
+    height: 90px;
     float: left;
     z-index: 50;
 }
 .bottom_bar > button {
-    margin: 23px 0 0 4.5%;
+    margin: 23px 0 0 4.65%;
     border: none;
     display: block;
     float: left;
@@ -66,7 +73,7 @@ button > div {
     float: right;
     width: 60px;
     margin: 0 auto;
-    text-align:center;
+    text-align: center;
     color: white;
 }
 #subway {
@@ -75,3 +82,4 @@ button > div {
 .hi1 {
     display: none;
 }
+
