@@ -15,6 +15,12 @@ header > h1 {
     float: left;
 }
 
+h3 {
+    margin-right: -10px;
+    line-height: 40px;
+    font-family: TAEBAEKmilkyway;
+    font-size: 20px;
+}
 
 #map {
     width: 394px;
@@ -34,7 +40,6 @@ header > h1 {
     height: 30px;
     background-color: #4169e1;
 }
-
 
 .bottom_bar {
     background-color: rgb(255, 255, 255);
