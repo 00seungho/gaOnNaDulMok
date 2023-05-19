@@ -1,6 +1,6 @@
 #abody {
     width: 414px;
-    height: 786p;
+    height: 786px;
 }
 header {
     width: 100%;
@@ -15,6 +15,12 @@ header > h1 {
     float: left;
 }
 
+h3 {
+    margin-right: -10px;
+    line-height: 40px;
+    font-family: TAEBAEKmilkyway;   
+    font-size: 20px;
+}
 
 #map {
     width: 394px;
@@ -35,16 +41,15 @@ header > h1 {
     background-color: #4169e1;
 }
 
-
 .bottom_bar {
-    background-color: bisque;
+    background-color: rgb(255, 255, 255);
     position: fixed;
-    top: 786px;
+    bottom:30px;
     left: 0;
     right: 0;
     height: 110px;
     float: left;
-    z-index: 100;
+    z-index: 50;
 }
 .bottom_bar > button {
     margin: 23px 0 0 4.5%;
