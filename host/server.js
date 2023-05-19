@@ -2,11 +2,9 @@ const express = require('express');
 const path = require('path')
 var cors = require('cors');
 var request = require('request');
-var nodeschedule = require('node-schedule');
 require("dotenv").config();
 var GONGGONGAPIKEY = process.env.DB_USER;
 var PORT = process.env.DB_HOST;
-const apiKey = GONGGONGAPIKEY;
 const startIndex = 1;
 const endIndex=999;
 const apiUrl = 'http://openapi.seoul.go.kr:8088/'+GONGGONGAPIKEY+"/json/SeoulMetroFaciInfo/"+startIndex+"/"+endIndex;
