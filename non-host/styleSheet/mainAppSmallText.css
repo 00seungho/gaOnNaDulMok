@@ -38,8 +38,11 @@ h3 {
     background-color: #4169e1;
 }
 
+
 #sideMenu {
-    width: 50%;    
+    width: 50%;
+    height: 100px;
+    position: relative;
 }
 
 
