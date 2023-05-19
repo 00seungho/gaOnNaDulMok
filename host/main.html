@@ -8,14 +8,9 @@
     
     <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="/a/styleSheet/mainAppBigText.css">
     <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="/a/styleSheet/mainAppSmallText.css">
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5357b61c3cbe5cc7daabd29772dc3e2b"></script>
-    <script src="/a/javaScript/juquery-3.0.js"></script>    
+    <link rel="stylesheet" media="screen and (max-divice-width: 1920px)" href="/a/styleSheet/mainWebSmallText.css">
+    <script src="/a/javaScript/jquery-1.6.2.min.js"></script>
     <script src="/a/javaScript/mainAppSmallText.js"></script>
-    <script src="/a/javaScript/main.js"></script>
-
-
-
-
 
     <style>
         * {
@@ -26,17 +21,31 @@
         @font-face {
             font-family: 'TAEBAEKmilkyway';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
-            font-weight: normal; 
+            font-weight: normal;
             font-style: normal;
         }
     </style>
 </head>
-<body> 
+<body>
     <div id="abody">
         <header>
             <!--<img id="logo" src="imgs/app/gaon.png" style="width: 147pt; height: 32pt;">-->
             <h1>가온나들목</h1>
             <button id="side_bar" type="button"><div></div></button>
+        </header>
+        <header id="webMenu">
+            <div>
+                <ul>
+                <li><h3><a href="#">가온나들목</a></h3></li>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">엘리베이터</a></li>
+                <li><a href="#">화장실</a></li>
+                <li><a href="#">휠체어 리프트</a></li>
+                <li><a href="#">저상버스</a></li>
+                <li><a href="#">길찾기</a></li>
+                <li><a href="#">이동지원차량</a></li>
+                </ul>
+            </div>
         </header>
         <div id="map"></div>
     </div>
