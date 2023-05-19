@@ -52,6 +52,22 @@ app.get('/', function(req,res){ // '/'는 홈임
 
   
 });
+app.get('/web', function(req,res){ // '/'는 홈임
+  // const name = req.query.seauch
+  
+  // request({
+  //   url: apiUrl,
+  //   method: 'GET'
+  // }, function (error, response, body) {
+  //   const parsedBody = JSON.parse(body);
+  //   var count = parsedBody.SeoulMetroFaciInfo.list_total_count; 
+  //   // console.log(parsedBody.SeoulMetroFaciInfo.row[998]); //객체 접근방법, ps.SeoulMetroFaciInfo.row[인덱스번호].STATION_ID
+  //   processPS(parsedBody.SeoulMetroFaciInfo.row[998]);
+  // });
+  res.sendFile(__dirname+'/web_ev.html')
+
+  
+});
 app.get('/pet', function(req,res){ // '/'는 홈임
   res.sendFile(__dirname+'/pet.html')
 
