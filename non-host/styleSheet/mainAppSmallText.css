@@ -32,9 +32,6 @@ h3 {
 }
 
 
-
-
-
 #sideMenu {
     position: fixed;
     top : 0;
@@ -91,7 +88,26 @@ h3 {
     margin: 0 10% 0 0;
     font-size: 14pt;
 }
-
+#sideMenuButton {
+    width: 80%;
+    height: 30px;
+    background-color: #EFEFEF;
+    border-radius: 50px;
+}
+#zoomOut {
+    width: 50%;
+    height: 25px;
+    background-color: rosybrown;
+    border: none;
+    border-radius: 50px;
+}
+#zoomIn {
+    width: 50%;
+    height: 25px;
+    background-color: rosybrown;
+    border: none;
+    border-radius: 50px;
+}
 
 
 .bottom_bar {
