@@ -1,24 +1,25 @@
 #header {
-    width: 100%;
+    width: 330px;
     height: 40px;
-    margin: 60px 0 5% 0;
+    margin: 60px 0 10% 10%;
     float: left;
 }
-
-
-h3 {
-    font-family: TAEBAEKmilkyway;   
-    font-size: 20px;
+    
+#header > h1 {
+    margin: 0 20% 0 20%;
+    line-height: 40px;
+    font-family: TAEBAEKmilkyway;
+    font-size: 33px;
+    float: left;
 }
-
+    
 #map {
     width: 394px;
     height: 400px;
     margin: 10% 10px 0 10px;
     background-color: #EFEFEF;
 }
-
-
+    
 #side_bar {
     float: left;
     border: none;
@@ -27,8 +28,7 @@ h3 {
     background-color: #4169e1;
     margin: 5px 0;
 }
-
-
+    
 #sideMenu {
     display: none;
     position: fixed;
@@ -117,8 +117,7 @@ h3 {
     bottom: 26px;
     z-index: 101;
 }
-
-
+    
 .bottom_bar {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px #dddddd;
@@ -154,7 +153,7 @@ button > div {
 .hi1 {
     display: none;
 }
-
+    
 #wall { 
     display: none;
     position: fixed;
@@ -163,8 +162,7 @@ button > div {
     background-color: rgba(62, 58, 99, 0.201);
     z-index: 90;
 }
-
-
+    
 #webMenu { /* 여기는 웹페이지 메뉴 안보이게 하는곳 */
     display: none;
 }

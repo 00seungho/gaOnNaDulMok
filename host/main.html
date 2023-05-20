@@ -6,23 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>가온나들목</title>
     
-    <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="/a/styleSheet/mainAppBigText.css">
-    <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="/a/styleSheet/mainAppSmallText.css">
-    <link rel="stylesheet" media="screen and (max-divice-width: 1920px)" href="/a/styleSheet/mainWebSmallText.css">
+    <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="styleSheet/mainAppBigText.css">
+    <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="styleSheet/mainAppSmallText.css">
+    <link rel="stylesheet" media="screen and (max-divice-width: 1920px)" href="styleSheet/mainWebSmallText.css">
 
     <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/static/woff2/SUITE.css" rel="stylesheet"> <!-- 폰트 -->
-
-    <script src="/a/javaScript/juquery-3.0.js"></script>
-    <script src="/a/javaScript/mainAppSmallText.js"></script>
-
+    
+    <script src="javaScript/jquery-1.6.2.min.js"></script>
+    <script src="javaScript/mainAppSmallText.js"></script>
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body { font-family: 'SUITE', sans-serif; }
-        
         @font-face {
             font-family: 'TAEBAEKmilkyway';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
@@ -30,17 +23,22 @@
             font-style: normal;
         }
 
-        header > h1 {
-            margin: 0 18% 0 30%;
-            line-height: 40px;
-            font-family: TAEBAEKmilkyway;
-            font-size: 33px;
-            float: left;
+        * {
+
+            margin: 0;
+            padding: 0;
         }
+
+        body { font-family: 'SUITE', sans-serif; }
+        
         h2 {
             font-family: TAEBAEKmilkyway;
             font-size: 17pt;
             float: left;
+        }
+        h3 {
+            font-family: TAEBAEKmilkyway;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -48,7 +46,7 @@
     <div id="abody">
         <header id="header">
             <!--<img id="logo" src="imgs/app/gaon.png" style="width: 147pt; height: 32pt;">-->
-            <h1>가온나들목</h1>
+            <h1 style="width: 160px; text-align: center;">가온나들목</h1>
             <button id="side_bar" type="button"></button>
         </header>
         <header id="webMenu">
@@ -67,21 +65,21 @@
         </header>
         <div id="map" style="float: left;"></div>
     </div>
-    <div id="sideMenu" style="display: none;">
-        <div id="sideMenuLogo">
-            <h2>가온나들목</h2>
-        </div>
+    <div id="sideMenu">
+         <div id="sideMenuLogo">
+             <h2>가온나들목</h2>
+         </div>
         <hr>
         <h3 class="textRight" style="font-size: 9pt; color: lightgray; position: reltive;line-height: 40px;">Menu</h3>
         <ul style="font-size: 11pt; margin: 0 0 20px 0;">
-            <li><img src="/a/imgs/app/8335899.png"><div>공지사항</div></li>
-            <li><img src="/a/imgs/app/637209.png"><div>지하철 엘리베이터</div></li>
-            <li><img src="/a/imgs/app/12499.png"><div>근처 휠체어리프트</div></li>
-            <li><img src="/a/imgs/app/lfb.png"><div>저상버스</div></li>
-            <li><img src="/a/imgs/app/7167398.png"><div>이동지원차량 예약</div></li>
-            <li><img src="/a/imgs/app/1347558.png"><div>안전한 길 찾기</div></li>
-            <li><img src="/a/imgs/app/5653257.png"><div>근처 화장실</div></li>
-            <li><img src="/a/imgs/app/563541.png"><div>환경설정</div></li>
+            <li><img src="imgs/app/8335899.png"><div>공지사항</div></li>
+            <li><img src="imgs/app/637209.png"><div>지하철 엘리베이터</div></li>
+            <li><img src="imgs/app/12499.png"><div>근처 휠체어리프트</div></li>
+            <li><img src="imgs/app/lfb.png"><div>저상버스</div></li>
+            <li><img src="imgs/app/7167398.png"><div>이동지원차량 예약</div></li>
+            <li><img src="imgs/app/1347558.png"><div>안전한 길 찾기</div></li>
+            <li><img src="imgs/app/5653257.png"><div>근처 화장실</div></li>
+            <li><img src="imgs/app/563541.png"><div>환경설정</div></li>
         </ul>
         <hr>
         <h3 class="textRight" style="font-size: 9pt; color: lightgray; position: relative;line-height: 40px;">Accessibility</h3>
@@ -90,13 +88,13 @@
             <button id="zoomIn" type="button"><h3 style="font-size: 11pt;">확대</h3></button>
         </div>
     </div>
-   
+
     <!-- 앱 -->
     <bottom class="bottom_bar">
-        <button id="subway" class="bottom_bar_button"><img src="/a/imgs/app/50724.png" style="width: 24px; height:24px; float: left; margin: 10px 5px;"><div class="hi2 hi3 hi4" style="font-size: 17px; font-family: SUITE">지하철</div></button>
-        <button id="bus" class="bottom_bar_button"><img src="/a/imgs/app/7577293.png" style="width: 24px; height:24px; float: left; margin: 10px 5px; opacity: 50%;"><div class="hi1 hi3 hi4" style="font-size: 17px; font-family: SUITE">버스</div></button>
-        <button id="texi" class="bottom_bar_button"><img src="/a/imgs/app/3514593.png" style="width: 24px; height:24px; float: left; margin: 10px 5px; opacity: 50%;"><div class="hi1 hi2 hi4" style="font-size: 17px; font-family: SUITE">택시</div></button>
-        <button id="sideWalk" class="bottom_bar_button"><img src="/a/imgs/app/76865.png" style="width: 24px; height:24px; float: left; margin: 10px 5px; opacity: 50%;"><div class="hi1 hi2 hi3" style="font-size: 17px; font-family: SUITE">도보</div></button>
+        <button id="subway" class="bottom_bar_button"><img src="imgs/app/50724.png" style="width: 24px; height:24px; float: left; margin: 10px 5px;"><div class="hi2 hi3 hi4" style="font-size: 17px; font-family: SUITE">지하철</div></button>
+        <button id="bus" class="bottom_bar_button"><img src="imgs/app/7577293.png" style="width: 24px; height:24px; float: left; margin: 10px 5px; opacity: 50%;"><div class="hi1 hi3 hi4" style="font-size: 17px; font-family: SUITE">버스</div></button>
+        <button id="texi" class="bottom_bar_button"><img src="imgs/app/3514593.png" style="width: 24px; height:24px; float: left; margin: 10px 5px; opacity: 50%;"><div class="hi1 hi2 hi4" style="font-size: 17px; font-family: SUITE">택시</div></button>
+        <button id="sideWalk" class="bottom_bar_button"><img src="imgs/app/76865.png" style="width: 24px; height:24px; float: left; margin: 10px 5px; opacity: 50%;"><div class="hi1 hi2 hi3" style="font-size: 17px; font-family: SUITE">도보</div></button>
     </bottom>
     <div id="wall"></div>
 </body>
