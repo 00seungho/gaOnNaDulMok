@@ -1,4 +1,6 @@
 $(function(){
+
+    // 메인에서 아래 하단 고정바 클릭했을 시 이벤트
     $('#subway').on("click", function() {
         $('.hi1').css({"display": "none"});
 
@@ -61,5 +63,43 @@ $(function(){
         $('#subway img').css({"opacity":"50%"});
         $('#bus img').css({"opacity":"50%"});
         $('#texi img').css({"opacity":"50%"});
+    });
+
+    // 확대 축소 버튼 클릭시 이벤트
+    $('#zoomOut').on('click', function(){
+        $('#zoomOut').css({
+            "color":"white",
+            "backgroundColor":"#4169e1",
+            "zIndex":"101"
+        })
+        $('#zoomIn').css({
+            "color":"black",
+            "backgroundColor":"#EFEFEF",
+            "zIndex":"100"
+        })
+    });
+    $('#zoomIn').on('click', function(){
+        $('#zoomIn').css({
+            "color":"white",
+            "backgroundColor":"#4169e1",
+            "zIndex":"101"
+        })
+        $('#zoomOut').css({
+            "color":"black",
+            "backgroundColor":"#EFEFEF",
+            "zIndex":"100"
+        })
+    });
+
+    // sideMenu 나오게 하기 
+    $('#side_bar').on('click', function(){
+        $('#wall').css({"display":"block"});
+        $('#sideMenu').css({"display":"block"});
+    });
+    
+    // sideMenu 가리기
+    $('#wall').on('click', function(){
+        $('#sideMenu').css({"display":"none"});
+        $(this).css({"display":"none"});
     });
 });
