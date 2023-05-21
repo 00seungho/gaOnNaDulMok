@@ -1,3 +1,8 @@
+var options = {
+    enableHighAccuracy: true,   
+    timeout: 5000,
+    maximumAge: 0
+  };
 function onGeoOkay(position) {
     var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
@@ -32,7 +37,7 @@ infowindow.open(map, marker);
 }
 
   function onGeoError() {
-    alert("현재 위치정보를 거절하셨습니다. 지도위에 정보를 표시하지 못합니다.");
+    alert("위치정보를 불러올 수 없습니다. 지도를 표시합니다.");
     
         var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
           mapOption = { 
@@ -47,4 +52,4 @@ infowindow.open(map, marker);
       // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
       //marker.setMap(null);    
       
-  navigator.geolocation.getCurrentPosition(onGeoOkay, onGeoError);
+  navigator.geolocation.getCurrentPosition(onGeoOkay, onGeoError, options);

@@ -48,7 +48,7 @@ app.get('/', function(req,res){ // '/'는 홈임
   //   // console.log(parsedBody.SeoulMetroFaciInfo.row[998]); //객체 접근방법, ps.SeoulMetroFaciInfo.row[인덱스번호].STATION_ID
   //   processPS(parsedBody.SeoulMetroFaciInfo.row[998]);
   // });
-  res.sendFile(__dirname+'/main.html')
+  res.sendFile(__dirname+'/html/main.html')
 
   
 });
@@ -64,7 +64,7 @@ app.get('/web', function(req,res){ // '/'는 홈임
   //   // console.log(parsedBody.SeoulMetroFaciInfo.row[998]); //객체 접근방법, ps.SeoulMetroFaciInfo.row[인덱스번호].STATION_ID
   //   processPS(parsedBody.SeoulMetroFaciInfo.row[998]);
   // });
-  res.sendFile(__dirname+'/web_ev.html')
+  res.sendFile(__dirname+'/html/web_main_1.html')
 
   
 });
