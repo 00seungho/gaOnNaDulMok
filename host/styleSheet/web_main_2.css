@@ -46,11 +46,18 @@
 
   #map
   {   border: 1px solid  black;
-      width: 1920px;  height: 938px;
+      width: 1920px;  height: 200px;
       opacity: 1;
       float: left;
   }
-
+  
+  #searchfind
+  {   border: 1px solid  rgb(0, 0, 0);
+    position: relative;
+    width: 1920px;  height: 400px;
+    opacity: 1;
+    float: left;
+  }
 
   footer  div:nth-child(1)
   {
@@ -79,6 +86,7 @@
   .autocomplete > div.active {
       background: #e0e5f6;
       color: #000;
+
     }
     
     /* -------------------------- */
@@ -86,10 +94,11 @@
     .autocomplete > div {
       background: #f1f3f499;
       padding: .2rem .6rem;
+
     }
     
     #searchSection{
-      height: 912px;  width: 900px;
+      height: auto;  width: 900px;
       float: left;
       /* box-shadow: 0 0 1rem rgba(0, 0, 0, .05);  
       border-radius: 5px;
@@ -137,4 +146,3 @@
     mark {
       background: #adadad90;
     }
-   

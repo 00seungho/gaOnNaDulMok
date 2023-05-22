@@ -1,19 +1,17 @@
 
-var url = "http://openapi.seoul.go.kr:8088/74776a5341746d6439394a57735854/json/SearchSTNBySubwayLineInfo/1/999/"
-const dataList = [];
-
+var url = "http://openapi.seoul.go.kr:8088/74776a5341746d6439394a57735854/json/subwayStationMaster/1/999/"
+const dataList =[];
 window.onload = function(){
 fetch(url)
   .then(response => response.json())
   .then(data => {
-    
-    var count = data.SearchSTNBySubwayLineInfo.list_total_count;
+    var count = data.subwayStationMaster.list_total_count;
     const uniqueDataList = [];
     for (var i = 1; i < count; i++) {
-      const stationName = data.SearchSTNBySubwayLineInfo.row[i].STATION_NM;
+      const stationName = data.subwayStationMaster.row[i].STATN_NM;
       if (!uniqueDataList.includes(stationName)) {
         uniqueDataList.push(stationName);
-      }
+      } 
     }
 
     // 중복값이 제거된 배열을 사용할 수 있습니다.

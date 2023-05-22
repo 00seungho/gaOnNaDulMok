@@ -175,7 +175,9 @@ button > div {
     z-index: 100;
     opacity: 1;
   }
-  
+  #searchField{
+    height: 500px;
+  }
   #searchSection{
     margin: 10% 10px 0 10px;
     width:394px;
