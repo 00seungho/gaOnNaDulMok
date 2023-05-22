@@ -66,7 +66,7 @@ fetch(url)
                clearAutoComplete();
                break;
            }
-         });
+         });  
          
          $autoComplete.addEventListener("mousedown", (event) => {
            event.preventDefault();
@@ -98,7 +98,7 @@ fetch(url)
            $autoComplete.innerHTML = data
              .map(
                (label) => `
-               <div class='autocomplete-item' s>
+               <div class='autocomplete-item'>
                  ${label.replace(regex, "<mark>$1</mark>")}
                </div>
              `

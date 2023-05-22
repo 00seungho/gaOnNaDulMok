@@ -1,144 +1,140 @@
-header
-{  
-    top: 0px;   left:0px;   width:1920px;   height: 60px;
-    border: 1px solid;  opacity: 1;
-    background:#f1f1f1 no-repeat padding-box;   background: var(--unnamed-color-f1f1f1) 0% 0% no-repeat padding-box;
-    text-align: left;   letter-spacing: 0px;
+  header
+  {  
+      top: 0px;   left:0px;   width:1920px;   height: 60px;
+      border: 1px solid;  opacity: 1;
+      background:#f1f1f1 no-repeat padding-box;   background: var(--unnamed-color-f1f1f1) 0% 0% no-repeat padding-box;
+      text-align: left;   letter-spacing: 0px;
+      
+      
+      
+  }
+  ul
+  {   color:#000000; padding-left: 330px;    padding-right: 330px;
+      margin:auto;
+      list-style: none;
+  }
+  li
+  {   padding-right: 50px;
+      display: inline-block;   
+  }
+  a
+  {
+      text-decoration-line: none;
+      color: #000000;
+  }
+  body
+  {   margin: 0px;
+      top:0px;    left: 0px;  width: 1920px;  height: 2160px;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      opacity: 1;
+  }
+  nav
+  {
+  padding-left:760px; padding-right: 761px;  
+  top: 130px; left: 760px;    
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-48)/var(--unnamed-line-spacing-59) var(--unnamed-font-family-suite);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-000000);
+  text-align: left;
+  font: normal normal 300 40px/59px SUITE;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  float: left;
+
+  }
+
+  #map
+  {   border: 1px solid  black;
+      width: 1920px;  height: 938px;
+      opacity: 1;
+      float: left;
+  }
+
+
+  footer  div:nth-child(1)
+  {
+  top: 2020px;    left: 810px;    width:1920px;   height: 80px;
+  border: 1px solid black;  opacity: 1;
+  background:#f1f1f1 no-repeat padding-box;   background: var(--unnamed-color-f1f1f1) 0% 0% no-repeat padding-box;
+  line-height: 80px;  text-align:center;
+  float: left;
+  }
+  footer  div:nth-child(2)
+  {   
+      top: 2100px;    left: 0px;  width: 1920px;  height: 60px;
+      border: 1px solid black;  opacity: 1;
+      background: #F1F1F1 0% 0% no-repeat padding-box;
+      line-height: 60px;
+      float: left;
+  }
+  footer > ul
+  {
+      padding-left: 328px;    padding-right: 328px;
+  }
+
+  /*검색 창 css*/
+  /* 현재 선택된 검색어 */
+
+  .autocomplete > div.active {
+      background: #e0e5f6;
+      color: #000;
+    }
     
+    /* -------------------------- */
     
+    .autocomplete > div {
+      background: #f1f3f499;
+      padding: .2rem .6rem;
+    }
     
-}
-ul
-{   color:#000000; padding-left: 330px;    padding-right: 330px;
-    margin:auto;
-    list-style: none;
-}
-li
-{   padding-right: 50px;
-    display: inline-block;   
-}
-a
-{
-    text-decoration-line: none;
-    color: #000000;
-}
-body
-{   margin: 0px;
-    top:0px;    left: 0px;  width: 1920px;  height: 2160px;
-    background: #FFFFFF 0% 0% no-repeat padding-box;
-    opacity: 1;
-}
-nav
-{
-padding-left:760px; padding-right: 761px;  
-top: 130px; left: 760px;    
-font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-48)/var(--unnamed-line-spacing-59) var(--unnamed-font-family-suite);
-letter-spacing: var(--unnamed-character-spacing-0);
-color: var(--unnamed-color-000000);
-text-align: left;
-font: normal normal 300 40px/59px SUITE;
-letter-spacing: 0px;
-color: #000000;
-opacity: 1;
-float: left;
-
-}
-
-#map
-{   border: 1px solid  black;
-     width: 1920px;  height: 938px;
-    opacity: 1;
-    float: left;
-}
-/* #search
-{
-    background-color: #F1F1F1;
-    border: 1px solid  black;
-} */
-
-footer  div:nth-child(1)
-{
-top: 2020px;    left: 810px;    width:1920px;   height: 80px;
-border: 1px solid black;  opacity: 1;
-background:#f1f1f1 no-repeat padding-box;   background: var(--unnamed-color-f1f1f1) 0% 0% no-repeat padding-box;
-line-height: 80px;  text-align:center;
-float: left;
-}
-footer  div:nth-child(2)
-{   
-    top: 2100px;    left: 0px;  width: 1920px;  height: 60px;
-    border: 1px solid black;  opacity: 1;
-    background: #F1F1F1 0% 0% no-repeat padding-box;
-    line-height: 60px;
-    float: left;
-}
-footer > ul
-{
-    padding-left: 328px;    padding-right: 328px;
-}
-
-/*검색 창 css*/
-/* 현재 선택된 검색어 */
-
-.autocomplete > div.active {
-    background: #e0e5f6;
-    color: #000;
-  }
-  
-  /* -------------------------- */
-  
-  .autocomplete > div {
-    background: #f1f3f499;
-    padding: .2rem .6rem;
-  }
-  
-  #searchSection{
-    height: 912px;  width: 900px;
-    float: left;
-    /* box-shadow: 0 0 1rem rgba(0, 0, 0, .05);  
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #fff;
-    margin-top: 2rem;
-    float: left; */
-  }
-  
-  @import url("https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/static/woff2/SUITE.css");
-  /* #search{
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    float: left;
-
-  } */
-  
-
-  #search{
-    width: 74%;
-    height: 3rem;
-    border-radius: 5px;
-    padding: 0 3%;
-    border: 1px solid #e0e5f6;
-    background: #fff;
-    font-size: 1rem;
-    float: left;
-    margin-right: 30px;
-  }
-  #searchButton{
-    width: 10%;
-    background: #fff;
-    height: 3rem;
-    float: left;
-  }
-  input::placeholder {
+    #searchSection{
+      height: 912px;  width: 900px;
+      float: left;
+      /* box-shadow: 0 0 1rem rgba(0, 0, 0, .05);  
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: #fff;
+      margin-top: 2rem;
+      float: left; */
+    }
     
-    font-size: 1rem;
-  }
-  
-  mark {
-    background: #adadad90;
-  }
-  
+    @import url("https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/static/woff2/SUITE.css");
+    /* #search{
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      float: left;
+
+    } */
+    
+
+    #search{
+      width: 74%;
+      height: 3rem;
+      border-radius: 5px;
+      padding: 0 3%;
+      border: 1px solid #e0e5f6;
+      background: #fff;
+      font-size: 1rem;
+      float: left;
+      margin-right: 30px;
+    }
+    #searchButton{
+      width: 10%;
+      background: #fff;
+      height: 3rem;
+      float: left;
+    }
+    input::placeholder {
+      
+      font-size: 1rem;
+    }
+    
+    mark {
+      background: #adadad90;
+    }
+   

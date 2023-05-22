@@ -53,3 +53,4 @@ infowindow.open(map, marker);
       //marker.setMap(null);    
       
   navigator.geolocation.getCurrentPosition(onGeoOkay, onGeoError, options);
+      
