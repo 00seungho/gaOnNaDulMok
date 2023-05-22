@@ -44,20 +44,7 @@
 
   }
 
-  #map
-  {   border: 1px solid  black;
-      width: 1920px;  height: 200px;
-      opacity: 1;
-      float: left;
-  }
-  
-  #searchfind
-  {   border: 1px solid  rgb(0, 0, 0);
-    position: relative;
-    width: 1920px;  height: 400px;
-    opacity: 1;
-    float: left;
-  }
+ 
 
   footer  div:nth-child(1)
   {
@@ -80,6 +67,21 @@
       padding-left: 328px;    padding-right: 328px;
   }
 
+  /*유승호 수정*/
+  #map
+  {   border: 1px solid  black;
+      width: 1920px;  height: 400px;
+      opacity: 1;
+      float: left;
+  }
+  
+  #searchfind
+  {   border: 1px solid  rgb(0, 0, 0);
+    position: relative;
+    width: 1920px;  height: 400px;
+    opacity: 1;
+    float: left;
+  } 
   /*검색 창 css*/
   /* 현재 선택된 검색어 */
 
