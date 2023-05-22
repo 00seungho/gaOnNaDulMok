@@ -67,6 +67,27 @@
         </header>
         <div id="map" style="float: left;"></div>
     </div>
+    <div id="searchSection">
+        <div id="searchField">
+            <h2 style="font-family: TAEBAEKmilkyway;">엘리베이터 위치, 상태 조회</h2>
+
+            <!-- 검색어 입력창   -->
+            <form action="/" method="get">
+
+            <input type="text" 
+                id="search"
+              placeholder="역 이름을 입력하세요"
+              autocomplete="off"
+              name ="subway"
+            >
+            <input id="searchButton" type="submit" value="검색" >
+            <div id="gongBAck"></div>
+            <!-- 자동완성 단어 리스트 -->
+            <div class="autocomplete" style="float: left; width:315px;"></div>
+        </div>
+        <script src ="javaScript/subwayAutoSeach.js"></script>
+            </form>
+    </div>
     <div id="sideMenu">
         <div id="sideMenuLogo">
             <h2>가온나들목</h2>
@@ -84,6 +105,7 @@
             <li><img src="imgs/app/563541.png"><div>환경설정</div></li>
         </ul>
         <hr>
+
         <h3 class="textRight" style="font-size: 9pt; color: lightgray; position: relative;line-height: 40px;">Accessibility</h3>
         <div id="sideMenuButton">
             <button id="zoomOut" type="button"><h3 style="font-size: 11pt;">축소</h3></button>

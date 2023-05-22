@@ -168,3 +168,44 @@ button > div {
 #webMenu { /* 여기는 웹페이지 메뉴 안보이게 하는곳 */
     display: none;
 }
+
+/*자동검색기능 머시깽*/
+.autocomplete > div {
+    background: #f1f3f499;
+    padding: .2rem .6rem;
+    position:relative;
+    z-index: 100;
+    opacity: 1;
+  }
+  
+  #searchSection{
+    margin: 10% 10px 0 10px;
+    width:394px;
+    float: left;
+    }
+
+  #search{
+    width: 74%;
+    height: 3rem;
+    border-radius: 5px;
+    padding: 0 3%;
+    border: 1px solid #e0e5f6;
+    background: #fff;
+    font-size: 1rem;
+    float: left;
+    margin-right: 30px;
+  }
+  #searchButton{
+    width: 10%;
+    background: #fff;
+    height: 3rem;
+        float: left;
+  }
+  input::placeholder {
+    
+    font-size: 1rem;
+  }
+  
+  mark {
+    background: #adadad90;
+  }
