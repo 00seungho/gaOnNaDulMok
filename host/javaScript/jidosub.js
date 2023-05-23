@@ -141,16 +141,15 @@ function fetchSeoulMetroFaciInfo(url,trainCode){
     fetch(url)
     .then(response => response.json())
     .then(data => {
-        console.log(trainCode.length)
         for(var i = 0; i<trainCode.length; i++){
-            for(var j = 0 ; j < 999 ; j++){
+            for(var j = 0 ; j < data.SeoulMetroFaciInfo.row.length ; j++){
                     if(trainCode[i]==data.SeoulMetroFaciInfo.row[j].STATION_ID){
                         const searchfind = document.getElementById("searchfind");
                         searchfind.innerHTML += "<div id ='searchfindall'>";
-                        searchfind.innerHTML += "<h3> 역명:"+data.SeoulMetroFaciInfo.row[j].STATION_NM+"<h4>";
-                        searchfind.innerHTML += "<h4> 운행구간:"+data.SeoulMetroFaciInfo.row[j].STUP_LCTN+"<h4>";
-                        searchfind.innerHTML += "<h4> 위치"+data.SeoulMetroFaciInfo.row[j].LOCATION	+"<h4>";
-                        searchfind.innerHTML += "<h4> 승강기 상태"+data.SeoulMetroFaciInfo.row[j].USE_YN	+"<h4>";               
+                        searchfind.innerHTML += "<h3> 역명 : "+data.SeoulMetroFaciInfo.row[j].STATION_NM+"<h4>";
+                        searchfind.innerHTML += "<h4> 운행구간 : "+data.SeoulMetroFaciInfo.row[j].STUP_LCTN+"<h4>";
+                        searchfind.innerHTML += "<h4> 위치 : "+data.SeoulMetroFaciInfo.row[j].LOCATION	+"<h4>";
+                        searchfind.innerHTML += "<h4> 승강기 상태 : "+data.SeoulMetroFaciInfo.row[j].USE_YN	+"<h4>";               
                         searchfind.innerHTML += "</div>";
                     }
             }

@@ -178,6 +178,9 @@ button > div {
   #searchField{
     height: 500px;
   }
+  #searchfind{
+    width:394px;
+  }
   #searchSection{
     margin: 10% 10px 0 10px;
     width:394px;

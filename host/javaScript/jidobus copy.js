@@ -147,10 +147,10 @@ function fetchSeoulMetroFaciInfo(url,trainCode){
                     if(trainCode[i]==data.SeoulMetroFaciInfo.row[j].STATION_ID){
                         const searchfind = document.getElementById("searchfind");
                         searchfind.innerHTML += "<div id ='searchfindall'>";
-                        searchfind.innerHTML += "<h3> 역명:"+data.SeoulMetroFaciInfo.row[j].STATION_NM+"<h4>";
-                        searchfind.innerHTML += "<h4> 운행구간:"+data.SeoulMetroFaciInfo.row[j].STUP_LCTN+"<h4>";
-                        searchfind.innerHTML += "<h4> 위치"+data.SeoulMetroFaciInfo.row[j].LOCATION	+"<h4>";
-                        searchfind.innerHTML += "<h4> 승강기 상태"+data.SeoulMetroFaciInfo.row[j].USE_YN	+"<h4>";               
+                        searchfind.innerHTML += "<h3> 역명:"+data.SeoulMetroFaciInfo.row[j].STATION_NM+"</h3>";
+                        searchfind.innerHTML += "<h3> 운행구간:"+data.SeoulMetroFaciInfo.row[j].STUP_LCTN+"</h3>";
+                        searchfind.innerHTML += "<h3> 위치"+data.SeoulMetroFaciInfo.row[j].LOCATION	+"</h3>";
+                        searchfind.innerHTML += "<h3> 승강기 상태"+data.SeoulMetroFaciInfo.row[j].USE_YN	+"</h3>";               
                         searchfind.innerHTML += "</div>";
                     }
             }

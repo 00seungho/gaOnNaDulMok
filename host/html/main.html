@@ -68,8 +68,8 @@
         </header>
         <div id="map" style="float: left;"></div>
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5357b61c3cbe5cc7daabd29772dc3e2b"></script>
-        <script src = "/a/javaScript/jido.js"></script>
-        
+        <script src = "/a/javaScript/jidosub.js"></script>
+        <div id="searchfind"></div>
     </div>
     <div id="searchSection">
         <div id="searchField">
@@ -84,10 +84,13 @@
               autocomplete="off"
               name ="subway"
             >
-            <input id="searchButton" type="submit" value="검색  " >
+            <input id="searchButton" type="button" value="검색">
             <div id="gongBAck"></div>
             <!-- 자동완성 단어 리스트 -->
+            <div id="searchfind">
+
             <div class="autocomplete" style="float: left; width:315px;"></div>
+            </div>
         </div>
     </form>
         <script src ="/a/javaScript/subwayAutoSeach.js"></script>
