@@ -68,24 +68,20 @@
         <div id="map" style="float: left;"></div>
     </div>
     <div id="searchSection"><!--검색 영역 전체크기-->
-        <div id="searchField"><!--검색 영역-->
-            <h2 style="font-family: TAEBAEKmilkyway;">엘리베이터 위치, 상태 조회</h2>
+        <div id="searchField" ><!--검색 영역-->
+            <h2 style="margin: 0 0 5% 0;">엘리베이터 위치, 상태 조회</h2>
 
             <!-- 검색어 입력창   -->
             <form action="/" method="get">
-
-            <input type="text" 
-                id="search"
-              placeholder="역 이름을 입력하세요"
-              autocomplete="off"
-              name ="subway"
-            >
-            <input id="searchButton" type="submit" value="검색" >
-            <!-- 자동완성 단어 리스트 -->
-            <div class="autocomplete" style="float: left; width:315px;"></div>
-        </div>
-        <script src ="javaScript/subwayAutoSeach.js"></script><!--검색 영역 스크립트 추가-->
+                <input type="text" id="search" placeholder="역 이름을 입력하세요" autocomplete="off" name ="subway">
+                <input id="searchButton" type="submit" value="검색">
+                <!-- 자동완성 단어 리스트 -->
+                <div id="autoWidth">
+                    <div class="autocomplete" style="float: left;"></div>
+                </div>
+                <script src ="javaScript/subwayAutoSeach.js"></script><!--검색 영역 스크립트 추가-->
             </form>
+        </div>
     </div>
     <div id="sideMenu">
         <div id="sideMenuLogo">
@@ -94,30 +90,25 @@
         <hr>
         <h3 class="textRight" style="font-size: 9pt; color: lightgray; position: reltive;line-height: 40px;">Menu</h3>
         <ul style="font-size: 11pt; margin: 0 0 20px 0;">
-            <li><img src="imgs/app/8335899.png"><div>공지사항</div></li>
             <li><img src="imgs/app/637209.png"><div>지하철 엘리베이터</div></li>
-            <li><img src="imgs/app/12499.png"><div>근처 휠체어리프트</div></li>
             <li><img src="imgs/app/lfb.png"><div>저상버스</div></li>
-            <li><img src="imgs/app/7167398.png"><div>이동지원차량 예약</div></li>
-            <li><img src="imgs/app/1347558.png"><div>안전한 길 찾기</div></li>
             <li><img src="imgs/app/5653257.png"><div>근처 화장실</div></li>
-            <li><img src="imgs/app/563541.png"><div>환경설정</div></li>
         </ul>
-        <hr>
-
-        <h3 class="textRight" style="font-size: 9pt; color: lightgray; position: relative;line-height: 40px;">Accessibility</h3>
-        <div id="sideMenuButton">
-            <button id="zoomOut" type="button"><h3 style="font-size: 11pt;">축소</h3></button>
-            <button id="zoomIn" type="button"><h3 style="font-size: 11pt;">확대</h3></button>
+        <div id="bottom_button">
+            <hr>
+            <h3 class="textRight" style="font-size: 9pt; color: lightgray; position: relative;line-height: 40px;">Accessibility</h3>
+            <div id="sideMenuButton">
+                <button id="zoomOut" type="button"><h3 style="font-size: 11pt;">축소</h3></button>
+                <button id="zoomIn" type="button"><h3 style="font-size: 11pt;">확대</h3></button>
+            </div>
         </div>
     </div>
    
     <!-- 앱 -->
     <bottom class="bottom_bar">
-        <button id="subway" class="bottom_bar_button"><img src="imgs/app/50724.png" style="width: 24px; height:24px; float: left; margin: 10px 5px;"><div class="hi2 hi3 hi4" style="font-size: 17px; font-family: SUITE">지하철</div></button>
-        <button id="bus" class="bottom_bar_button"><img src="imgs/app/7577293.png" style="width: 24px; height:24px; float: left; margin: 10px 5px; opacity: 50%;"><div class="hi1 hi3 hi4" style="font-size: 17px; font-family: SUITE">버스</div></button>
-        <button id="texi" class="bottom_bar_button"><img src="imgs/app/3514593.png" style="width: 24px; height:24px; float: left; margin: 10px 5px; opacity: 50%;"><div class="hi1 hi2 hi4" style="font-size: 17px; font-family: SUITE">택시</div></button>
-        <button id="sideWalk" class="bottom_bar_button"><img src="imgs/app/76865.png" style="width: 24px; height:24px; float: left; margin: 10px 5px; opacity: 50%;"><div class="hi1 hi2 hi3" style="font-size: 17px; font-family: SUITE">도보</div></button>
+        <button id="subway" class="bottom_bar_button"><img src="imgs/app/50724.png" style="width: 24px; height:24px; float: left; margin: 10px 5px;"><div class="hi2 hi3" style="font-size: 17px; font-family: SUITE">지하철</div></button>
+        <button id="bus" class="bottom_bar_button"><img src="imgs/app/7577293.png" style="width: 24px; height:24px; float: left; margin: 10px 5px; opacity: 50%;"><div class="hi1 hi3" style="font-size: 17px; font-family: SUITE">버스</div></button>
+        <button id="texi" class="bottom_bar_button"><img src="imgs/app/3514593.png" style="width: 24px; height:24px; float: left; margin: 10px 5px; opacity: 50%;"><div class="hi1 hi2" style="font-size: 17px; font-family: SUITE">택시</div></button>
     </bottom>
     <div id="wall"></div>
 </body>

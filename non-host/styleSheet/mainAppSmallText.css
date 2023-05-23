@@ -86,6 +86,12 @@ h3 {
     margin: 0 10% 0 0;
     font-size: 14pt;
 }
+#bottom_button {
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    right: 0;
+}
 #sideMenuButton {
     width: 80%;
     height: 35px;
@@ -131,7 +137,7 @@ h3 {
     z-index: 50;
 }
 .bottom_bar > button {
-    margin: 23px 0 0 4.65%;
+    margin: 23px 0 0 9.5%;
     border: none;
     display: block;
     float: left;
@@ -169,43 +175,63 @@ button > div {
     display: none;
 }
 
+#autoWidth {
+    float: left;
+    width: 70%;
+    height: 100px;
+    margin: 3px 0 0 5%;
+    overflow-y: scroll;
+}
 /*자동검색기능 머시깽*/
+.autocomplete {
+    width: 100%;
+}
 .autocomplete > div {
-    background: #f1f3f499;
+    background: #1a1a1a99;
     padding: .2rem .6rem;
-    position:relative;
     z-index: 100;
     opacity: 1;
-  }
+    color: white;
+    height: 30px;
+    line-height: 30px;
+}
   
-  #searchSection{
+#searchSection {
     margin: 10% 10px 0 10px;
-    width:394px;
+    width: 394px;
     float: left;
-    }
+}
 
-  #search{
-    width: 74%;
-    height: 3rem;
+
+#search {
+    width: 70%;
+    height: 2.5rem;
     border-radius: 5px;
     padding: 0 3%;
-    border: 1px solid #e0e5f6;
+    box-shadow: 0 0 5px #d0d0d0;
+    border: none;
     background: #fff;
     font-size: 1rem;
     float: left;
-    margin-right: 30px;
-  }
-  #searchButton{
-    width: 10%;
-    background: #fff;
-    height: 3rem;
-        float: left;
-  }
-  input::placeholder {
-    
+    margin: 0 3% 0 10px;
+    font-family: TAEBAEKmilkyway;
+    font-weight: 700;
+}
+#searchButton {
+    width: 15%;
+    font-family: TAEBAEKmilkyway;
+    height: 2.5rem;
+    background: #4169e1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    float: left;
+}
+input::placeholder {
     font-size: 1rem;
-  }
+}
   
-  mark {
-    background: #adadad90;
-  }
+mark {
+    background: #fffc99d6;
+}
