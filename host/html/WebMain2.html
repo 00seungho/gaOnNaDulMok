@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/a/styleSheet/web_main_2.css">
+    
+    <link rel="stylesheet" href="/a/styleSheet/WebMain2.css">
+
     <style>
         @font-face {
             font-family: 'TAEBAEKmilkyway';
@@ -14,19 +16,19 @@
             font-style: normal;
         }
     </style>
+    <script src ="/a/javaScript/subwayFind.js"></script>
+
 </head>
 <body>
     <header>
         <div>
             <ul>
-            <li><h3><a href="/a/html/web_main_1.html">가온나들목</a></h3></li>
-            <li><a href="h">공지사항</a></li>
-            <li><a href="/a/html/web_main_2.html">엘리베이터</a></li>
-            <li><a href="#">화장실</a></li>
-            <li><a href="/a/html/web_main_3.html">휠체어 리프트</a></li>
-            <li><a href="/a/html/web_main_4.html">저상버스</a></li>
-            <li><a href="">길찾기</a></li>
-            <li><a href="/a/html/web_main_5.html">이동지원차량</a></li>
+            <li><h3><a href="/a/html/WebMain1.html">가온나들목</a></h3></li>
+            <li><a href="/a/html/WebMain2.html">엘리베이터</a></li>
+            <li><a href="/a/html/WebMain6.html">화장실</a></li>
+            <li><a href="/a/html/WebMain3.html">휠체어 리프트</a></li>
+            <li><a href="/a/html/WebMain4.html">저상버스</a></li>
+            <li><a href="/a/html/WebMain5.html">이동지원차량</a></li>
             </ul>
         </div>
     </header>
@@ -37,9 +39,9 @@
     </nav>
     <div id="map">
 
-    </div>
+    </div> 
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5357b61c3cbe5cc7daabd29772dc3e2b"></script>
-    <script src ="/a/javaScript/jido.js"></script>
+    <script src ="/a/javaScript/jidosub.js"></script>
 
 
         <div id="searchSection">
@@ -48,7 +50,7 @@
                 <h4 style="font-family: TAEBAEKmilkyway;">역 명을 입력하세요</h4>
 
                 <!-- 검색어 입력창   -->
-                <form action="/" method="get">
+                <form action="" method="get">
 
                 <input type="text" 
                     id="search"
@@ -56,13 +58,22 @@
                   autocomplete="off"
                   name ="subway"
                 >
-                <input id="searchButton" type="submit" value="검색" >
+                <input id="searchButton" type="button" value="검색">
                 <div id="gongBAck"></div>
                 <!-- 자동완성 단어 리스트 -->
-                <div class="autocomplete" style="float: left; width:300px;"></div>
+                <div id="hi"></div>
+                <div id="searchfind">
+
+                
+                <div class="autocomplete" style="float: left; width:300px;">
+
+                </div>
             </div>
+        </div>
             <script src ="/a/javaScript/subwayAutoSeach.js"></script>
-        </form>
+                </form>
+
+
         </div>
         <footer>
         <div>살려주시라요</div> 

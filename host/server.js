@@ -10,8 +10,6 @@ const endIndex=999;
 const apiUrl = 'http://openapi.seoul.go.kr:8088/'+GONGGONGAPIKEY+"/json/SeoulMetroFaciInfo/"+startIndex+"/"+endIndex;
 const app = express();
 app.use('/a',express.static(__dirname));
-
-
   
 
 app.use(cors())
@@ -64,7 +62,7 @@ app.get('/web', function(req,res){ // '/'는 홈임
   //   // console.log(parsedBody.SeoulMetroFaciInfo.row[998]); //객체 접근방법, ps.SeoulMetroFaciInfo.row[인덱스번호].STATION_ID
   //   processPS(parsedBody.SeoulMetroFaciInfo.row[998]);
   // });
-  res.sendFile(__dirname+'/html/web_main_1.html')
+  res.sendFile(__dirname+'/html/WebMain1.html')
 
   
 });

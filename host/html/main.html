@@ -9,9 +9,10 @@
     <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="/a/styleSheet/mainAppBigText.css">
     <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="/a/styleSheet/mainAppSmallText.css">
     <link rel="stylesheet" media="screen and (max-divice-width: 1920px)" href="/a/styleSheet/mainWebSmallText.css">
+    <link rel="stylesheet" media="screen and (max-divice-width: 414px)" href="/a/styleSheet/webSeach.css">
 
     <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/static/woff2/SUITE.css" rel="stylesheet"> <!-- 폰트 -->
-
+    
     <script src="/a/javaScript/jquery-1.6.2.min.js"></script>
     <script src="/a/javaScript/mainAppSmallText.js"></script>
 
@@ -66,9 +67,30 @@
             </div>
         </header>
         <div id="map" style="float: left;"></div>
-        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5357b61c3cbe5cc7daabd29772dc3e2b
-        "></script>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5357b61c3cbe5cc7daabd29772dc3e2b"></script>
         <script src = "/a/javaScript/jido.js"></script>
+        
+    </div>
+    <div id="searchSection">
+        <div id="searchField">
+            <h2 style="font-family: TAEBAEKmilkyway;">엘리베이터 위치, 상태 조회</h2>
+
+            <!-- 검색어 입력창   -->
+            <form action="/" method="get">
+
+            <input type="text" 
+                id="search"
+              placeholder="역 이름을 입력하세요"
+              autocomplete="off"
+              name ="subway"
+            >
+            <input id="searchButton" type="submit" value="검색  " >
+            <div id="gongBAck"></div>
+            <!-- 자동완성 단어 리스트 -->
+            <div class="autocomplete" style="float: left; width:315px;"></div>
+        </div>
+    </form>
+        <script src ="/a/javaScript/subwayAutoSeach.js"></script>
     </div>
     <div id="sideMenu">
         <div id="sideMenuLogo">
