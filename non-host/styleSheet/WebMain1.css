@@ -2,7 +2,7 @@
 
 header
 {  
-    top: 0px;   left:0px;   width:1920px;   height: 60px;
+    top: 0px;   left:0px;   width:1720px;   height: 60px;
     border: 1px solid;  opacity: 1;
     background:#f1f1f1 no-repeat padding-box;   background: var(--unnamed-color-f1f1f1) 0% 0% no-repeat padding-box;
     text-align: left;   letter-spacing: 0px;
@@ -25,7 +25,7 @@ a
 }
 body
 {   margin: 0px;
-    top:0px;    left: 0px;  width: 1920px;  height: 2160px;
+    top:0px;    left: 0px;  width: 1620px;  height: 2160px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 1;
 }
