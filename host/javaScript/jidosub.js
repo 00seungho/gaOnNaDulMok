@@ -268,7 +268,7 @@ window.onload = function () {
                         }
                     }
                 }
-                document.getElementById("gongBack").style.display = ""
+               
 
             })
             .catch(error => {
