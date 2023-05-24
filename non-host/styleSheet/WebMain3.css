@@ -1,75 +1,91 @@
+
+@font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.font1
+{
+    font-family: 'TAEBAEKmilkyway';
+    font-size: 31px;
+}
 header
-{  
-    top: 0px;   left:0px;   width:1920px;   height: 60px;
-    border: 1px solid;  opacity: 1;
-    background:#f1f1f1 no-repeat padding-box;   background: var(--unnamed-color-f1f1f1) 0% 0% no-repeat padding-box;
+{   position: absolute;
+    left: 290px;    top: 0px;      width:1340px;   height: 60px;
+    border: 0px solid;
+    background-color: #F1F1F1;  
     text-align: left;   letter-spacing: 0px;
-    
-    
+    /* 상단 가온 박스 */
     
 }
 ul
-{   color:#000000; padding-left: 330px;    padding-right: 330px;
+{    color:#000000; padding-left: 360px;   
     margin:auto;
     list-style: none;
+    /* ul 태그 안 내용 한줄로 표기 */
 }
 li
-{   padding-right: 50px;
-    display: inline-block;   
+{   
+    padding-right: 100px;
+    display: inline-block;  
+     /* header 글자 사이 간격 */
 }
+
 a
 {
     text-decoration-line: none;
     color: #000000;
+    /* ul 안에 하이퍼링크 줄 제거 및 색깔 고정*/
 }
 body
-{   margin: 0px;
-    top:0px;    left: 0px;  width: 1920px;  height: 2160px;
+{   
+        
+    margin: 0px;
+    top:0px;    left: 0px;  width: 1180px;  height: 2160px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 1;
+    /* 몸통 부분 크기 및 배경 이미지 */
 }
-nav
-{
-padding-left:760px; padding-right: 761px;  width: 450px;
-top: 130px; left: 760px;    
-font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-300) var(--unnamed-font-size-48)/var(--unnamed-line-spacing-59) var(--unnamed-font-family-suite);
-letter-spacing: var(--unnamed-character-spacing-0);
-color: var(--unnamed-color-000000);
-text-align: left;
-font: normal normal 300 40px/59px SUITE;
-letter-spacing: 0px;
-color: #000000;
-opacity: 1;
-}
-section div:nth-child(1)
-{   border: 1px solid  black;
-    top: 260px; left: 0px;  width: 1920px;  height: 938px;
-    background: black;
+section
+{   position: absolute;  
+    top: 269px; left: 290px;  width: 1340px;  height: 965px;
+    background: var(--unnamed-color-000000) 0% 0% no-repeat padding-box;
+    background: #000000 0% 0% no-repeat padding-box;
     opacity: 1;
-}
-section div:nth-child(2)
-{
-    height: 912px;  width: 1920px;  top:0px;    left: 0px;
-    background-color: #F1F1F1;
-    border: 1px solid  black;
+    /* 첫번째 섹션 검정 부분 */
 }
 
-footer  div:nth-child(1)
-{
-top: 2020px;    left: 810px;    width:1920px;   height: 80px;
-border: 1px solid black;  opacity: 1;
-background:#f1f1f1 no-repeat padding-box;   background: var(--unnamed-color-f1f1f1) 0% 0% no-repeat padding-box;
-line-height: 80px;  text-align:center;
-}
-footer  div:nth-child(2)
+nav
 {   
-    top: 2100px;    left: 0px;  width: 1920px;  height: 60px;
-    border: 1px solid black;  opacity: 1;
+    position: absolute;
+    top:60px; height: 209px;   width: 1340px; left: 290px;
+    text-align: center;
+    line-height: 209px;
+    font-family: 'SUITE', sans-serif;
+    font-size: 48px;
+
+}
+/* 네비게이션 부분 공백 */
+footer  div:nth-child(1)
+{   position: absolute;
+    top: 2100px;    left: 290px;  width: 1340px;  height: 60px;
+    border: 0px solid;  opacity: 1;
     background: #F1F1F1 0% 0% no-repeat padding-box;
     line-height: 60px;
 }
-footer > ul
-{
-    padding-left: 328px;    padding-right: 328px;
+/*  아래 푸터 두번쨰 박스 */
+section > div
+{   position: absolute;
+    right: 131px;    top:327px; bottom: 326px;  left: 131px;   width: 1340px;  height: 312px;
+    text-align: left;
+    color: #FFFFFF;
+    font-family: 'SUITE', sans-serif;
+    font-size: 250px;
 }
-
+/* 중간 div 안에 글자 가온나들목 */
+.font2
+{
+    font-family: 'SUIT', sans-serif;
+    font-size: 21px;
+}
