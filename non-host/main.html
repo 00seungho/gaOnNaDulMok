@@ -71,34 +71,61 @@
     <div id="mapSection" style="float:left; width:100%;">
         <div id="map" style="float: left;"></div>
     </div>
-    <div class="layer" id="elevator">
-        
+    <div class="layer" id="subwayInformation" style="width: 100%;"> <!--지하철 레이어--> 
         <div id="searchSection"><!--검색 영역 전체크기-->
-            <div id="searchField" ><!--검색 영역-->
-                <h2 style="margin: 3% 3% 2% 3%;">엘리베이터 위치, 상태 조회</h2>
-
-                <!-- 검색어 입력창   -->
-                <form action="/" method="get">
-                    <input type="text" id="search" placeholder="역 이름을 입력하세요" autocomplete="off" name ="subway">
-                    <input id="searchButton" type="button" value="검색">
-                    <!-- 자동완성 단어 리스트 -->
-                        <div class="autocomplete" style="float: left; margin-left: 3%;"></div>
-
-                    <script src ="javaScript/subwayAutoSeach.js"></script><!--검색 영역 스크립트 추가-->
-                </form>
+            <div style="float: left; width: 100%;">
+                <h2 style="margin: 3% 3% 2% 3%;">지하철 내</h2>
             </div>
-            <div id="searchfind"></div>
-            <div id="autoWidth"></div>
+            <div style="float: left; width: 300px; margin: 10px 0 10px 15%;">
+                <div id='subwayButton'>
+                    <button type="button" id="elevatorBut">엘리베이터</button>
+                    <button type="button" id="liftBut">휠체어리프트</button>
+                </div>
+            </div>
+            <div id="elevator">
+                <div id="searchField"><!--검색 영역-->
+                    <!-- 검색어 입력창   -->
+                    <form action="/" method="get">
+                        <input type="text" id="search" placeholder="찾고 싶은 역 이름을 입력해주세요" autocomplete="off" name ="subway">
+                        <input id="searchButton" type="button" value="검색">
+                        <!-- 자동완성 단어 리스트 -->
+                            <div class="autocomplete" style="float: left; margin-left: 3%;"></div>
+
+                        <script src ="javaScript/subwayAutoSeach.js"></script><!--검색 영역 스크립트 추가-->
+                    </form>
+                </div>
+                <div id="searchfind"></div>
+                <div class="autoWidth"></div>
+            </div>
+            <div>
+
+            </div>
         </div>
     </div>
 
-    <div class="layer" id="findBus" style="width: 100%; float: left; display: none;">
-        <h2 style="margin: 3% 3% 2% 3%;">버스 정류장 현황</h2>
+    <div class="layer" id="findBus" style="width: 100%; float: left; display: none;"> <!--버스 레이어-->
+        <div id="searchSectionBus"><!--검색 영역 전체크기-->
+            <div id="searchBusField" ><!--검색 영역-->
+                <h2 style="margin: 3% 3% 2% 3%;">버스 정류장 현황</h2>
+
+                <!-- 검색어 입력창   -->
+                <form action="/" method="get">
+                    <input type="text" id="searchBus" placeholder="찾고 싶은 정류장 이름을 입력해주세요" autocomplete="off" name ="subway">
+                    <input id="searchBusButton" type="button" value="검색">
+                    <!-- 자동완성 단어 리스트 -->
+                        <div class="" style="float: left; margin-left: 3%;"></div>
+
+                    <script src =""></script><!--버스 검색 영역 스크립트 추가-->
+                </form>
+            </div>
+            <div id="searchfind"></div>
+            <div class="autoWidth"></div>
+        </div>
     </div>
 
-    <div class="layer" id="callTaxi" style="width: 100%; float: left; display: none;">
+    <div class="layer" id="callTaxi" style="width: 100%; float: left; display: none;"> <!--택시 레이어-->
         <div style="width: 80%; height: 10%; margin: 0 auto;">
-            <img src="imgs/app/sfmc.png" style="width: 80%; margin: 0 auto;">
+            <img src="imgs/app/sfmc.png" style="width: 100%; margin: 0 auto;">
         </div>
     </div>
 

@@ -16,7 +16,7 @@ $(function(){
         $('#texi img').css({"opacity":"50%"});
         $('#sideWalk img').css({"opacity":"50%"});
         
-        $('#elevator').css({"display":"block"});
+        $('#subwayInformation').css({"display":"block"});
         $('#findBus').css({"display":"none"});
         $('#callTaxi').css({"display":"none"});
         
@@ -38,7 +38,7 @@ $(function(){
         $('#texi img').css({"opacity":"50%"});
         $('#sideWalk img').css({"opacity":"50%"});
 
-        $('#elevator').css({"display":"none"});
+        $('#subwayInformation').css({"display":"none"});
         $('#findBus').css({"display":"block"});
         $('#callTaxi').css({"display":"none"});
         
@@ -60,7 +60,7 @@ $(function(){
         $('#bus img').css({"opacity":"50%"});
         $('#sideWalk img').css({"opacity":"50%"});
         
-        $('#elevator').css({"display":"none"});
+        $('#subwayInformation').css({"display":"none"});
         $('#findBus').css({"display":"none"});
         $('#callTaxi').css({"display":"block"});
 

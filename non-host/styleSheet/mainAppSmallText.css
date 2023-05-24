@@ -18,7 +18,10 @@ h3 {
     font-size: 20px;
 }
 #map {
+    position: relative;
     width: 100%;
+    left: 0;
+    right: 0;
     height: 400px;
     background-color: #EFEFEF;
 }
@@ -189,7 +192,7 @@ button > div {
     display: none;
 }
 
-#autoWidth {
+.autoWidth {
     float: left;
     width: 70%;
     height: 100px;
@@ -215,8 +218,6 @@ button > div {
     float: left;
     margin-top: 5%;
 }
-
-
 #search {
     width: 70%;
     height: 2.5rem;
@@ -260,3 +261,76 @@ mark {
 }
 
 /* bus */
+#searchSectionBus {
+    width: 100%;
+    float: left;
+    margin-top: 5%;
+}
+#searchBus {
+    width: 70%;
+    height: 2.5rem;
+    border-radius: 5px;
+    padding: 0 3%;
+    box-shadow: 0 0 5px #d0d0d0;
+    border: none;
+    background: #fff;
+    font-size: 1rem;
+    float: left;
+    margin: 0 3% 0 10px;
+    font-family: TAEBAEKmilkyway;
+    font-weight: 700;
+}
+#searchBusButton {
+    width: 15%;
+    font-family: TAEBAEKmilkyway;
+    height: 2.5rem;
+    background: #4169e1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    float: left;
+}
+#searchfind{
+    width: 100%;
+    float: left;
+}
+#searchFindAll{
+    margin-left: 3%; 
+    margin-top: 4%;
+}
+
+#subwayButton {
+    float: left; 
+    width: 300px; 
+    height: 30px; 
+    background-color: #EFEFEF; 
+    margin: 0 auto;
+    border: none; 
+    border-radius: 50px;
+}
+#elevatorBut {
+    position: relative; 
+    background-color: #4169e1;
+    color: rgb(255, 255, 255);
+    width: 150px; 
+    height: 24px; 
+    border: none; 
+    border-radius: 50px;
+    z-index: 30;
+    top: 3px;
+    left: 3px;
+    font-family: TAEBAEKmilkyway;
+    font-weight: 600;
+}
+#liftBut {
+    position: relative;
+    width: 150px;
+    height: 24px;
+    border: none;
+    border-radius: 50px;
+    bottom: 21px;
+    left: 147px;
+    font-family: TAEBAEKmilkyway;
+    font-weight: 600;
+}
