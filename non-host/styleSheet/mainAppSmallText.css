@@ -431,7 +431,7 @@ button > div {
 }
 /*자동검색기능 머시깽*/
 .autocomplete {
-    width: 100%;
+    width: 75%;
 }
 .autocomplete > div {
     background: #1a1a1a99;
