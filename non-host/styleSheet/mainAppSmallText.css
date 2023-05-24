@@ -10,6 +10,9 @@ h3 {
     font-family: TAEBAEKmilkyway;   
     font-size: 20px;
 }
+#mapSection{
+    padding-left: 5%;
+}
 
 #map {
     width: 394px;
