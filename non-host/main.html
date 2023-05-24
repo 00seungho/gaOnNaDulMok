@@ -46,11 +46,13 @@
 </head>
 <body>
     <div id="abody">
-        <header id="header">
-            <!--<img id="logo" src="imgs/app/gaon.png" style="width: 147pt; height: 32pt;">-->
-            <h1>가온나들목</h1>
-            <button id="side_bar" type="button"></button>
-        </header>
+        <div id="logoFixed">
+            <header id="header">
+                <!--<img id="logo" src="imgs/app/gaon.png" style="width: 147pt; height: 32pt;">-->
+                <h1>가온나들목</h1>
+                <button id="side_bar" type="button"></button>
+            </header>
+        </div>
         <header id="webMenu">
             <div>
                 <ul>
@@ -71,19 +73,21 @@
         <div id="map" style="float: left;"></div>
         <div id="searchSection"><!--검색 영역 전체크기-->
             <div id="searchField" ><!--검색 영역-->
-                <h2 style="margin: 0 0 5% 0;">엘리베이터 위치, 상태 조회</h2>
+                <h2 style="margin: 0 0 5% 0;"> &nbsp; &nbsp; 엘리베이터 위치, 상태 조회</h2>
 
                 <!-- 검색어 입력창   -->
                 <form action="/" method="get">
                     <input type="text" id="search" placeholder="역 이름을 입력하세요" autocomplete="off" name ="subway">
                     <input id="searchButton" type="submit" value="검색">
                     <!-- 자동완성 단어 리스트 -->
-                    <div id="autoWidth">
+                    
                         <div class="autocomplete" style="float: left;"></div>
-                    </div>
+                    
                     <script src ="javaScript/subwayAutoSeach.js"></script><!--검색 영역 스크립트 추가-->
                 </form>
             </div>
+            <div style="height: 200px; width: 100%;"></div>
+
         </div>
         <div id="sideMenu">
             <div id="sideMenuLogo">
