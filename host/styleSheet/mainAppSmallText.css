@@ -10,11 +10,14 @@ h3 {
     font-family: TAEBAEKmilkyway;   
     font-size: 20px;
 }
-
+#mapSection{
+    padding-left: 5%;
+}
 #map {
-    width: 394px;
+    margin-left: 5%;
+    width: 90%;
     height: 400px;
-    margin: 0 auto;
+    margin: 0;
     background-color: #EFEFEF;
 }
 
@@ -197,8 +200,7 @@ button > div {
 }
   
 #searchSection {
-    margin: 10% 10px 0 10px;
-    width: 394px;
+    width: 100%;
     float: left;
 }
 

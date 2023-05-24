@@ -68,9 +68,6 @@
   }
 
   /*유승호 수정*/
-  #searchfindall{
-    border: 5px solid blue;
-  }
   #map
   {   border: 1px solid  black;
       width: 1920px;  height: 400px;
@@ -88,16 +85,13 @@
   } 
   /*검색 창 css*/
   /* 현재 선택된 검색어 */
-  .autocomplete {
-    position: relative;
-    z-index: 50;
-  }
+
   .autocomplete > div.active {  
       background: #e0e5f6;
-      color: #000;
+      color: #000;  
     }
     
-    /* -------------------------- */
+    /* -------------------------- */                                                        
     
     .autocomplete > div {
       background: #f1f3f499;
