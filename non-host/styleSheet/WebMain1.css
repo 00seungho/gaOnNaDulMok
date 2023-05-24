@@ -1,23 +1,33 @@
 
-
+@font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.font1
+{
+    font-family: 'TAEBAEKmilkyway';
+    font-size: 31px;
+}
 header
-{   padding-left: 200px;
-    top: 0px;      width:1520px;   height: 60px;
-    border: 1px solid;  opacity: 1;
-    background:#f1f1f1 no-repeat padding-box;   background: var(--unnamed-color-f1f1f1) 0% 0% no-repeat padding-box;
+{   position: absolute;
+    left: 290px;    top: 0px;      width:1340px;   height: 60px;
+    border: 0px solid;
+    background-color: #F1F1F1;  
     text-align: left;   letter-spacing: 0px;
     /* 상단 가온 박스 */
     
 }
 ul
-{    color:#000000; padding-left: 330px;    padding-right: 330px;
+{    color:#000000; padding-left: 360px;   
     margin:auto;
     list-style: none;
     /* ul 태그 안 내용 한줄로 표기 */
 }
 li
 {   
-    padding-right: 80px;
+    padding-right: 100px;
     display: inline-block;  
      /* header 글자 사이 간격 */
 }
@@ -30,15 +40,16 @@ a
 }
 body
 {   
-    padding-left: 200px;    padding-right: 200px;
+        
     margin: 0px;
-    top:0px;    left: 0px;  width: 1720px;  height: 2160px;
+    top:0px;    left: 0px;  width: 1180px;  height: 2160px;
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 1;
     /* 몸통 부분 크기 및 배경 이미지 */
 }
 section
-{   top: 115px; left: 0px;  width: 1720px;  height: 965px;
+{   position: absolute;  
+    top: 115px; left: 290px;  width: 1340px;  height: 965px;
     background: var(--unnamed-color-000000) 0% 0% no-repeat padding-box;
     background: #000000 0% 0% no-repeat padding-box;
     opacity: 1;
@@ -46,32 +57,30 @@ section
 }
 
 nav
-{
-    height: 55px;   width: 1920px; 
+{   position: absolute;
+    top:60px; height: 55px;   width: 1340px; left: 290px;
 
 }
 /* 네비게이션 부분 공백 */
 footer  div:nth-child(1)
 {   position: absolute;
-top: 2020px;    left: 0x;    width:1720px;   height: 80px;
-border: 1px solid black;  opacity: 1;
-background:#f1f1f1 no-repeat padding-box;   background: var(--unnamed-color-f1f1f1) 0% 0% no-repeat padding-box;
-line-height: 80px;  text-align:center;
-}
-/* 아래 바텀 첫 번쨰 박스 */
-footer  div:nth-child(2)
-{   position: absolute;
-    top: 2100px;    left: 200px;  width: 1720px;  height: 60px;
-    border: 1px solid black;  opacity: 1;
+    top: 2100px;    left: 290px;  width: 1340px;  height: 60px;
+    border: 0px solid;  opacity: 1;
     background: #F1F1F1 0% 0% no-repeat padding-box;
     line-height: 60px;
 }
 /*  아래 푸터 두번쨰 박스 */
 section > div
 {   position: absolute;
-    right: 395px;    top:442px;  left: 464px;   width: 1350px;  height: 312px;
-    text-align: left;   font: normal normal normal 210px/312px SUITE;
-    letter-spacing: 0px;    color: #FFFFFF; opacity: 1;
-
+    right: 131px;    top:327px; bottom: 326px;  left: 131px;   width: 1340px;  height: 312px;
+    text-align: left;
+    color: #FFFFFF;
+    font-family: 'SUITE', sans-serif;
+    font-size: 250px;
 }
 /* 중간 div 안에 글자 가온나들목 */
+.font2
+{
+    font-family: 'SUIT', sans-serif;
+    font-size: 21px;
+}
