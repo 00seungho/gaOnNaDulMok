@@ -67,12 +67,11 @@
                 </ul>
             </div>
         </header>
-        
     </div>
-    <div id="">
-         <div id="mapSection" style="float:left; width:100%;">
-        <div id="map" style="float: left;"></div>
-    </div>
+    <div id="elevator">
+        <div id="mapSection" style="float:left; width:100%;">
+            <div id="map" style="float: left;"></div>
+        </div>
         <div id="searchSection"><!--검색 영역 전체크기-->
             <div id="searchField" ><!--검색 영역-->
                 <h2 style="margin: 3% 3% 2% 3%;">엘리베이터 위치, 상태 조회</h2>
@@ -80,35 +79,34 @@
                 <!-- 검색어 입력창   -->
                 <form action="/" method="get">
                     <input type="text" id="search" placeholder="역 이름을 입력하세요" autocomplete="off" name ="subway">
-                    <input id="searchButton" type="submit" value="검색">
+                    <input id="searchButton" type="button" value="검색">
                     <!-- 자동완성 단어 리스트 -->
-                    
-                        <div class="autocomplete" style="float: left;"></div>
-                    
+                        <div class="autocomplete" style="float: left; width: 60%; margin-left: 3%;"></div>
+
                     <script src ="javaScript/subwayAutoSeach.js"></script><!--검색 영역 스크립트 추가-->
                 </form>
             </div>
-            <div style="height: 200px; width: 100%;"></div>
-
+            <div id="searchfind"></div>
+            <div id="autoWidth"></div>
         </div>
-        <div id="sideMenu">
-            <div id="sideMenuLogo">
-                <h2>가온나들목</h2>
-            </div>
+    </div>
+    <div id="sideMenu">
+        <div id="sideMenuLogo">
+            <h2>가온나들목</h2>
+        </div>
+        <hr>
+        <h3 class="textRight" style="font-size: 9pt; color: lightgray; position: reltive;line-height: 40px;">Menu</h3>
+        <ul style="font-size: 11pt; margin: 0 0 20px 0;">
+            <li><img src="imgs/app/637209.png"><div>지하철 엘리베이터</div></li>
+            <li><img src="imgs/app/lfb.png"><div>저상버스</div></li>
+            <li><img src="imgs/app/5653257.png"><div>근처 화장실</div></li>
+        </ul>
+        <div id="bottom_button">
             <hr>
-            <h3 class="textRight" style="font-size: 9pt; color: lightgray; position: reltive;line-height: 40px;">Menu</h3>
-            <ul style="font-size: 11pt; margin: 0 0 20px 0;">
-                <li><img src="imgs/app/637209.png"><div>지하철 엘리베이터</div></li>
-                <li><img src="imgs/app/lfb.png"><div>저상버스</div></li>
-                <li><img src="imgs/app/5653257.png"><div>근처 화장실</div></li>
-            </ul>
-            <div id="bottom_button">
-                <hr>
-                <h3 class="textRight" style="font-size: 9pt; color: lightgray; position: relative;line-height: 40px;">Accessibility</h3>
-                <div id="sideMenuButton">
-                    <button id="zoomOut" type="button"><h3 style="font-size: 11pt;">축소</h3></button>
-                    <button id="zoomIn" type="button"><h3 style="font-size: 11pt;">확대</h3></button>
-                </div>
+            <h3 class="textRight" style="font-size: 9pt; color: lightgray; position: relative;line-height: 40px;">Accessibility</h3>
+            <div id="sideMenuButton">
+                <button id="zoomOut" type="button"><h3 style="font-size: 11pt;">축소</h3></button>
+                <button id="zoomIn" type="button"><h3 style="font-size: 11pt;">확대</h3></button>
             </div>
         </div>
     </div>
