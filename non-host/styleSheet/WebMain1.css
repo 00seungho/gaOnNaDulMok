@@ -50,6 +50,7 @@ nav
     height: 55px;   width: 1920px; 
 
 }
+/* 네비게이션 부분 공백 */
 footer  div:nth-child(1)
 {   position: absolute;
 top: 2020px;    left: 0x;    width:1720px;   height: 80px;
@@ -57,6 +58,7 @@ border: 1px solid black;  opacity: 1;
 background:#f1f1f1 no-repeat padding-box;   background: var(--unnamed-color-f1f1f1) 0% 0% no-repeat padding-box;
 line-height: 80px;  text-align:center;
 }
+/* 아래 바텀 첫 번쨰 박스 */
 footer  div:nth-child(2)
 {   position: absolute;
     top: 2100px;    left: 200px;  width: 1720px;  height: 60px;
@@ -64,10 +66,12 @@ footer  div:nth-child(2)
     background: #F1F1F1 0% 0% no-repeat padding-box;
     line-height: 60px;
 }
+/*  아래 푸터 두번쨰 박스 */
 section > div
 {   position: absolute;
-    right: 395px;    top:442px;  left: 464px;   width: 1300px;  height: 312px;
-    text-align: left;   font: normal normal normal 250px/312px SUITE;
+    right: 395px;    top:442px;  left: 464px;   width: 1350px;  height: 312px;
+    text-align: left;   font: normal normal normal 210px/312px SUITE;
     letter-spacing: 0px;    color: #FFFFFF; opacity: 1;
 
 }
+/* 중간 div 안에 글자 가온나들목 */
