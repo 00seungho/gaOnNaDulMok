@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/a/styleSheet/WebMain6.css">
-</head>
+    <script src="/a/javaScript/apikey.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js"></script><!--엑셀 불러오는 함수-->
+    
+    
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5357b61c3cbe5cc7daabd29772dc3e2b"></script>
+    <script src = "/a/javaScript/totliet.js"></script>
+
+    </head>
 <body>
     <header>
         <div>
@@ -26,7 +34,40 @@
         </div>
     </nav>
     <section>
-        <div>
+        <div id="map">
+
+        </div>
+        <div id="searchSection">
+            <div id="searchField">
+                <h2 style="font-family: TAEBAEKmilkyway;">엘리베이터 위치, 상태 조회</h2>
+                <h4 style="font-family: TAEBAEKmilkyway;">역 명을 입력하세요</h4>
+
+                <!-- 검색어 입력창   -->
+                <form action="" method="get">
+
+                <input type="text" 
+                    id="search"
+                  placeholder="역 이름을 입력하세요"
+                  autocomplete="off"
+                  name ="subway"
+                >
+                <input id="searchButton" type="button" value="검색">
+                <div id="gongBAck"></div>
+                <!-- 자동완성 단어 리스트 -->
+                <div id="hi"></div>
+                <div id="searchfind">
+
+                </form>
+                <div class="autocomplete" style="float: left; width:300px;">
+                
+
+                </div>
+            
+            </div>
+
+        </div>
+            <script src ="/a/javaScript/subwayAutoSeach.js"></script>
+
 
         </div>
     </section>
