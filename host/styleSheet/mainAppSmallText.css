@@ -1,25 +1,24 @@
 #header {
-    width: 330px;
+    width: 100%;
     height: 40px;
-    margin: 60px 0 10% 10%;
+    margin: 60px 0 5% 0;
     float: left;
 }
-    
-#header > h1 {
-    margin: 0 20% 0 20%;
-    line-height: 40px;
-    font-family: TAEBAEKmilkyway;
-    font-size: 33px;
-    float: left;
+
+
+h3 {
+    font-family: TAEBAEKmilkyway;   
+    font-size: 20px;
 }
-    
-#map {
-    width: 394px;
+
+#map{
+    width: 100%;
     height: 400px;
-    margin: 10% 10px 0 10px;
+    margin: 0;
     background-color: #EFEFEF;
-}   
-    
+}
+
+
 #side_bar {
     float: left;
     border: none;
@@ -28,7 +27,8 @@
     background-color: #4169e1;
     margin: 5px 0;
 }
-    
+
+
 #sideMenu {
     display: none;
     position: fixed;
@@ -86,6 +86,12 @@
     margin: 0 10% 0 0;
     font-size: 14pt;
 }
+#bottom_button {
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    right: 0;
+}
 #sideMenuButton {
     width: 80%;
     height: 35px;
@@ -107,7 +113,7 @@
     font-size: 12pt;
 }
 #zoomIn {
-    width: 50%;
+    width: 50%;     
     height: 29px;
     background-color: #EFEFEF;
     border: none;
@@ -117,7 +123,8 @@
     bottom: 26px;
     z-index: 101;
 }
-    
+
+
 .bottom_bar {
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px #dddddd;
@@ -126,11 +133,10 @@
     left: 0;
     right: 0;
     height: 90px;
-    float: left;
     z-index: 50;
 }
 .bottom_bar > button {
-    margin: 23px 0 0 4.65%;
+    margin: 23px 0 0 9.5%;
     border: none;
     display: block;
     float: left;
@@ -153,7 +159,7 @@ button > div {
 .hi1 {
     display: none;
 }
-    
+
 #wall { 
     display: none;
     position: fixed;
@@ -162,50 +168,78 @@ button > div {
     background-color: rgba(62, 58, 99, 0.201);
     z-index: 90;
 }
-    
+
+
 #webMenu { /* 여기는 웹페이지 메뉴 안보이게 하는곳 */
     display: none;
 }
 
+#autoWidth {
+    float: left;
+    width: 70%;
+    height: 100px;
+    margin: 3px 0 0 5%;
+    overflow-y: scroll;
+}
 /*자동검색기능 머시깽*/
+.autocomplete {
+    width: 100%;
+}
 .autocomplete > div {
-    background: #f1f3f499;
+    background: #1a1a1a99;
     padding: .2rem .6rem;
-    position:relative;
     z-index: 100;
     opacity: 1;
-  }
-  #searchField{
-    height: 500px;
-  }
-  #searchSection{
-    margin: 10% 10px 0 10px;
-    width:394px;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+}
+  
+#searchSection {
+    width: 100%;
     float: left;
-    }
+    margin-top: 5%;
+}
 
-  #search{
-    width: 74%;
-    height: 3rem;
+
+#search {
+    width: 70%;
+    height: 2.5rem;
     border-radius: 5px;
     padding: 0 3%;
-    border: 1px solid #e0e5f6;
+    box-shadow: 0 0 5px #d0d0d0;
+    border: none;
     background: #fff;
     font-size: 1rem;
     float: left;
-    margin-right: 30px;
-  }
-  #searchButton{
-    width: 10%;
-    background: #fff;
-    height: 3rem;
-        float: left;
-  }
-  input::placeholder {
-    
+    margin: 0 3% 0 10px;
+    font-family: TAEBAEKmilkyway;
+    font-weight: 700;
+}
+#searchButton {
+    width: 15%;
+    font-family: TAEBAEKmilkyway;
+    height: 2.5rem;
+    background: #4169e1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    float: left;
+}
+input::placeholder {
     font-size: 1rem;
-  }
+}
   
-  mark {
-    background: #adadad90;
-  }
+mark {
+    background: #fffc99d6;
+}
+#searchfind{
+    width: 100%;
+    float: left;
+
+}
+#searchFindAll{
+    margin-left: 3%; 
+    margin-top: 4%;
+}

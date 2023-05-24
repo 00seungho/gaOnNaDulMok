@@ -1,7 +1,8 @@
 
 var url = "http://openapi.seoul.go.kr:8088/74776a5341746d6439394a57735854/json/subwayStationMaster/1/999/"
 const dataList =[];
-window.onload = function(){
+document.getElementById("search").addEventListener('click',autoseach());
+function autoseach(){
 fetch(url)
   .then(response => response.json())
   .then(data => {
