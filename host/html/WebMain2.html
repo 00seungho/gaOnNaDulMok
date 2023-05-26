@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="/a/styleSheet/WebMain2.css">
+
+    <style>
+        @font-face {
+            font-family: 'TAEBAEKmilkyway';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+    <script src ="/a/javaScript/subwayFind.js"></script>
+
+</head>
+<body>
+    <header>
+        <div>
+            <ul>
+            <li><h3><a href="/a/html/WebMain1.html">가온나들목</a></h3></li>
+            <li><a href="/a/html/WebMain2.html">엘리베이터</a></li>
+            <li><a href="/a/html/WebMain6.html">화장실</a></li>
+            <li><a href="/a/html/WebMain3.html">휠체어 리프트</a></li>
+            <li><a href="/a/html/WebMain4.html">저상버스</a></li>
+            <li><a href="/a/html/WebMain5.html">이동지원차량</a></li>
+            </ul>
+        </div>
+    </header>
+    <nav>
+        <div>
+            <p>역 내 엘리베이터 찾기</p>
+        </div>
+    </nav>
+    <div id="map">
+
+    </div> 
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5357b61c3cbe5cc7daabd29772dc3e2b"></script>
+    <script src ="/a/javaScript/jidosub.js"></script>
+
+
+        <div id="searchSection">
+            <div id="searchField">
+                <h2 style="font-family: TAEBAEKmilkyway;">엘리베이터 위치, 상태 조회</h2>
+                <h4 style="font-family: TAEBAEKmilkyway;">역 명을 입력하세요</h4>
+
+                <!-- 검색어 입력창   -->
+                <form action="" method="get">
+
+                <input type="text" 
+                    id="
+                    "
+                  placeholder="역 이름을 입력하세요"
+                  autocomplete="off"
+                  name ="subway"
+                >
+                <input id="searchButton" type="button" value="검색">
+                <div id="gongBAck"></div>
+                <!-- 자동완성 단어 리스트 -->
+                <div id="hi"></div>
+                <div id="searchfind">
+
+                
+                <div class="autocomplete" style="float: left; width:300px;">
+
+                </div>
+            </div>
+        </div>
+            <script src ="/a/javaScript/subwayAutoSeach.js"></script>
+                </form>
+
+
+        </div>
+        <footer>
+        <div>살려주시라요</div> 
+        <div> 
+            <ul>
+            <li>회사명 : 하이파이브</li> 
+            <li>대표: 장호석</li>    
+            <li>주소: 서울특별시 용산구 보광로 73 한국폴리텍 정수캠퍼스</li> 
+            <li>전화번호: 02-1234-5678</li>  
+            <li>FAX:02-1357-2468</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

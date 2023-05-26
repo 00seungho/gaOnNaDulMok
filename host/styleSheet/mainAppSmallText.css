@@ -344,3 +344,15 @@ mark {
 #wlSelectorFieldApp{
     float: left;
 }
+#map2{
+    position: relative;
+    width: 99%;
+    left: 0;
+    right: 0;
+    height: 400px;
+    background-color: #EFEFEF;
+    background-image: url("../imgs/web/loadingfailed.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: solid 1px black;
+}
