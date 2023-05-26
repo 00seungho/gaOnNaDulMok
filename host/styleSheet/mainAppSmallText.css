@@ -40,8 +40,7 @@ h3 {
     margin: 5px 0;
 }
 
-.layer {
-}
+
 
 
 #sideMenu {
@@ -337,4 +336,11 @@ mark {
     left: 147px;
     font-family: TAEBAEKmilkyway;
     font-weight: 600;
+}
+
+#evSelectorFieldApp{
+    float: left;
+}
+#wlSelectorFieldApp{
+    float: left;
 }

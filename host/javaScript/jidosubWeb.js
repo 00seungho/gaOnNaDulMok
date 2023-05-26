@@ -6,7 +6,7 @@ var options = {
     maximumAge: 0
 };
 
-window.onload=function(){
+   window.onload = function(){
     function onGeoOkay(position) {// 정보를 받아올 수 있을때, position 을 매개변수, position은 객체형식의 현재위치를 가지고있음
         var mapContainer = document.getElementById('mapWeb') // 지도를 표시할 div 
         mapOption = {
@@ -14,28 +14,37 @@ window.onload=function(){
             level: 3 // 지도의 확대 레벨
         };
 
+        var mapContainer2 = document.getElementById('map') // 지도를 표시할 div 
+        mapOption2 = {
+            center: new kakao.maps.LatLng(position.coords.latitude, position.coords.longitude), // 지도의 중심좌표에 현재위치를 입력
+            level: 3 // 지도의 확대 레벨
+        };
 
+        
 
-
-        var imageSize = new kakao.maps.Size(24, 35); //마커의 크기설정
         var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-        // 마커를 생성합니다
+        var map2 = new kakao.maps.Map(mapContainer2, mapOption2); // 지도를 생성합니다
+
         var positions = [// 마커객체
             {
-                content: '<div>현재위치</div>',// 표시명 
-                latlng: new kakao.maps.LatLng(position.coords.latitude, position.coords.longitude)// 마 커위치
+                latlng: new kakao.maps.LatLng(position.coords.latitude, position.coords.longitude)// 마커위치
             },
         ]
-        // 마커를 생성합니다
+
+     
         var marker = new kakao.maps.Marker({
             map: map, // 마커를 표시할 지도
             position: positions[0].latlng // 마커의 위치
         });
-        // 마커에 표시할 인포윈도우를 생성합니다 
-        var infowindow = new kakao.maps.InfoWindow({
-            content: positions[0].content // 인포윈도우에 표시할 내용
+
+        var marker2 = new kakao.maps.Marker({
+            map: map2, // 마커를 표시할 지도
+            position: positions[0].latlng // 마커의 위치
         });
-        infowindow.open(map, marker);//마커 정보 지도위에 표시
+
+        marker.setMap(map);
+        marker2.setMap(map2);
+
 
         document.getElementById('searchButton').addEventListener('click', enter)// 검색버튼 클릭 시, 검색 함수실행
         document.getElementById('search').addEventListener('keyup', function (e) {// 키보드 엔터누를 시 검색 함수 실행
@@ -44,8 +53,16 @@ window.onload=function(){
             }
         })
 
+        document.getElementById('searchButtonWeb').addEventListener('click', enter)// 검색버튼 클릭 시, 검색 함수실행
+        document.getElementById('searchWeb').addEventListener('keyup', function (e) {// 키보드 엔터누를 시 검색 함수 실행
+            if (e.key === 'Enter') {
+                enter();
+            }
+        })
+
 
         function enter() {//검색함수
+
             fetch("http://openapi.seoul.go.kr:8088/74776a5341746d6439394a57735854/json/subwayStationMaster/1/999")//자동완성 데이터
                 .then(response => response.json())
                 .then(data => {
@@ -60,28 +77,13 @@ window.onload=function(){
                         }
                     }
 
-                    positions[1] = { // 마커의 인포윈도우
-                        content: '<div">' + document.getElementById('search').value + '</div>',
-                        latlng: new kakao.maps.LatLng(temp[0].CRDNT_Y, temp[0].CRDNT_X)
-                    }
-
-                    // 마커를 생성합니다
 
 
-                    // 마커에 표시할 인포윈도우를 생성합니다 
-                    var infowindow = new kakao.maps.InfoWindow({
-                        content: positions[1].content // 인포윈도우에 표시할 내용
-                    });
-                    // 이동할 위도 경도 위치를 생성합니다 
-                    var moveLatLon = new kakao.maps.LatLng(temp[0].CRDNT_Y, temp[0].CRDNT_X);
-                    marker.setPosition(positions[1].latlng);
-                    // 지도 중심을 부드럽게 이동시킵니다
-                    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
-                    map.panTo(moveLatLon);
                     var trainCode = [];
                     for (var i = 0; i < Object.keys(temp).length; i++) {
                         trainCode.push(temp[i].STATN_ID);
                     }
+
                     //
                     var url = "http://openapi.seoul.go.kr:8088/74776a5341746d6439394a57735854/json/SeoulMetroFaciInfo/1/2/"
                     fetch(url)
@@ -91,12 +93,22 @@ window.onload=function(){
                             const countSeoulMetroFaciInfo = data.SeoulMetroFaciInfo.list_total_count;
                             startidx = 1;
                             endidx = startidx + 998;
-                            if ((document.getElementById('searchFindAllSubWebEv') != null)) {
-                                document.getElementById('searchFindAllSubWebEv').remove();
+                            if ((document.getElementById('searchFindAllSubWebEvWeb') != null)) {
+                                document.getElementById('searchFindAllSubWebEvWeb').remove();
                             }
-                            if ((document.getElementById('searchFindAllSubWebWl') != null)) {
-                                document.getElementById('searchFindAllSubWebWl').remove();
+
+                            if ((document.getElementById('searchFindAllSubWebWlWeb') != null)) {
+                                document.getElementById('searchFindAllSubWebWlWeb').remove();
                             }
+
+                            if ((document.getElementById('searchFindAllSubWebEvApp') != null)) {
+                                document.getElementById('searchFindAllSubWebEvApp').remove();
+                            }
+
+                            if ((document.getElementById('searchFindAllSubWebWlApp') != null)) {
+                                document.getElementById('searchFindAllSubWebWlApp').remove();
+                            }
+
 
                             while (true) {
                                 if (endidx > countSeoulMetroFaciInfo + 998)
@@ -111,6 +123,7 @@ window.onload=function(){
                         })
                         .catch(error => {
                             console.error(error);
+                            
                         });
 
                 })
@@ -214,11 +227,20 @@ window.onload=function(){
                             const countSeoulMetroFaciInfo = data.SeoulMetroFaciInfo.list_total_count;
                             startidx = 1;
                             endidx = startidx + 998;
-                            if ((document.getElementById('searchFindAllSubWebEv') != null)) {
-                                document.getElementById('searchFindAllSubWebEv').remove();
+                            if ((document.getElementById('searchFindAllSubWebEvWeb') != null)) {
+                                document.getElementById('searchFindAllSubWebEvWeb').remove();
                             }
-                            if ((document.getElementById('searchFindAllSubWebWl') != null)) {
-                                document.getElementById('searchFindAllSubWebWl').remove();
+
+                            if ((document.getElementById('searchFindAllSubWebWlWeb') != null)) {
+                                document.getElementById('searchFindAllSubWebWlWeb').remove();
+                            }
+
+                            if ((document.getElementById('searchFindAllSubWebEvApp') != null)) {
+                                document.getElementById('searchFindAllSubWebEvApp').remove();
+                            }
+
+                            if ((document.getElementById('searchFindAllSubWebWlApp') != null)) {
+                                document.getElementById('searchFindAllSubWebWlApp').remove();
                             }
 
                             while (true) {
@@ -259,30 +281,45 @@ window.onload=function(){
             .then(response => response.json())
             .then(data => {
                 var searchfind = document.getElementById("searchSectionWeb");
-                document.getElementById("evSelectorFieldWeb").innerHTML += "<div id ='searchFindAllSubWebEv'></div>";
-                document.getElementById("wlSelectorFieldWeb").innerHTML += "<div id ='searchFindAllSubWebWl'></div>";
+                document.getElementById("evSelectorFieldWeb").innerHTML += "<div id ='searchFindAllSubWebEvWeb'></div>";
+                document.getElementById("wlSelectorFieldWeb").innerHTML += "<div id ='searchFindAllSubWebWlWeb'></div>";
+                document.getElementById("evSelectorFieldApp").innerHTML += "<div id ='searchFindAllSubWebEvApp'></div>";
+                document.getElementById("wlSelectorFieldApp").innerHTML += "<div id ='searchFindAllSubWebWlApp'></div>";
 
-                var searchFindAllEv = document.getElementById("searchFindAllSubWebEv")
-                var searchFindAllWl = document.getElementById("searchFindAllSubWebWl")
+                var searchFindAllEvWeb = document.getElementById("searchFindAllSubWebEvWeb")
+                var searchFindAllWlWeb = document.getElementById("searchFindAllSubWebWlWeb")
+                var searchFindAllEvApp = document.getElementById("searchFindAllSubWebEvApp")
+                var searchFindAllWlApp = document.getElementById("searchFindAllSubWebWlApp")
 
                 for (var i = 0; i < trainCode.length; i++) {
                     for (var j = 0; j < data.SeoulMetroFaciInfo.row.length; j++) {
                         if (trainCode[i] == data.SeoulMetroFaciInfo.row[j].STATION_ID && (data.SeoulMetroFaciInfo.row[j].GUBUN == "EV" )) {
-                            searchFindAllEv.innerHTML += "<h3> 역명 : " + data.SeoulMetroFaciInfo.row[j].STATION_NM + "</h3>";
-                            searchFindAllEv.innerHTML += "<h4> 운행구간 : " + data.SeoulMetroFaciInfo.row[j].STUP_LCTN + "</h4>";
-                            searchFindAllEv.innerHTML += "<h4> 위치 : " + data.SeoulMetroFaciInfo.row[j].LOCATION + "</h4>";
-                            searchFindAllEv.innerHTML += "<h4> 현재 상태 : " + data.SeoulMetroFaciInfo.row[j].USE_YN + "</h4>";
-                            searchFindAllEv.innerHTML += "</br>";
+                            searchFindAllEvWeb.innerHTML += "<h3> 역명 : " + data.SeoulMetroFaciInfo.row[j].STATION_NM + "</h3>";
+                            searchFindAllEvWeb.innerHTML += "<h4> 운행구간 : " + data.SeoulMetroFaciInfo.row[j].STUP_LCTN + "</h4>";
+                            searchFindAllEvWeb.innerHTML += "<h4> 위치 : " + data.SeoulMetroFaciInfo.row[j].LOCATION + "</h4>";
+                            searchFindAllEvWeb.innerHTML += "<h4> 현재 상태 : " + data.SeoulMetroFaciInfo.row[j].USE_YN + "</h4>";
+                            searchFindAllEvWeb.innerHTML += "</br>";
+                            searchFindAllEvApp.innerHTML += "<h3> 역명 : " + data.SeoulMetroFaciInfo.row[j].STATION_NM + "</h3>";
+                            searchFindAllEvApp.innerHTML += "<h4> 운행구간 : " + data.SeoulMetroFaciInfo.row[j].STUP_LCTN + "</h4>";
+                            searchFindAllEvApp.innerHTML += "<h4> 위치 : " + data.SeoulMetroFaciInfo.row[j].LOCATION + "</h4>";
+                            searchFindAllEvApp.innerHTML += "<h4> 현재 상태 : " + data.SeoulMetroFaciInfo.row[j].USE_YN + "</h4>";
+                            searchFindAllEvApp.innerHTML += "</br>";
                         }
                         else if (trainCode[i] == data.SeoulMetroFaciInfo.row[j].STATION_ID && (data.SeoulMetroFaciInfo.row[j].GUBUN == "WL" )){
-                            searchFindAllWl.innerHTML += "<h3> 역명 : " + data.SeoulMetroFaciInfo.row[j].STATION_NM + "</h3>";
-                            searchFindAllWl.innerHTML += "<h4> 운행구간 : " + data.SeoulMetroFaciInfo.row[j].STUP_LCTN + "</h4>";
-                            searchFindAllWl.innerHTML += "<h4> 위치 : " + data.SeoulMetroFaciInfo.row[j].LOCATION + "</h4>";
-                            searchFindAllWl.innerHTML += "<h4> 현재 상태 : " + data.SeoulMetroFaciInfo.row[j].USE_YN + "</h4>";
-                            searchFindAllWl.innerHTML += "</br>";
+                            searchFindAllWlWeb.innerHTML += "<h3> 역명 : " + data.SeoulMetroFaciInfo.row[j].STATION_NM + "</h3>";
+                            searchFindAllWlWeb.innerHTML += "<h4> 운행구간 : " + data.SeoulMetroFaciInfo.row[j].STUP_LCTN + "</h4>";
+                            searchFindAllWlWeb.innerHTML +=  "<h4> 위치 : " + data.SeoulMetroFaciInfo.row[j].LOCATION + "</h4>";
+                            searchFindAllWlWeb.innerHTML += "<h4> 현재 상태 : " + data.SeoulMetroFaciInfo.row[j].USE_YN + "</h4>";
+                            searchFindAllWlWeb.innerHTML += "</br>";
+                            searchFindAllWlApp.innerHTML += "<h3> 역명 : " + data.SeoulMetroFaciInfo.row[j].STATION_NM + "</h3>";
+                            searchFindAllWlApp.innerHTML += "<h4> 운행구간 : " + data.SeoulMetroFaciInfo.row[j].STUP_LCTN + "</h4>";
+                            searchFindAllWlApp.innerHTML += "<h4> 위치 : " + data.SeoulMetroFaciInfo.row[j].LOCATION + "</h4>";
+                            searchFindAllWlApp.innerHTML += "<h4> 현재 상태 : " + data.SeoulMetroFaciInfo.row[j].USE_YN + "</h4>";
+                            searchFindAllWlApp.innerHTML += "</br>";
                         }
                     }
                 }
+
                 document.getElementById("gongBAck").style.display ="none"
 
             })
@@ -293,15 +330,21 @@ window.onload=function(){
 
     }
 
-
 }
+
 
 function hideEv(){
     document.getElementById("evSelectorFieldWeb").style.display = "none"
     document.getElementById("wlSelectorFieldWeb").style.display = ""
+    document.getElementById("evSelectorFieldApp").style.display = "none"
+    document.getElementById("wlSelectorFieldApp").style.display = ""
+
 }
 
 function hideWl(){
     document.getElementById("evSelectorFieldWeb").style.display = ""
     document.getElementById("wlSelectorFieldWeb").style.display = "none"
+    document.getElementById("evSelectorFieldApp").style.display = ""
+    document.getElementById("wlSelectorFieldApp").style.display = "none"
+
 }
