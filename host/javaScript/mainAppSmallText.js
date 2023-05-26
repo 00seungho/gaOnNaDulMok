@@ -15,6 +15,12 @@ $(function(){
         $('#bus img').css({"opacity":"50%"});
         $('#texi img').css({"opacity":"50%"});
         $('#sideWalk img').css({"opacity":"50%"});
+        
+        $('#subwayInformation').css({"display":"block"});
+        $('#findBus').css({"display":"none"});
+        $('#callTaxi').css({"display":"none"});
+        
+        $('#map').css({"display":"block"});
     });
 
     $('#bus').on("click", function() {
@@ -31,6 +37,12 @@ $(function(){
         $('#subway img').css({"opacity":"50%"});
         $('#texi img').css({"opacity":"50%"});
         $('#sideWalk img').css({"opacity":"50%"});
+
+        $('#subwayInformation').css({"display":"none"});
+        $('#findBus').css({"display":"block"});
+        $('#callTaxi').css({"display":"none"});
+        
+        $('#map').css({"display":"block"});
     });
 
     $('#texi').on("click", function() {
@@ -47,22 +59,12 @@ $(function(){
         $('#subway img').css({"opacity":"50%"});
         $('#bus img').css({"opacity":"50%"});
         $('#sideWalk img').css({"opacity":"50%"});
-    });
-
-    $('#sideWalk').on("click", function() {
-        $('.hi4').css({"display":"none"});
-
-        $('#sideWalk').css({"backgroundColor":"#4169e1"});
-        $('#subway').css({"backgroundColor":"#f5f5f5"});
-        $('#bus').css({"backgroundColor":"#f5f5f5"});
-        $('#texi').css({"backgroundColor":"#f5f5f5"});
-
-        $('#sideWalk div').css({"display":"block"});
         
-        $('#sideWalk img').css({"opacity":"100%"});
-        $('#subway img').css({"opacity":"50%"});
-        $('#bus img').css({"opacity":"50%"});
-        $('#texi img').css({"opacity":"50%"});
+        $('#subwayInformation').css({"display":"none"});
+        $('#findBus').css({"display":"none"});
+        $('#callTaxi').css({"display":"block"});
+
+        $('#map').css({"display":"none"});
     });
 
     // 확대 축소 버튼 클릭시 이벤트
@@ -102,4 +104,6 @@ $(function(){
         $('#sideMenu').css({"display":"none"});
         $(this).css({"display":"none"});
     });
+
+    
 });

@@ -6,10 +6,9 @@ var options = {
     maximumAge: 0
 };
 
-window.onload = function () {
+window.onload=function(){
     function onGeoOkay(position) {// 정보를 받아올 수 있을때, position 을 매개변수, position은 객체형식의 현재위치를 가지고있음
         var mapContainer = document.getElementById('map') // 지도를 표시할 div 
-
         mapOption = {
             center: new kakao.maps.LatLng(position.coords.latitude, position.coords.longitude), // 지도의 중심좌표에 현재위치를 입력
             level: 3 // 지도의 확대 레벨
@@ -92,8 +91,8 @@ window.onload = function () {
                             const countSeoulMetroFaciInfo = data.SeoulMetroFaciInfo.list_total_count;
                             startidx = 1;
                             endidx = startidx + 998;
-                            if ((document.getElementById('searchFindAll') != null)) {
-                                document.getElementById('searchFindAll').remove();
+                            if ((document.getElementById('searchFindAllSub') != null)) {
+                                document.getElementById('searchFindAllSub').remove();
                             }
 
                             while (true) {
@@ -253,14 +252,13 @@ window.onload = function () {
         fetch(url)
             .then(response => response.json())
             .then(data => {
-                var searchfind = document.getElementById("searchfind");
-                searchfind.innerHTML += "<div id ='searchFindAll'></div>";
-                var searchFindAll = document.getElementById("searchFindAll")
+                var searchfind = document.getElementById("searchfindSub");
+                searchfind.innerHTML += "<div id ='searchFindAllSub'></div>";
+                var searchFindAll = document.getElementById("searchFindAllSub")
                 for (var i = 0; i < trainCode.length; i++) {
                     for (var j = 0; j < data.SeoulMetroFaciInfo.row.length; j++) {
-                        if (trainCode[i] == data.SeoulMetroFaciInfo.row[j].STATION_ID && (data.SeoulMetroFaciInfo.row[j].GUBUN == "EV" || data.SeoulMetroFaciInfo.row[j].GUBUN == "WL")) {
+                        if (trainCode[i] == data.SeoulMetroFaciInfo.row[j].STATION_ID && (data.SeoulMetroFaciInfo.row[j].GUBUN == "EV" )) {
                             searchFindAll.innerHTML += "<h3> 역명 : " + data.SeoulMetroFaciInfo.row[j].STATION_NM + "</h3>";
-                            searchFindAll.innerHTML += "<h4> 승강기 구분 : " + (data.SeoulMetroFaciInfo.row[j].GUBUN == "EV" ? "엘리베이터" : "휠체어리프트") + "</h4>";
                             searchFindAll.innerHTML += "<h4> 운행구간 : " + data.SeoulMetroFaciInfo.row[j].STUP_LCTN + "</h4>";
                             searchFindAll.innerHTML += "<h4> 위치 : " + data.SeoulMetroFaciInfo.row[j].LOCATION + "</h4>";
                             searchFindAll.innerHTML += "<h4> 현재 상태 : " + data.SeoulMetroFaciInfo.row[j].USE_YN + "</h4>";

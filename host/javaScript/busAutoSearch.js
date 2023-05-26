@@ -20,7 +20,7 @@ fetch(url)
     uniqueDataList.forEach(item => dataList.push(item))
 
          const $search = document.querySelector("#search");//$search 변수에 id search 를 담겠다. 
-         const $autoComplete = document.querySelector(".autocompleteSub");
+         const $autoComplete = document.querySelector(".autocomplete");
          
          let nowIndex = 0;
          let matchDataList = [];
@@ -73,7 +73,7 @@ fetch(url)
          });
          
          function updateHighlightedItem() {
-           const items = $autoComplete.querySelectorAll(".autocomplete-itemSub");
+           const items = $autoComplete.querySelectorAll(".autocomplete-item");
            items.forEach((item, index) => {
              item.classList.toggle("active", index === nowIndex);
            });
@@ -97,7 +97,7 @@ fetch(url)
            $autoComplete.innerHTML = data
              .map(
                (label) => `
-               <div class='autocomplete-itemSub'>
+               <div class='autocomplete-item'>
                  ${label.replace(regex, "<mark>$1</mark>")}
                </div>
              `
@@ -107,7 +107,7 @@ fetch(url)
            $autoComplete.classList.toggle("active", data.length > 0);
          
            // 호버 효과 적용
-           const items = $autoComplete.querySelectorAll(".autocomplete-itemSub");
+           const items = $autoComplete.querySelectorAll(".autocomplete-item");
            items.forEach((item, index) => {
              item.addEventListener("mouseenter", () => {
                nowIndex = index;
