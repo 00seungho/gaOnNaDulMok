@@ -19,9 +19,18 @@
             padding: 0;
             font-family: TAEBAEKmilkyway;
         }
+        #abody {
+            width: 100%;
+            margin-bottom: 15%;
+        }
         h1 {
             font-size: 33px;
             line-height: 40px;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 15pt;
+            font-weight: 700; 
         }
     </style>
 
@@ -35,8 +44,21 @@
             </header>
         </div>
     </div>
-    <div id="mapSection" style="float:left; width:100%;">
-        <div id="map" style="float: left; background-color: #EFEFEF;"></div>
+    <div>
+        <h2 style="text-align: center;">API 출처 및 저작권 표기</h2>
+        <h2>서울 열린데이터 광장</h2>
+        <h3>서울 교통공사 교통약자 이용시설(승강기) 가동현황<br>서울시 역사마스터 정보</h3>
+        <h2>서울시 교통정보 시스템 (TOPIS)</h2>
+        <h3>서울시 버스운행정보 공유서비스</h3>
+        <h2>국토교통부</h2>
+        <h3>역사별 장애인 화장실 위치</h3>
     </div>
+    <bottom class="bottom_bar">
+        <div id="bottom_bars">
+            <button id="subway" class="bottom_bar_button"><img src="imgs/app/50724.png" style="width: 24px; height:24px; float: left; margin: 10px 5px; opacity: 50%;"><div class="hi2 hi3" style="font-size: 17px; font-family: SUITE">지하철</div></button>
+            <button id="bus" class="bottom_bar_button"><img src="imgs/app/7577293.png" style="width: 24px; height:24px; float: left; margin: 10px 5px; opacity: 50%;"><div class="hi1 hi3" style="font-size: 17px; font-family: SUITE">버스</div></button>
+            <button id="texi" class="bottom_bar_button"><img src="imgs/app/3514593.png" style="width: 24px; height:24px; float: left; margin: 10px 5px; opacity: 50%;"><div class="hi1 hi2" style="font-size: 17px; font-family: SUITE">택시</div></button>
+        </div>
+    </bottom>
 </body>
 </html>
