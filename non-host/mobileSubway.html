@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taxi</title>
-    <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="styleSheet/mobileTaxi.css">
-    
+    <title>Subway</title>
+    <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="styleSheet/mobileSubway.css">
+
     <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/static/woff2/SUITE.css" rel="stylesheet">
 
     <style>
@@ -39,19 +39,37 @@
             font-weight: 500;
         }
     </style>
-
 </head>
 <body>
     <div id="abody">
         <div id="logoFixed">
-            <header id="header">  <!-- js 추가해서 연결한건데 확인바람 -->
+            <header id="header"> <!-- js 추가해서 연결한건데 확인바람 -->
                 <h1 onclick="window.open('mobileMain.html')" style="display: block; float: left; margin: 0 45px; font-weight: 400;">가온나들목</h1>
                 <button id="side_bar" type="button"></button>
             </header>
         </div>
     </div>
-    <div>
-        <h2 style="text-align: center; margin: 0 0 30px;">이동지원차량 이용</h2>
+    <div id="mapSection" style="float:left; width:100%;">
+        <div id="map" style="float: left;"></div>
+    </div>
+    <div class="layer" id="findBus" style="width: 100%; float: left;"> <!--버스 레이어-->
+        <div id="searchSectionBus"><!--검색 영역 전체크기-->
+            <div id="searchBusField" ><!--검색 영역-->
+                <h2 style="margin: 20px 3% 15px 5%;">버스 정류장 현황</h2>
+
+                <!-- 검색어 입력창   -->
+                <form action="/" method="get">
+                    <input type="text" id="searchBus" placeholder="찾고 싶은 정류장 이름을 입력해주세요" autocomplete="off" name ="subway">
+                    <input id="searchBusButton" type="button" value="검색">
+                    <!-- 자동완성 단어 리스트 -->
+                        <div class="" style="float: left; margin-left: 3%;"></div>
+
+                    <script src =""></script><!--버스 검색 영역 스크립트 추가-->
+                </form>
+            </div>
+            <div id="searchfind"></div>
+            <div class="autoWidth"></div>
+        </div>
     </div>
     
     <div id="sideMenu"> <!-- 옆 사이드 메뉴, 아래 #wall 과 한세트 -->
@@ -77,16 +95,16 @@
     </div>
     <div id="wall"></div>
 
-    <bottom class="bottom_bar">  <!-- js 추가해서 연결한건데 확인바람 -->
+    <bottom class="bottom_bar"> <!-- js 추가해서 연결한건데 확인바람 -->
         <div id="bottom_bars">
             <div id="subwayButton" style="width: 100px; margin: 0 5px 0 0; float: left;">
-                <button onclick="window.open('mobileSubway.html')" ><img src="imgs/app/50724.png"><div class="hi2 hi3" style="font-size: 12pt; font-family: SUITE">지하철</div></button>
+                <button id="subway" class="bottom_bar_button"><img src="imgs/app/50724.png"><div class="hi2 hi3" style="text-align: left; font-size: 12pt; font-family: SUITE">지하철</div></button>
             </div>
             <div id="busButton" style="width: 100px; margin: 0 5px 0 5px; float: left;">
-                <button onclick="window.open('mobileBus.html')" id="bus" class="bottom_bar_button"><img src="imgs/app/7577293.png"><div class="hi1 hi3" style="font-size: 12pt; font-family: SUITE">버스</div></button>
+                <button onclick="window.open('mobileBus.html')" id="bus" class="bottom_bar_button"><img src="imgs/app/7577293.png"><div class="hi1 hi3" style="text-align: left; font-size: 12pt; font-family: SUITE">버스</div></button>
             </div>
-            <div id="taxiButton" style="width: 100px; margin: 0 0 0 5px; float: left;">
-                <button id="taxi" class="bottom_bar_button"><img src="imgs/app/3514593.png"><div class="hi1 hi2" style="font-size: 12pt; font-family: SUITE">택시</div></button>
+            <div id="texiButton" style="width: 100px; margin: 0 0 0 5px; float: left;">
+                <button onclick="window.open('mobileTaxi.html')" id="texi" class="bottom_bar_button"><img src="imgs/app/3514593.png"><div class="hi1 hi2" style="text-align: left; font-size: 12pt; font-family: SUITE">택시</div></button>
             </div>
         </div>
     </bottom>
