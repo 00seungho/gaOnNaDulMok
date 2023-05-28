@@ -251,7 +251,7 @@ button > div {
     height: 24px; 
     float: left; 
     margin: 10px 0 10px 10px; 
-    opacity: 50%; 
+    opacity: 100%; 
 }
 #busButton div {
     display: block;
