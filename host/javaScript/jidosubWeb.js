@@ -6,63 +6,59 @@ var options = {
     maximumAge: 0
 };
 
-   window.onload = function(){
-    function onGeoOkay(position) {// 정보를 받아올 수 있을때, position 을 매개변수, position은 객체형식의 현재위치를 가지고있음
-        var mapContainer = document.getElementById('mapWeb') // 지도를 표시할 div 
+
+    function openkakaomap(position){
+        var mapContainer = document.getElementById('map') // 지도를 표시할 div 
         mapOption = {
             center: new kakao.maps.LatLng(position.coords.latitude, position.coords.longitude), // 지도의 중심좌표에 현재위치를 입력
             level: 3 // 지도의 확대 레벨
         };
-
-        var mapContainer2 = document.getElementById('map') // 지도를 표시할 div 
-        mapOption2 = {
-            center: new kakao.maps.LatLng(position.coords.latitude, position.coords.longitude), // 지도의 중심좌표에 현재위치를 입력
-            level: 3 // 지도의 확대 레벨
-        };
-
-        
-
         var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-        var map2 = new kakao.maps.Map(mapContainer2, mapOption2); // 지도를 생성합니다
 
         var positions = [// 마커객체
-            {
-                latlng: new kakao.maps.LatLng(position.coords.latitude, position.coords.longitude)// 마커위치
-            },
-        ]
-
-     
+        {
+            latlng: new kakao.maps.LatLng(position.coords.latitude, position.coords.longitude)// 마커위치
+        }
+    ]
         var marker = new kakao.maps.Marker({
             map: map, // 마커를 표시할 지도
             position: positions[0].latlng // 마커의 위치
         });
-
-        var marker2 = new kakao.maps.Marker({
-            map: map2, // 마커를 표시할 지도
-            position: positions[0].latlng // 마커의 위치
-        });
-
         marker.setMap(map);
-        marker2.setMap(map2);
+
+    }
+ 
+   window.onload=function (){
+    const divElement = document.getElementById('moblie')    
+    if(window.getComputedStyle(divElement).display == "none"){
+    const chang = document.getElementById("map");
+    chang.id = "map2"; 
+}
 
 
+    function onGeoOkay(position){ // 정보를 받아올 수 있을때, position 을 매개변수, position은 객체형식의 현재위치를 가지고있음
+        openkakaomap(position)
+    
+        if(window.getComputedStyle(divElement).display == "none"){
+            document.getElementById('searchButtonWeb').addEventListener('click', enter)// 검색버튼 클릭 시, 검색 함수실행
+            document.getElementById('searchWeb').addEventListener('keyup', function (e) {// 키보드 엔터누를 시 검색 함수 실행
+                if (e.key === 'Enter') {
+                    enter();
+                }
+            })
+        }
+
+        else{
         document.getElementById('searchButton').addEventListener('click', enter)// 검색버튼 클릭 시, 검색 함수실행
         document.getElementById('search').addEventListener('keyup', function (e) {// 키보드 엔터누를 시 검색 함수 실행
             if (e.key === 'Enter') {
                 enter();
             }
         })
-
-        document.getElementById('searchButtonWeb').addEventListener('click', enter)// 검색버튼 클릭 시, 검색 함수실행
-        document.getElementById('searchWeb').addEventListener('keyup', function (e) {// 키보드 엔터누를 시 검색 함수 실행
-            if (e.key === 'Enter') {
-                enter();
-            }
-        })
-
+    }
 
         function enter() {//검색함수
-
+            
             fetch("http://openapi.seoul.go.kr:8088/74776a5341746d6439394a57735854/json/subwayStationMaster/1/999")//자동완성 데이터
                 .then(response => response.json())
                 .then(data => {
@@ -70,13 +66,22 @@ var options = {
                     const temp = {};//자동완성 된 역사의 코드전체를 담을 배열
                     var i;
                     var j = 0;
+                    if(window.getComputedStyle(divElement).display != "none"){
                     for (i = 0; i < count; i++) {
                         if (document.getElementById('search').value == data.subwayStationMaster.row[i].STATN_NM) { // input search의 값을 읽고, 역의 이름과 비교
                             temp[j] = data.subwayStationMaster.row[i];//이름이 같다면, 역의 객체를 temp에 담음
                             j++;
                         }
                     }
-
+                }
+                else{
+                    for (i = 0; i < count; i++) {
+                        if (document.getElementById('searchWeb').value == data.subwayStationMaster.row[i].STATN_NM) { // input search의 값을 읽고, 역의 이름과 비교
+                            temp[j] = data.subwayStationMaster.row[i];//이름이 같다면, 역의 객체를 temp에 담음
+                            j++;
+                        }
+                    }
+                }
 
 
                     var trainCode = [];
@@ -93,14 +98,17 @@ var options = {
                             const countSeoulMetroFaciInfo = data.SeoulMetroFaciInfo.list_total_count;
                             startidx = 1;
                             endidx = startidx + 998;
-                            if ((document.getElementById('searchFindAllSubWebEvWeb') != null)) {
-                                document.getElementById('searchFindAllSubWebEvWeb').remove();
+                            if(window.getComputedStyle(divElement).display == "none"){
+                                if ((document.getElementById('searchFindAllSubWebEvWeb') != null)) {
+                                    document.getElementById('searchFindAllSubWebEvWeb').remove();
+                                }
+    
+                                if ((document.getElementById('searchFindAllSubWebWlWeb') != null)) {
+                                    document.getElementById('searchFindAllSubWebWlWeb').remove();
+                                }
                             }
-
-                            if ((document.getElementById('searchFindAllSubWebWlWeb') != null)) {
-                                document.getElementById('searchFindAllSubWebWlWeb').remove();
-                            }
-
+   
+                            else{
                             if ((document.getElementById('searchFindAllSubWebEvApp') != null)) {
                                 document.getElementById('searchFindAllSubWebEvApp').remove();
                             }
@@ -108,7 +116,7 @@ var options = {
                             if ((document.getElementById('searchFindAllSubWebWlApp') != null)) {
                                 document.getElementById('searchFindAllSubWebWlApp').remove();
                             }
-
+                        }
 
                             while (true) {
                                 if (endidx > countSeoulMetroFaciInfo + 998)
@@ -134,45 +142,26 @@ var options = {
                 });
 
         }
-        //지도에 마커를 띄움
-
 
 
 
 
     }
+    
 
     function onGeoError() {
-        var mapContainer = document.getElementById('mapWeb') // 지도를 표시할 div 
+        const newposition = {
+            coords: {
+              latitude: 37.563685889 // 실제 위도 값을 여기에 입력
+              ,longitude: 126.975584404
+            }
+          };
+        openkakaomap(newposition)
 
-        mapOption = {
-            center: new kakao.maps.LatLng(37.563685889, 126.975584404), // 지도의 중심좌표에 현재위치를 입력
-            level: 3 // 지도의 확대 레벨
-        };
+   
 
 
 
-
-        var imageSize = new kakao.maps.Size(24, 35); //마커의 크기설정
-        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-        // 마커를 생성합니다
-        var positions = [// 마커객체
-            {
-                content : "<div>시청역</div>",
-                latlng: new kakao.maps.LatLng(37.563685889, 126.975584404)// 마커위치
-            },
-        ]
-        var marker = new kakao.maps.Marker({
-            map: map, // 마커를 표시할 지도
-            position: positions[0].latlng // 마커의 위치
-        });
-        var infowindow = new kakao.maps.InfoWindow({
-            content: positions[0].content // 인포윈도우에 표시할 내용
-        });
-        // 마커를 생성합니다
-        infowindow.open(map, marker);//마커 정보 지도위에 표시
-        // 마커에 표시할 인포윈도우를 생성합니다 
-        
         document.getElementById('searchButtonWeb').addEventListener('click', enter)// 검색버튼 클릭 시, 검색 함수실행
         document.getElementById('searchWeb').addEventListener('keyup', function (e) {// 키보드 엔터누를 시 검색 함수 실행
             if (e.key === 'Enter') {
@@ -299,6 +288,7 @@ var options = {
                             searchFindAllEvWeb.innerHTML += "<h4> 위치 : " + data.SeoulMetroFaciInfo.row[j].LOCATION + "</h4>";
                             searchFindAllEvWeb.innerHTML += "<h4> 현재 상태 : " + data.SeoulMetroFaciInfo.row[j].USE_YN + "</h4>";
                             searchFindAllEvWeb.innerHTML += "</br>";
+
                             searchFindAllEvApp.innerHTML += "<h3> 역명 : " + data.SeoulMetroFaciInfo.row[j].STATION_NM + "</h3>";
                             searchFindAllEvApp.innerHTML += "<h4> 운행구간 : " + data.SeoulMetroFaciInfo.row[j].STUP_LCTN + "</h4>";
                             searchFindAllEvApp.innerHTML += "<h4> 위치 : " + data.SeoulMetroFaciInfo.row[j].LOCATION + "</h4>";
@@ -329,8 +319,8 @@ var options = {
             });
 
     }
-
 }
+
 
 
 function hideEv(){
@@ -348,3 +338,4 @@ function hideWl(){
     document.getElementById("wlSelectorFieldApp").style.display = "none"
 
 }
+
