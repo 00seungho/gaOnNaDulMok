@@ -9,7 +9,6 @@ fetch(url)
   .then(response => response.json())
   .then(data => {
 
-    console.log(data[1].정류소명);
     var count = data.length;
     const uniqueDataList = [];
     for (var i = 1; i < count; i++) {

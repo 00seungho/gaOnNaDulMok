@@ -1,0 +1,497 @@
+#Web{
+display: none;
+}
+/*#logoFixed {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    margin: 0 0 10% 0;
+    z-index: 90;
+}
+
+#header {
+    width: 100%;
+    height: 40px;
+    margin: 60px 0 5% 0;
+    float: left;
+}
+
+
+h3 {
+    font-family: TAEBAEKmilkyway;   
+    font-size: 20px;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    background-color: #EFEFEF;
+    margin-top: 120px;
+}
+
+
+#side_bar {
+    float: left;
+    border: none;
+    width: 30px;
+    height: 30px;
+    background-color: #4169e1;
+    margin: 5px 0;
+}
+
+
+#sideMenu {
+    display: none;
+    position: fixed;
+    top : 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: white;
+    z-index: 100;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 0 10px #dddddd;
+}
+#sideMenu > ul {
+    list-style-type: none;
+}
+#sideMenuLogo {
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+#sideMenu > div > h2 {
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: -65px;
+}
+#sideMenu hr {
+    border: 1px solid lightgray;
+    width: 80%;
+    margin: 0 auto;
+}
+#sideMenu li {
+    width: 80%;
+    height: 45px;
+    margin: 10px 10%;
+    border-radius: 10px;
+    background-color: #EFEFEF;
+}
+#sideMenu img {
+    width: 25px; 
+    height: 25px;
+    margin: 10px 10px; 
+    float: left;
+}
+#sideMenu li div {
+    line-height: 45px;
+}
+.textRight {
+    text-align: right;
+    margin: 0 10% 0 0;
+    font-size: 14pt;
+}
+#bottom_button {
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    right: 0;
+}
+#sideMenuButton {
+    width: 80%;
+    height: 35px;
+    background-color: #EFEFEF;
+    border-radius: 50px;
+    margin: 0 10%;
+}
+#zoomOut {
+    width: 50%;
+    height: 29px;
+    background-color: #4169e1;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    position: relative;
+    left: 2%;
+    top: 3px;
+    z-index: 102;
+    font-size: 12pt;
+}
+#zoomIn {
+    width: 50%;
+    height: 29px;
+    background-color: #EFEFEF;
+    border: none;
+    border-radius: 50px;
+    position: relative;
+    left: 48%;
+    bottom: 26px;
+    z-index: 101;
+}
+
+
+.bottom_bar {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px #dddddd;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    float: left;
+    z-index: 50;
+}
+.bottom_bar > button {
+    margin: 23px 0 0 8%;
+    border: none;
+    display: block;
+    float: left;
+    height: 44px;
+    border-radius: 150px;
+    padding: 0 15px;
+}
+button > div {
+    height: 44px;
+    line-height: 44px;
+    float: right;
+    width: 60px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+#subway {
+    background-color: #4169e1;
+}
+.hi1 {
+    display: none;
+}
+
+#wall { 
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(62, 58, 99, 0.201);
+    z-index: 90;
+}
+
+
+#webMenu { 여기는 웹페이지 메뉴 안보이게 하는곳 
+    display: none;
+}
+
+#autoWidth {
+    float: left;
+    width: 70%;
+    margin: 3px 0 0 5%;
+    overflow-y: scroll;
+}
+자동검색기능 머시깽
+.autocomplete {
+    width: 100%;
+    margin: 0 0 70px 0;
+}
+.autocomplete > div {
+    background: #1a1a1a99;
+    padding: .2rem .6rem;
+    z-index: 100;
+    opacity: 1;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+}
+  
+#searchSection {
+    margin: 10% 0 0 0;
+    width: 100%;
+    float: left;
+}
+
+
+#search {
+    width: 70%;
+    height: 2.5rem;
+    border-radius: 5px;
+    padding: 0 3%;
+    box-shadow: 0 0 5px #d0d0d0;
+    border: none;
+    background: #fff;
+    font-size: 1rem;
+    float: left;
+    margin: 0 3% 0 10px;
+    font-family: TAEBAEKmilkyway;
+    font-weight: 700;
+}
+#searchButton {
+    width: 15%;
+    font-family: TAEBAEKmilkyway;
+    height: 2.5rem;
+    background: #4169e1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    float: left;
+}
+input::placeholder {
+    font-size: 1rem;
+}
+  
+mark {
+    background: #fffc99d6;
+}
+*/
+
+#header {
+    width: 100%;
+    height: 40px;
+    margin: 60px 0 5% 0;
+    float: left;
+}
+
+
+h3 {
+    font-family: TAEBAEKmilkyway;   
+    font-size: 20px;
+}
+
+#map{
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    background-color: #EFEFEF;
+}
+
+
+#side_bar {
+    float: left;
+    border: none;
+    width: 30px;
+    height: 30px;
+    background-color: #4169e1;
+    margin: 5px 0;
+}
+
+
+#sideMenu {
+    display: none;
+    position: fixed;
+    top : 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: white;
+    z-index: 100;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 0 0 10px #dddddd;
+}
+#sideMenu > ul {
+    list-style-type: none;
+}
+#sideMenuLogo {
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+#sideMenu > div > h2 {
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: -65px;
+}
+#sideMenu hr {
+    border: 1px solid lightgray;
+    width: 80%;
+    margin: 0 auto;
+}
+#sideMenu li {
+    width: 80%;
+    height: 45px;
+    margin: 10px 10%;
+    border-radius: 10px;
+    background-color: #EFEFEF;
+}
+#sideMenu img {
+    width: 25px; 
+    height: 25px;
+    margin: 10px 10px; 
+    float: left;
+}
+#sideMenu li div {
+    line-height: 45px;
+}
+.textRight {
+    text-align: right;
+    margin: 0 10% 0 0;
+    font-size: 14pt;
+}
+#bottom_button {
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    right: 0;
+}
+#sideMenuButton {
+    width: 80%;
+    height: 35px;
+    background-color: #EFEFEF;
+    border-radius: 50px;
+    margin: 0 10%;
+}
+#zoomOut {
+    width: 50%;
+    height: 29px;
+    background-color: #4169e1;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    position: relative;
+    left: 2%;
+    top: 3px;
+    z-index: 102;
+    font-size: 12pt;
+}
+#zoomIn {
+    width: 50%;     
+    height: 29px;
+    background-color: #EFEFEF;
+    border: none;
+    border-radius: 50px;
+    position: relative;
+    left: 48%;
+    bottom: 26px;
+    z-index: 101;
+}
+
+
+.bottom_bar {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px #dddddd;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+    z-index: 50;
+}
+.bottom_bar > button {
+    margin: 23px 0 0 9.5%;
+    border: none;
+    display: block;
+    float: left;
+    height: 44px;
+    border-radius: 150px;
+    padding: 0 15px;
+}
+button > div {
+    height: 44px;
+    line-height: 44px;
+    float: right;
+    width: 60px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+#subway {
+    background-color: #4169e1;
+}
+.hi1 {
+    display: none;
+}
+
+#wall { 
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(62, 58, 99, 0.201);
+    z-index: 90;
+}
+
+
+#webMenu { /* 여기는 웹페이지 메뉴 안보이게 하는곳 */
+    display: none;
+}
+
+#autoWidth {
+    float: left;
+    width: 70%;
+    height: 100px;
+    margin: 3px 0 0 5%;
+    overflow-y: scroll;
+}
+/*자동검색기능 머시깽*/
+.autocomplete {
+    width: 75%;
+}
+.autocomplete > div {
+    background: #1a1a1a99;
+    padding: .2rem .6rem;
+    z-index: 100;
+    opacity: 1;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+}
+  
+#searchSection {
+    width: 100%;
+    float: left;
+    margin-top: 5%;
+}
+
+
+#search {
+    width: 70%;
+    height: 2.5rem;
+    border-radius: 5px;
+    padding: 0 3%;
+    box-shadow: 0 0 5px #d0d0d0;
+    border: none;
+    background: #fff;
+    font-size: 1rem;
+    float: left;
+    margin: 0 3% 0 10px;
+    font-family: TAEBAEKmilkyway;
+    font-weight: 700;
+}
+#searchButton {
+    width: 15%;
+    font-family: TAEBAEKmilkyway;
+    height: 2.5rem;
+    background: #4169e1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    float: left;
+}
+input::placeholder {
+    font-size: 1rem;
+}
+  
+mark {
+    background: #fffc99d6;
+}
+#searchfind{
+    width: 100%;
+    float: left;
+
+}
+#searchFindAll{
+    margin-left: 3%; 
+    margin-top: 4%;
+}
+        
