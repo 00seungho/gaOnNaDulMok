@@ -59,125 +59,16 @@ body
     float:left;
     width: 100%; 
     text-align: center;
-    line-height: 209px;
     font-family: 'SUITE', sans-serif;
     font-size: 48px;
     border: 1px solid black;
 
 }
-/* 네비게이션 부분 공백 */
 
-/*  아래 푸터 두번쨰 박스 */
-
-/* 중간 div 안에 글자 가온나들목 */
-.font2
-{
-    font-family: 'SUIT', sans-serif;
-    font-size: 21px;
+.imgcenter{
+    width: 100%;
 }
 
-#searchSectionWeb{
-    float: left;
-    width: 100%;
-    margin-top: 10px;
+#nav{
+ line-height: 50px;
 }
-#map{
-    float: left;    
-    width: 100%;
-    height: 700px;
-    border: solid black 1px;
-}
-#searchSection{
-    float: left;    
-    width: 100%;
-    height: 300px;
-    border: solid black 1px;
-}
-#gongBAck{
-    width: 100%;
-    float: left;
-    height: 300px;
-}
-#searchWeb{
-    width: 70%;
-    height: 30px;
-    border-radius: 5px 5px 5px 5px;
-    font-size: 1em;
-}
-#thin{
-    width: 100%;
-    height: 1px;
-    float: left;
-}
-#searchButtonWeb{
-    width: 4%;
-    height: 32px;
-}
-.autocomplete-itemSubWeb{
-    background-color: #F5f5f5;
-    width: 100%;
-}
-.autocompleteSubWeb{
-    width: 70%;
-}
-
-#evSelectorWeb{
-    float: left;
-    width: 100%;
-    margin-top: 10px;
-}   
-
-/* 엘베선택버튼 */
-.evSelectWeb {
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-	background-color:#ffffff;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#666666;
-	font-size:17px;
-	font-weight:bold;
-	padding:12px 27px;
-	text-decoration:none;
-}
-.evSelectWeb:hover {
-	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-	background-color:#f6f6f6;
-}
-.evSelectWeb:active {
-	position:relative;
-	top:1px;
-}
-/* 휠체어리프트선택버튼 */
-.wlSelectWeb {
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-	background-color:#ffffff;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#666666;
-	font-size:17px;
-	font-weight:bold;
-	padding:12px 27px;
-	text-decoration:none;
-    margin-left: 2%;
-}
-.wlSelectWeb:hover {
-	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-	background-color:#f6f6f6;
-}
-.wlSelectWeb:active {
-	position:relative;
-	top:1px;
-}
-#evSelectorFieldWeb{
-    float: left;
-}
-#wlSelectorFieldWeb{
-    float: left;
-}
-        

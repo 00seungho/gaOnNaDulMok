@@ -46,7 +46,7 @@ app.get('/', function(req,res){ // '/'는 홈임
   //   // console.log(parsedBody.SeoulMetroFaciInfo.row[998]); //객체 접근방법, ps.SeoulMetroFaciInfo.row[인덱스번호].STATION_ID
   //   processPS(parsedBody.SeoulMetroFaciInfo.row[998]);
   // });
-  res.sendFile(__dirname+'/html/index.html')
+  res.sendFile(__dirname+'train.html')
 
   
 });

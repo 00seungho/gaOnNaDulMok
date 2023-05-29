@@ -29,7 +29,7 @@ var options = {
     }
  
    window.onload=function (){
-    const divElement = document.getElementById('moblie')    
+    const divElement = document.getElementById('moblie');   
     if(window.getComputedStyle(divElement).display == "none"){
     const chang = document.getElementById("map");
     chang.id = "map2"; 

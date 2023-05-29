@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main</title>
-    <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="../styleSheet/mobileMain.css">
-    <link rel="stylesheet" media="screen and (min-device-width: 415px)" href="../styleSheet/WebMain1.css">
+    <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="styleSheet/mobileMain.css">
+    <link rel="stylesheet" media="screen and (min-device-width: 415px)" href="styleSheet/webMain.css">
 
     <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/static/woff2/SUITE.css" rel="stylesheet">
 
@@ -53,22 +53,21 @@
     <div id="abody">
         <div id="logoFixed">
             <header id="header">  <!-- js 추가해서 연결한건데 확인바람 -->
-                <h1 onclick="window.open('mobileMain.html')" style="display: block; float: left; margin: 0 45px; font-weight: 400;">가온나들목</h1>
+                <h1 onclick="window.open('index.html')" style="display: block; float: left; margin: 0 45px; font-weight: 400;">가온나들목</h1>
                 <button id="side_bar" type="button"></button>
             </header>
         </div>
     </div>
     <div>
         <h2 style="text-align: center; margin: 0 0 30px;">API 출처 및 저작권 표기</h2>
-        <h2 style="text-align: center; margin: 0 0 15px;">서울 열린데이터 광장</h2>
         <h3 style="text-align: center; margin: 0 0 40px;">서울 교통공사 교통약자 이용시설(승강기) 가동현황<br>서울시 역사마스터 정보</h3>
         <h2 style="text-align: center; margin: 0 0 15px;">서울시 교통정보 시스템 (TOPIS)</h2>
         <h3 style="text-align: center; margin: 0 0 40px;">서울시 버스운행정보 공유서비스</h3>
         <h2 style="text-align: center; margin: 0 0 15px;">국토교통부</h2>
         <h3 style="text-align: center; margin: 0 0 40px;">역사별 장애인 화장실 위치</h3>
         <div style="width: 200px; margin: 30px auto;">
-            <img src="../imgs/app/cr1.png" style="width: 100px; height: 40px; float: left;">
-            <img src="../imgs/app/cr2.png" style="width: 100px; height: 40px; float: left;">
+            <img src="imgs/app/cr1.png" style="width: 100px; height: 40px; float: left;">
+            <img src="imgs/app/cr2.png" style="width: 100px; height: 40px; float: left;">
         </div>
     </div>
     
@@ -79,10 +78,10 @@
         <hr>
         <h3 class="textRight" style="font-size: 12pt; color: lightgray; position: reltive;line-height: 40px;">Menu</h3>
         <ul style="font-size: 11pt; margin: 0 0 20px 0;">
-            <li><img src="../imgs/app/637209.png"><div style="font-weight: 500; font-family: SUITE;">지하철 내 엘리베이터</div></li>
-            <li><img src="../imgs/app/7577293.png"><div style="font-weight: 500; font-family: SUITE;">버스 찾기</div></li>
-            <li><img src="../imgs/app/7167398.png"><div style="font-weight: 500; font-family: SUITE;">이동지원차량 예약</div></li>
-            <li><img src="../imgs/app/5653257.png"><div style="font-weight: 500; font-family: SUITE;">지하철 내 화장실</div></li>
+            <li><img src="imgs/app/637209.png"><div style="font-weight: 500; font-family: SUITE;">지하철 내 엘리베이터</div></li>
+            <li><img src="imgs/app/7577293.png"><div style="font-weight: 500; font-family: SUITE;">버스 찾기</div></li>
+            <li><img src="imgs/app/7167398.png"><div style="font-weight: 500; font-family: SUITE;">이동지원차량 예약</div></li>
+            <li><img src="imgs/app/5653257.png"><div style="font-weight: 500; font-family: SUITE;">지하철 내 화장실</div></li>
         </ul>
         <div id="bottom_button">
             <hr>
@@ -98,15 +97,15 @@
     <bottom class="bottom_bar">  <!-- js 추가해서 연결한건데 확인바람 -->
         <div id="bottom_bars">
             <div id="subwayButton" style="width: 100px; margin: 0 5px 0 0; float: left;">
-                <button id="subway" class="bottom_bar_button"><img src="../imgs/app/50724.png"><div class="hi2 hi3" style="font-size: 12pt; font-family: SUITE">지하철</div></button>
+                <button id="subway" onclick="window.open('train.html')"  class="bottom_bar_button"><img src="imgs/app/50724.png"><div class="hi2 hi3" style="font-size: 12pt; font-family: SUITE">지하철</div></button>
             </div>
             <div id="busButton" style="width: 100px; margin: 0 5px 0 5px; float: left;">
-                <button onclick="window.open('mobileBus.html')" id="bus" class="bottom_bar_button"><img src="../imgs/app/7577293.png"><div class="hi1 hi3" style="font-size: 12pt; font-family: SUITE">버스</div></button>
+                <button onclick="window.open('mobileBus.html')" id="bus" class="bottom_bar_button"><img src="imgs/app/7577293.png"><div class="hi1 hi3" style="font-size: 12pt; font-family: SUITE">버스</div></button>
             </div>
             <div id="texiButton" style="width: 100px; margin: 0 0 0 5px; float: left;">
-                <button id="texi" class="bottom_bar_button"><img src="../imgs/app/3514593.png"><div class="hi1 hi2" style="font-size: 12pt; font-family: SUITE">택시</div></button>
+                <button id="texi" class="bottom_bar_button"><img src="imgs/app/3514593.png"><div class="hi1 hi2" style="font-size: 12pt; font-family: SUITE">택시</div></button>
             </div>
-        </div>
+        </div> 
     </bottom>
 </div>
     <!--모바일 웹-->
@@ -115,26 +114,31 @@
         <div id="headerWeb">
             <ul>
                 <li>
-                    <h3 class="font1"><a href="html/WebMain1.html">가온나들목</a></h3>
+                    <h3 class="font1"><a href="index.html">가온나들목</a></h3>
                 </li>
-                <li><a href="html/WebMain2.html">엘리베이터</a></li>
-                <li><a href="html/WebMain6.html">화장실</a></li>
-                <li><a href="html/WebMain4.html">저상버스</a></li>
-                <li><a href="html/WebMain5.html">이동지원차량</a></li>
+                <li><a href="train.html">지하철</a></li>
+                <li><a href="#">화장실</a></li>
+                <li><a href="#">저상버스</a></li>
+                <li><a href="#">이동지원차량</a></li>
             </ul>
         </div>
-
+        <div id="main">
+            <h1></h1>
+        </div>
         <div id="nav">
             <h2>API 출처 및 저작권 표기</h2>
-            <h2 style="text-align: center;">서울 열린데이터 광장</h2>
-            <h3 style="text-align: center;">서울 교통공사 교통약자 이용시설(승강기) 가동현황<br>서울시 역사마스터 정보</h3>
-            <div class="imgcenter">
-            <img src="../imgs/app/cr1.png" style="width: 100px; height: 40px; float: left; display:block;">
-            </div>  
-            <h2 style="text-align: center;">서울시 교통정보 시스템 (TOPIS)</h2>
-            <h3 style="text-align: center;">서울시 버스운행정보 공유서비스</h3>
-            <h2 style="text-align: center;">국토교통부</h2>
-            <h3 style="text-align: center;">역사별 장애인 화장실 위치</h3>
+            <a href="https://data.seoul.go.kr/"><h2 style="text-align: center;">서울 열린데이터 광장</h2></a>
+            <a href="https://data.seoul.go.kr/dataList/OA-15994/S/1/datasetView.do"><h3 style="text-align: center;">서울 교통공사 교통약자 이용시설(승강기) 가동현황</a>
+            <br><b>제공 : 서울교통공사</b>
+
+            <br><a href="https://data.seoul.go.kr/dataList/OA-21232/S/1/datasetView.do">서울시 역사마스터 정보</a><br>
+        <b>제공 : 서울시 교통정보 시스템(TOPIS)</b>
+        </h3>
+           
+        <h3 style="text-align: center;"><a href="http://api.bus.go.kr/contents/sub02/svcList.html">서울시 버스운행정보 공유서비스</a></h3>
+           <h3 style="text-align: center;"> <b>제공 : 국토교통부</b></h3>
+            <a href="https://data.kric.go.kr/rips/M_01_02/detail.do?id=432&service=vulnerableUserInfo&operation=stationDisabledToilet&keywords=%ed%99%94%ec%9e%a5%ec%8b%a4&lcd=&mcd="><h3 style="text-align: center;">역사별 장애인 화장실 위치</h3></a>
+           <h3> <b>제공 : 국토교통부 전국도시철도운영기관</b></h3>
         </div>
 
     </div>
