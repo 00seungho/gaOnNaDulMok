@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subway</title>
+    <title>가온나들목 Subway</title>
     <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="styleSheet/mobileSubway.css">
 
     <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/static/woff2/SUITE.css" rel="stylesheet">
+    
+    <script src="javaScript/jquery-1.6.2.min.js"></script>
+    <script src="javaScript/mobileSubway.js"></script>
 
     <style>
         @font-face {
@@ -85,6 +88,21 @@
                 <div id="searchfind"></div>
                 <div class="autoWidth"></div>
             </div>
+            <div id="wheelchair_lift">
+                <div id="searchField2"><!--검색 영역-->
+                    <!-- 검색어 입력창   -->
+                    <form action="/" method="get">
+                        <input type="text" id="search2" placeholder="근처 휠체어 리프트를 검색합니다." autocomplete="off" name ="wheelchairLift">
+                        <input id="searchButton2" type="button" value="검색">
+                        <!-- 자동완성 단어 리스트 -->
+                            <div class="autocomplete" style="float: left; margin-left: 3%;"></div>
+
+                        <script src =""></script><!--검색 영역 스크립트 추가-->
+                    </form>
+                </div>
+                <div id="searchfind2"></div>
+                <div class="autoWidth"></div>
+            </div>
         </div>
     </div>
     
@@ -95,17 +113,17 @@
         <hr>
         <h3 class="textRight" style="font-size: 12pt; color: lightgray; position: reltive;line-height: 40px;">Menu</h3>
         <ul style="font-size: 11pt; margin: 0 0 20px 0;">
-            <li><img src="imgs/app/637209.png"><div style="font-weight: 500; font-family: SUITE;">지하철 내 엘리베이터</div></li>
-            <li><img src="imgs/app/7577293.png"><div style="font-weight: 500; font-family: SUITE;">버스 찾기</div></li>
-            <li><img src="imgs/app/7167398.png"><div style="font-weight: 500; font-family: SUITE;">이동지원차량 예약</div></li>
-            <li><img src="imgs/app/5653257.png"><div style="font-weight: 500; font-family: SUITE;">지하철 내 화장실</div></li>
+            <li style="background-color: #4169e1;"><img src="imgs/app/637209.png"><div style="font-weight: 500; font-family: SUITE; color: white;">지하철 내 엘베 / 휠체어</div></li>
+            <li onclick="window.open('mobileBus.html')"><img src="imgs/app/7577293.png"><div style="font-weight: 500; font-family: SUITE;">버스 찾기</div></li>
+            <li onclick="window.open('mobileTaxi.html')"><img src="imgs/app/7167398.png"><div style="font-weight: 500; font-family: SUITE;">이동지원차량 예약</div></li>
+            <li onclick="window.open('mobileTolet.html')"><img src="imgs/app/5653257.png"><div style="font-weight: 500; font-family: SUITE;">지하철 내 화장실</div></li>
         </ul>
         <div id="bottom_button">
             <hr>
             <h3 class="textRight" style="font-size: 12pt; color: lightgray; position: relative;line-height: 40px;">Accessibility</h3>
             <div id="sideMenuButton">
                 <button id="zoomOut" type="button"><h4>축소</h4></button>
-                <button id="zoomIn" type="button"><h4>확대</h4></button>
+                <button id="zoomIn" type="button" onclick="alert('서비스 준비중입니다.')"><h4>확대</h4></button>
             </div>
         </div>
     </div>
