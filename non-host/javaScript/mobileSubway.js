@@ -1,4 +1,5 @@
 $(function(){
+    
 
     /* 사이드 메뉴 나타내기 & 없애기 */
     $('#side_bar').on("click", function(){
