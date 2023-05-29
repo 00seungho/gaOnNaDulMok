@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bus</title>
     <link rel="stylesheet" media="screen and (max-device-width: 414px)" href="styleSheet/mobileBus.css">
+    <link rel="stylesheet" media="screen and (min-device-width: 415px)" href="styleSheet/webBus.css">
 
     <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUITE/fonts/static/woff2/SUITE.css" rel="stylesheet">
 
@@ -60,13 +61,13 @@
                 <h2 style="margin: 20px 3% 15px 5%;">버스 정류장 현황</h2>
 
                 <!-- 검색어 입력창   -->
-                <form action="/" method="get">
+                <form action="" method="get">
                     <input type="text" id="searchBus" placeholder="찾고 싶은 정류장 이름을 입력해주세요" autocomplete="off" name ="subway">
                     <input id="searchBusButton" type="button" value="검색">
                     <!-- 자동완성 단어 리스트 -->
                         <div class="" style="float: left; margin-left: 3%;"></div>
 
-                    <script src =""></script><!--버스 검색 영역 스크립트 추가-->
+                    <script src ="javaScript/busAutoSearchMoblie.js"></script><!--버스 검색 영역 스크립트 추가-->
                 </form>
             </div>
             <div id="searchfind"></div>
@@ -113,7 +114,6 @@
 </div>
 <!-- 모바일 끝 -->
 <!-- 웹 시작 -->
-<div id="web">
     <div id="Web">
         <div id="headerWeb">
             <ul>
@@ -122,44 +122,36 @@
                 </li>
                 <li><a href="train.html">지하철</a></li>
                 <li><a href="#">화장실</a></li>
-                <li><a href="#">저상버스</a></li>
+                <li><a href="bus.html">저상버스</a></li>
                 <li><a href="#">이동지원차량</a></li>
             </ul>
         </div>
 
         <div id="nav">
-            <p>지하철 교통약자 편의시설 조회</p>
+            <p>역 별 저상버스 검색</p>
         </div>
 
         <div id="map">
 
         </div>
-        <div id="evSelectorWeb">
-            <a href="javascript:hideWl();" class="evSelectWeb">엘리베이터</a>
-            <a href ="javascript:hideEv()" class="wlSelectWeb">휠체어리프트</a>
-
-        </div>
         <div id="searchSectionWeb">
             <div id="searchFieldWeb"><!--검색 영역-->
                 <!-- 검색어 입력창   -->
-                <form action="/" method="get">
+                <form action="" method="get">
                     <input type="text" id="searchWeb" placeholder="찾고 싶은 역 이름을 입력해주세요" autocomplete="off"
-                        name="subway">
+                        name="bus">
                     <input id="searchButtonWeb" type="button" value="검색">
                     <!-- 자동완성 단어 리스트 -->
                     <div id="thin"></div>
-                    <div class="autocompleteSubWeb" style="float: left;"></div>
+                    <div class="autocompleteBusWeb" style="float: left;"></div>
                
-                    <script src="javaScript/subwayAutoSeachWeb.js"></script><!--검색 영역 스크립트 추가-->
+                    <script src="javaScript/busAutoSearchWeb.js"></script><!--검색 영역 스크립트 추가-->
                 </form>
             </div>
         </div>
 
-        <div id="evSelectorFieldWeb">
+        <div id="busFieldWeb">
             
-        </div>
-
-        <div id="wlSelectorFieldWeb" style='display:none;'>
         </div>
 
         <div id="gongBAck"></div>

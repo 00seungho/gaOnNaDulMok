@@ -1,0 +1,183 @@
+#mobile{
+    display: none;
+}
+@font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font1
+{
+    font-family: 'TAEBAEKmilkyway';
+    font-size: 31px;
+}
+#headerWeb
+{   
+    width:100%;  
+    height: 60px;
+    border: 0px solid;
+    /* background-color: #F1F1F1;   */
+    text-align: left;  
+    float: left;
+    /* 상단 가온 박스 */
+}
+ul
+{  
+    width: 100%;
+    color:#000000; 
+    margin:auto;
+    list-style: none;
+    padding-top: 1%;
+    /* ul 태그 안 내용 한줄로 표기 */
+}
+
+#headerWeb > ul> li
+{   
+    padding-left: 10%;   
+    display: inline-block;  
+     /* header 글자 사이 간격 */
+}
+
+a
+{
+    text-decoration-line: none;
+    color: #000000;
+    /* ul 안에 하이퍼링크 줄 제거 및 색깔 고정*/
+}
+body
+{   
+    margin: 0 auto;
+    width: 1180px; 
+    background: #FFFFFF;
+    /* 몸통 부분 크기 및 배경 이미지 */
+}
+
+#nav
+{   
+    float:left;
+    width: 100%; 
+    text-align: center;
+    line-height: 209px;
+    font-family: 'SUITE', sans-serif;
+    font-size: 48px;
+    border: 1px solid black;
+
+}
+/* 네비게이션 부분 공백 */
+
+/*  아래 푸터 두번쨰 박스 */
+
+/* 중간 div 안에 글자 가온나들목 */
+.font2
+{
+    font-family: 'SUIT', sans-serif;
+    font-size: 21px;
+}
+
+#searchSectionWeb{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+#map{
+    float: left;    
+    width: 100%;
+    height: 700px;
+    border: solid black 1px;
+}
+#searchSection{
+    float: left;    
+    width: 100%;
+    height: 300px;
+    border: solid black 1px;
+}
+#gongBAck{
+    width: 100%;
+    float: left;
+    height: 300px;
+}
+#searchWeb{
+    width: 70%;
+    height: 30px;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 1em;
+}
+#thin{
+    width: 100%;
+    height: 1px;
+    float: left;
+}
+#searchButtonWeb{
+    width: 4%;
+    height: 32px;
+}
+.autocomplete-itemSubWeb{
+    background-color: #F5f5f5;
+    width: 100%;
+}
+.autocompleteSubWeb{
+    width: 70%;
+}
+
+#evSelectorWeb{
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}   
+
+/* 엘베선택버튼 */
+.evSelectWeb {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 27px;
+	text-decoration:none;
+}
+.evSelectWeb:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+.evSelectWeb:active {
+	position:relative;
+	top:1px;
+}
+/* 휠체어리프트선택버튼 */
+.wlSelectWeb {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-size:17px;
+	font-weight:bold;
+	padding:12px 27px;
+	text-decoration:none;
+    margin-left: 2%;
+}
+.wlSelectWeb:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+.wlSelectWeb:active {
+	position:relative;
+	top:1px;
+}
+#evSelectorFieldWeb{
+    float: left;
+}
+#wlSelectorFieldWeb{
+    float: left;
+}
+        
