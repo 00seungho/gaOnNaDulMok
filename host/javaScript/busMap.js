@@ -96,7 +96,7 @@ window.onload = function(){
 
 
         var searchfind = function(url){ 
-            fetch(url, { method: "GET", mode: 'no-cors', headers: { 'Access-Control-Allow-Origin': true, 'Content-Type': 'text/xml' }})
+            fetch(url)
             .then(response => response.text())
             .then(xmlText => {
                 console.log(xmlText);

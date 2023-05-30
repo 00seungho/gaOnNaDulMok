@@ -1,5 +1,5 @@
 
-var url = "http://openapi.seoul.go.kr:8088/74776a5341746d6439394a57735854/json/subwayStationMaster/1/999/"
+var url = "https://hifive.metainsu.co.kr/api/v1/common/sub-ev"
 document.getElementById("searchWeb").addEventListener('click',autoseach());
 function autoseach(){
 fetch(url)

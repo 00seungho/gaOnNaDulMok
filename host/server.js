@@ -21,6 +21,7 @@ function processPS(ps)
 
 app.listen(PORT, function(){
     console.log('서버오픈')
+    
 });
 
 

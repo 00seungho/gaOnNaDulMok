@@ -90,7 +90,7 @@ window.onload = function () {
 
         function enter() {//검색함수
 
-            fetch("http://openapi.seoul.go.kr:8088/74776a5341746d6439394a57735854/json/subwayStationMaster/1/999")//자동완성 데이터
+            fetch("https://hifive.metainsu.co.kr/api/v1/common/sub-ev")//자동완성 데이터
                 .then(response => response.json())
                 .then(data => {
                     const count = data.subwayStationMaster.list_total_count; //자동완성 역사 총 갯수
@@ -120,11 +120,16 @@ window.onload = function () {
                     }
 
                     //
-                    var url = "http://openapi.seoul.go.kr:8088/74776a5341746d6439394a57735854/json/SeoulMetroFaciInfo/1/2/"
-                    fetch(url)
+                    var url = "https://hifive.metainsu.co.kr/api/v1/common/sub-master?startIndex=1&endIndex=2/"
+
+                    var requestOptions = {
+                        method: 'GET',
+                        mode: 'cors'             
+                      };
+                      
+                    fetch(url,requestOptions)
                         .then(response => response.json())
                         .then(data => {
-
                             const countSeoulMetroFaciInfo = data.SeoulMetroFaciInfo.list_total_count;
                             startidx = 1;
                             endidx = startidx + 998;
@@ -151,7 +156,7 @@ window.onload = function () {
                             while (true) {
                                 if (endidx > countSeoulMetroFaciInfo + 998)
                                     break;
-                                url = "http://openapi.seoul.go.kr:8088/74776a5341746d6439394a57735854/json/SeoulMetroFaciInfo/" + startidx + "/" + endidx + "/";
+                                url = `https://hifive.metainsu.co.kr/api/v1/common/sub-master?startIndex=${startidx}&endIndex=${endidx}/`;
 
                                 fetchSeoulMetroFaciInfo(url, trainCode);
                                 startidx = endidx + 1;
@@ -212,7 +217,7 @@ window.onload = function () {
 
         function enter() {//검색함수
 
-            fetch("http://openapi.seoul.go.kr:8088/74776a5341746d6439394a57735854/json/subwayStationMaster/1/999")//자동완성 데이터
+            fetch("https://hifive.metainsu.co.kr/api/v1/common/sub-ev")//자동완성 데이터
                 .then(response => response.json())
                 .then(data => {
                     const count = data.subwayStationMaster.list_total_count; //자동완성 역사 총 갯수
@@ -244,7 +249,7 @@ window.onload = function () {
                     }
 
                     //
-                    var url = "http://openapi.seoul.go.kr:8088/74776a5341746d6439394a57735854/json/SeoulMetroFaciInfo/1/2/"
+                    var url = "https://hifive.metainsu.co.kr/api/v1/common/sub-master?startIndex=1&endIndex=2/"
                     fetch(url)
                         .then(response => response.json())
                         .then(data => {
@@ -275,7 +280,7 @@ window.onload = function () {
                             while (true) {
                                 if (endidx > countSeoulMetroFaciInfo + 998)
                                     break;
-                                url = "http://openapi.seoul.go.kr:8088/74776a5341746d6439394a57735854/json/SeoulMetroFaciInfo/" + startidx + "/" + endidx + "/";
+                                    url = `https://hifive.metainsu.co.kr/api/v1/common/sub-master?startIndex=${startidx}&endIndex=${endidx}/`;
 
                                 fetchSeoulMetroFaciInfo(url, trainCode);
                                 startidx = endidx + 1;
