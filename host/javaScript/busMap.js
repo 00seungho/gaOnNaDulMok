@@ -52,8 +52,7 @@ window.onload = function(){
                 if(data[i].정류소명 == busName){
                     var a = i;
                     found = true;
-                    console.log(i);
-                    break;
+                        break;
                 }
         }
         newmarker(a,data);
@@ -96,28 +95,27 @@ window.onload = function(){
     }     
 
 
-    var searchfind = function(url){ 
-        fetch(url)
-        .then(response => response.text())
-        .then(xmlText => {
-            while (searchbusall.firstChild) {
-                searchbusall.removeChild(searchbusall.firstChild);
-              }
-            const parser = new DOMParser();
-            const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
-            const newItem = xmlDoc.querySelectorAll('itemList');
-            const searchbusall = document.getElementById('busFieldWeb');
-            for(var i=0; i<newItem.length; i++){ 
-                searchbusall.innerHTML += "<h2>버스 이름: "+newItem[i].busRouteAbrv+"</h2>" //버스명 먼저출력
-                searchbusall.innerHTML += "<h3>첫번째 예정도착 시간: "+newItem[i].vehId1+"분 남았습니다.</h3>"//버스 시간
-                searchbusall.innerHTML += "<h3>두번째 예정도착 시간: "+newItem[i].vehId1+"분 남았습니다.</h3>"//버스 시간
-            }
-        
-          })
-          .catch(error => {
-            console.error('Error:', error);
-          });
-    }
+        var searchfind = function(url){ 
+            fetch(url, { method: "GET", mode: 'no-cors', headers: { 'Access-Control-Allow-Origin': true, 'Content-Type': 'text/xml' }})
+            .then(response => response.text())
+            .then(xmlText => {
+                console.log(xmlText);
+
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, 'text/xml');
+                const newItem = xmlDoc.querySelectorAll('itemList');
+                const searchbusall = document.getElementById('busFieldWeb');
+                for(var i=0; i<newItem.length; i++){ 
+                    searchbusall.innerHTML += "<h2>버스 이름: "+newItem[i].busRouteAbrv+"</h2>" //버스명 먼저출력
+                    searchbusall.innerHTML += "<h3>첫번째 예정도착 시간: "+newItem[i].vehId1+"분 남았습니다.</h3>"//버스 시간
+                    searchbusall.innerHTML += "<h3>두번째 예정도착 시간: "+newItem[i].vehId1+"분 남았습니다.</h3>"//버스 시간
+                }
+            
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
 
 
 
