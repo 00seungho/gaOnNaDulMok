@@ -20,7 +20,7 @@ fetch(url)
     uniqueDataList.forEach(item => dataList.push(item))
 
          const $search = document.querySelector("#search");//$search 변수에 id search 를 담겠다. 
-         const $autoComplete = document.querySelector(".autocompleteSub");
+         const $autoComplete = document.querySelector("#searchfind");
          
          let nowIndex = 0;
          let matchDataList = [];

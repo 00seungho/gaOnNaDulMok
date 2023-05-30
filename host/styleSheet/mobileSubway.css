@@ -1,6 +1,6 @@
 #Web{
     display: none;
-    }
+}
 #logoFixed {
     width: 302px;
     height: 100px;
@@ -33,7 +33,49 @@
     margin: 5px 15px;
 }
 
-#searchBus {
+/* 엘리베이터, 휠체어리프트 버튼 */
+#subwayBut {
+    position: relative; 
+    height: 36px; 
+    width: 240px; 
+    border-radius: 50px; 
+    background-color: #EFEFEF; 
+    box-shadow: 0 0 5px 2px #e6e6e6;
+    margin: 0 auto;
+    z-index: 29;
+}
+#elevatorBut {
+    position: relative; 
+    width: 120px; 
+    height: 30px; 
+    top: 3px; 
+    left: 3px;
+    border-radius: 50px; 
+    z-index: 31;
+    background-color: #4169e1; 
+    color: white;
+    border: none;
+}
+#liftBut {
+    position: relative; 
+    width: 120px; 
+    height: 30px; 
+    bottom: 27px;
+    left: 117px;
+    border-radius: 50px; 
+    z-index: 30;
+    background-color: #EFEFEF;
+    color: black;
+    border: none;
+}
+
+/* 엘리베이터 검색창 */
+#searchSection {
+    width: 100%;
+    float: left;
+    margin-top: 5%;
+}
+#search {
     width: 70%;
     height: 2.5rem;
     border-radius: 5px;
@@ -44,12 +86,10 @@
     font-size: 1rem;
     float: left;
     margin: 0 3% 0 10px;
-    font-family: TAEBAEKmilkyway;
     font-weight: 700;
 }
-#searchBusButton {
+#searchButton {
     width: 15%;
-    font-family: TAEBAEKmilkyway;
     height: 2.5rem;
     background: #4169e1;
     color: white;
@@ -58,27 +98,79 @@
     font-weight: 700;
     float: left;
 }
-input::placeholder {
-    font-size: 1rem;
-}
-  
-mark {
-    background: #fffc99d6;
-}
-#searchfind{
+#searchfind {
     width: 100%;
     float: left;
 }
-#searchFindAll{
+#searchFindAll {
     margin-left: 3%; 
     margin-top: 4%;
 }
-#autoWidth {
+
+
+/* 휠체어 리프트 검색창 */
+#searchSection2 {
+    width: 100%;
+    float: left;
+    margin-top: 5%;
+}
+#search2 {
+    width: 70%;
+    height: 2.5rem;
+    border-radius: 5px;
+    padding: 0 3%;
+    box-shadow: 0 0 5px #d0d0d0;
+    border: none;
+    background: #fff;
+    font-size: 1rem;
+    float: left;
+    margin: 0 3% 0 10px;
+    font-weight: 700;
+}
+#searchButton2 {
+    width: 15%;
+    height: 2.5rem;
+    background: #4169e1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    float: left;
+}
+#searchfind2 {
+    width: 100%;
+    float: left;
+}
+#searchFind2All {
+    margin-left: 3%; 
+    margin-top: 4%;
+}
+
+
+.autoWidth {
     float: left;
     width: 70%;
     height: 100px;
     margin: 3px 0 0 5%;
     overflow-y: scroll;
+}
+.autocomplete { /* 자동검색기능 */
+    width: 75%;
+}
+.autocomplete > div {
+    background: #1a1a1a99;
+    padding: .2rem .6rem;
+    z-index: 100;
+    opacity: 1;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+}
+input::placeholder {
+    font-size: 1rem;
+}
+mark {
+    background: #fffc99d6;
 }
 
 
@@ -237,8 +329,8 @@ button > div {
     color: white;
 }
 
-/* 버스 버튼 */
-#busButton button {
+/* 지하철 버튼 */
+#subwayButton button {
     background-color: #4169e1;
     border: none;
     display: block;
@@ -249,20 +341,22 @@ button > div {
     padding: 0 7px 0 3px;
     margin: 0;
 }
-#busButton img {
+#subwayButton img {
     width: 24px; 
     height: 24px; 
     float: left; 
     margin: 10px 0 10px 10px; 
     opacity: 100%; 
 }
-#busButton div {
+#subwayButton div {
     display: block;
     height: 44px;
     line-height: 44px;
     float: right;
     width: 50px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     color: white;
 }
+
+

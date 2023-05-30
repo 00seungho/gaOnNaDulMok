@@ -32,10 +32,10 @@ window.onload = function(){
     }
     
     else{
-    document.getElementById('searchButton').addEventListener('click', function(){
+    document.getElementById('searchBusButton').addEventListener('click', function(){
         searchjson("../src/bus.json",searchBarmobile.value);
     })// 검색버튼 클릭 시, 검색 함수실행
-    document.getElementById('search').addEventListener('keyup', function (e) {// 키보드 엔터누를 시 검색 함수 실행
+    document.getElementById('searchBus').addEventListener('keyup', function (e) {// 키보드 엔터누를 시 검색 함수 실행
         if (e.key === 'Enter') {
             searchjson("../src/bus.json",searchBarmobile.value);
             searchfind
