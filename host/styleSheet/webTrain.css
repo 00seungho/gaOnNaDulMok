@@ -29,17 +29,18 @@ ul
     color:#000000; 
     margin:auto;
     list-style: none;
-    padding-top: 1%;
+    padding-top: 1.5%;
     /* ul 태그 안 내용 한줄로 표기 */
 }
 
-#headerWeb > ul> li
+#headerWeb > ul > a > li
 {   
+    text-align: center;
+    float: left;
     padding-left: 10%;   
-    display: inline-block;  
+    /* display: inline-block;   */
      /* header 글자 사이 간격 */
 }
-
 a
 {
     text-decoration-line: none;
