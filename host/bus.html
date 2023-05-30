@@ -48,7 +48,7 @@
         <div id="abody">
             <div id="logoFixed">
                 <header id="header"> <!-- js 추가해서 연결한건데 확인바람 -->
-                    <h1 onclick="window.open('index.html')" style="display: block; float: left; margin: 0 45px; font-weight: 400;">가온나들목</h1>
+                    <h1 onclick="location.href='index.html'" style="display: block; float: left; margin: 0 45px; font-weight: 400;">가온나들목</h1>
                     <button id="side_bar" type="button"></button>
                 </header>
             </div>
@@ -78,14 +78,14 @@
         
         <div id="sideMenu"> <!-- 옆 사이드 메뉴, 아래 #wall 과 한세트 -->
             <div id="sideMenuLogo">
-                <h2>가온나들목</h2>
+                <h2 onclick="location.href='index.html'">가온나들목</h2>
             </div>
             <hr>
             <h3 class="textRight" style="font-size: 12pt; color: lightgray; position: reltive;line-height: 40px;">Menu</h3>
             <ul style="font-size: 11pt; margin: 0 0 20px 0;">
-                <li onclick="window.open('train.html')"><img src="imgs/app/637209.png"><div style="font-weight: 500; font-family: SUITE;">지하철 내 엘베 / 휠체어</div></li>
+                <li onclick="location.href='bus.html'"><img src="imgs/app/637209.png"><div style="font-weight: 500; font-family: SUITE;">지하철 내 엘베 / 휠체어</div></li>
                 <li style="background-color: #4169e1;"><img src="imgs/app/7577293.png"><div style="font-weight: 500; font-family: SUITE; color: white;">버스 찾기</div></li>
-                <li onclick="window.open('taxi.html')"><img src="imgs/app/7167398.png"><div style="font-weight: 500; font-family: SUITE;">이동지원차량 예약</div></li>
+                <li onclick="location.href='taxi.html'"><img src="imgs/app/7167398.png"><div style="font-weight: 500; font-family: SUITE;">이동지원차량 예약</div></li>
             </ul>
             <div id="bottom_button">
                 <hr>
@@ -101,13 +101,13 @@
         <bottom class="bottom_bar"> <!-- js 추가해서 연결한건데 확인바람 -->
             <div id="bottom_bars">
                 <div id="subwayButton" style="width: 100px; margin: 0 5px 0 0; float: left;">
-                    <button onclick="window.open('train.html')" id="subway" class="bottom_bar_button"><img src="imgs/app/50724.png"><div class="hi2 hi3" style="font-size: 12pt; font-family: SUITE">지하철</div></button>
+                    <button onclick="location.href='train.html'" id="subway" class="bottom_bar_button"><img src="imgs/app/50724.png"><div class="hi2 hi3" style="font-size: 12pt; font-family: SUITE">지하철</div></button>
                 </div>
                 <div id="busButton" style="width: 100px; margin: 0 5px 0 5px; float: left;">
                     <button id="bus" class="bottom_bar_button"><img src="imgs/app/7577293.png"><div class="hi1 hi3" style="font-size: 12pt; font-family: SUITE">버스</div></button>
                 </div>
                 <div id="texiButton" style="width: 100px; margin: 0 0 0 5px; float: left;">
-                    <button onclick="window.open('taxi.html')" id="texi" class="bottom_bar_button"><img src="imgs/app/3514593.png"><div class="hi1 hi2" style="font-size: 12pt; font-family: SUITE">택시</div></button>
+                    <button onclick="location.href='taxi.html'" id="texi" class="bottom_bar_button"><img src="imgs/app/3514593.png"><div class="hi1 hi2" style="font-size: 12pt; font-family: SUITE">택시</div></button>
                 </div>
             </div>
         </bottom>
@@ -116,13 +116,13 @@
 <!-- 웹 시작 -->
     <div id="Web">
         <div id="headerWeb">
-            <ul>    
-                <li>
-                    <h3 class="font1"><a href="index.html">가온나들목</a></h3>
-                </li>
-                <li><a href="train.html">지하철</a></li>
-                <li><a href="bus.html">저상버스</a></li>
-                <li><a href="#">이동지원차량</a></li>
+            <div style="width: 250px; height: 50px; margin: 5px 0 5px 30px; float: left;">
+                <a href="index.html"><h1 style="width: 250px; height: 50px; text-align: center; line-height: 50px; font-size: 36px;">가온나들목</h1></a>
+            </div>
+            <ul style="font-family: SUITE;">    
+                <a href="train.html"><li>지하철</li></a>
+                <a href="bus.html"><li>저상버스</li></a>
+                <a href="#"><li>이동지원차량</li></a>
             </ul>
         </div>
 

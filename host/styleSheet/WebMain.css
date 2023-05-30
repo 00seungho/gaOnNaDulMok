@@ -1,74 +1,67 @@
-#moblie{
+#moblie {
     display: none;
 }
-@font-face {
-    font-family: 'TAEBAEKmilkyway';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
 
-.font1
-{
-    font-family: 'TAEBAEKmilkyway';
-    font-size: 31px;
+#Web {
+    width: 1180px;
+    height: auto;
+    background-color: white;
 }
-#headerWeb
-{   
+#headerWeb {   
     width:100%;  
     height: 60px;
     border: 0px solid;
-    /* background-color: #F1F1F1;   */
+    background-color: #e3e7f0;   
     text-align: left;  
     float: left;
     /* 상단 가온 박스 */
 }
-ul
-{  
-      width: 100%;
+ul {  
+    width: 100%;
     color:#000000; 
-    margin:auto;
     list-style: none;
-    padding-top: 1%;
     /* ul 태그 안 내용 한줄로 표기 */
 }
 
-#headerWeb > ul> li
-{   
-    padding-left: 10%;   
-    display: inline-block;  
+#headerWeb li {   
+    font-size: 18pt;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    line-height: 50px;
+    width: 250px;
+    height: 50px;
+    float: left;
+    margin: 5px 0;
      /* header 글자 사이 간격 */
 }
+#headerWeb li:hover {
+    background-color: #979fb6;
+}
 
-a
-{
+a {
     text-decoration-line: none;
     color: #000000;
     /* ul 안에 하이퍼링크 줄 제거 및 색깔 고정*/
 }
-body
-{   
+body {   
     margin: 0 auto;
     width: 1180px; 
-    background: #FFFFFF;
+    background: #d2ebff;
     /* 몸통 부분 크기 및 배경 이미지 */
 }
 
-#nav
-{   
+#nav {   
     float:left;
     width: 100%; 
     text-align: center;
     font-family: 'SUITE', sans-serif;
     font-size: 48px;
-    border: 1px solid black;
-
+    line-height: 50px;
+    background-color: white;
 }
 
 .imgcenter{
     width: 100%;
-}
-
-#nav{
- line-height: 50px;
 }
