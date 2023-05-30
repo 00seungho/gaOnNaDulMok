@@ -24,7 +24,7 @@
 }
 #section{
     position: absolute;  
-    top: 630px; left: 200px;  width: 1520px;  height: 400px;
+    top: 430px; left: 200px;  width: 1520px;  height: 400px;
     background: var(--unnamed-color-000000) 0% 0% no-repeat padding-box;
     background: #000000 0% 0% no-repeat padding-box;
     opacity: 1
