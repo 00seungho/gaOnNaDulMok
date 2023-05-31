@@ -199,3 +199,12 @@ mark{
     background-color: black;
     border: none;
 }
+    
+#onefind{
+width: 50%;
+float: left;
+}
+#towfind{
+width: 49%;
+float: right;
+}
