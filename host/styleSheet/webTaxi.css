@@ -2,24 +2,24 @@
     display: none;
 }
 
-ul
-{  
-    width: 100%;
-    color:#000000; 
-    margin:auto;
-    list-style: none;
-    padding-top: 1.5%;
-    /* ul 태그 안 내용 한줄로 표기 */
+#Web {
+    width: 1180px;
+    height: auto;
 }
-
 #headerWeb {   
     width:100%;  
     height: 60px;
-    border: 0px solid;
-    background-color: #e3e7f0;   
+    border: none; 
     text-align: left;  
     float: left;
+    margin: 10px 0;
     /* 상단 가온 박스 */
+}
+ul {  
+    width: 100%;
+    color:#000000; 
+    list-style: none;
+    /* ul 태그 안 내용 한줄로 표기 */
 }
 #headerWeb li {   
     font-size: 14pt;
@@ -32,34 +32,45 @@ ul
     height: 50px;
     float: left;
     margin: 5px 0;
+    border-radius: 20px;
      /* header 글자 사이 간격 */
 }
 #headerWeb li:hover {
-    background-color: #979fb6;
+    background-color: #d8def0;
 }
 
-a
-{
+a {
     text-decoration-line: none;
     color: #000000;
     /* ul 안에 하이퍼링크 줄 제거 및 색깔 고정*/
 }
-body
-{   
+body {   
     margin: 0 auto;
     width: 1180px; 
-    background: #d2ebff;
     /* 몸통 부분 크기 및 배경 이미지 */
 }
-
-#nav
-{   
+#nav {   
     float:left;
     width: 100%; 
-    text-align: center;
-    line-height: 209px;
+    text-align: left;
+    margin: 10px 0 0 0;
+    line-height: 90px;
     font-family: 'SUITE', sans-serif;
-    font-size: 48px;
-    border: 1px solid black;
+    font-size: 30pt; 
+}
 
+
+#Web hr {
+    width: 100%;
+    height: 1px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    float: left;
+    background-color: black;
+    border: none;
+}
+
+#section {
+    width: 100%;
+    float: left;
 }
