@@ -175,7 +175,7 @@ body {
     width: 600px;
 }
 
-#evSelectorWeb{
+#busSelectorWeb{
     float: left;
     width: 100%;
     margin-top: 10px;
@@ -183,58 +183,44 @@ body {
 mark{
     background-color: rgb(193, 231, 231);
 }
+#busSelectorWeb {
+    float: left;
+    width: 300px;
+    margin: 40px 0 10px 30px;
+    box-shadow: 0px 0 5px 3px #d2d2d2;
+    border-radius: 50px;
+}   
+
 /* 엘베선택버튼 */
-.evSelectWeb {
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-	background-color:#ffffff;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#666666;
-	font-size:17px;
-	font-weight:bold;
-	padding:12px 27px;
+.bus1SelectWeb {
+	color: white;
+	background-color: #4169e1;
+	border-radius: 50px 0 0 50px;
+	display: block;
+	cursor: pointer;
+	font-size: 17px;
+	font-weight: 500;
+	width: 150px;
+    height: 50px;
 	text-decoration:none;
-}
-.evSelectWeb:hover {
-	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-	background-color:#f6f6f6;
-}
-.evSelectWeb:active {
-	position:relative;
-	top:1px;
+    border: none;
+    float: left;
 }
 /* 휠체어리프트선택버튼 */
-.wlSelectWeb {
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-	background-color:#ffffff;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#666666;
-	font-size:17px;
-	font-weight:bold;
-	padding:12px 27px;
+.bus2SelectWeb {
+    background-color: #f6f6f6;
+    color: #4169e1;
+	border-radius: 0 50px 50px 0;
+	display: block;
+	cursor: pointer;
+	font-size: 17px;
+	font-weight: 500;
+    width: 150px;
+    height: 50px;
+    float: left;
+	padding: 12px 27px;
 	text-decoration:none;
-    margin-left: 2%;
-}
-.wlSelectWeb:hover {
-	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-	background-color:#f6f6f6;
-}
-.wlSelectWeb:active {
-	position:relative;
-	top:1px;
-}
-#evSelectorFieldWeb{
-    float: left;
-}
-#wlSelectorFieldWeb{
-    float: left;
+    border: none;
 }
         
 

@@ -32,6 +32,40 @@
     border-radius: 5px;
     margin: 5px 15px;
 }
+/* 엘리베이터, 휠체어리프트 버튼 */
+#busBut {
+    position: relative; 
+    height: 36px; 
+    width: 240px; 
+    border-radius: 50px; 
+    background-color: #EFEFEF; 
+    box-shadow: 0 0 5px 2px #e6e6e6;
+    margin: 0 auto;
+    z-index: 29;
+}
+#busBut1 {
+    position: relative; 
+    width: 120px; 
+    height: 30px; 
+    top: 3px; 
+    left: 3px;
+    border-radius: 50px; 
+    z-index: 31;
+    
+    border: none;
+}
+#busBut2 {
+    position: relative; 
+    width: 120px; 
+    height: 30px; 
+    bottom: 27px;
+    left: 117px;
+    border-radius: 50px; 
+    z-index: 30;
+    
+    
+    border: none;
+}
 
 #searchBus {
     width: 70%;
