@@ -107,12 +107,12 @@ mark {
     margin-left: 3%; 
     margin-top: 4%;
 }
-#autoWidth {
+.autoWidth {
     float: left;
     width: 70%;
     height: 100px;
     margin: 3px 0 0 5%;
-    overflow-y: scroll;
+   
 }
 
 
