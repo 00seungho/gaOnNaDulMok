@@ -6,22 +6,25 @@
     width: 1180px;
     height: auto;
 }
-#headerWeb {   
-    width:100%;  
+
+#headerWeb {
+    width: 100%;
     height: 60px;
-    border: none; 
-    text-align: left;  
+    border: none;
+    text-align: left;
     float: left;
     margin: 10px 0;
     /* 상단 가온 박스 */
 }
-ul {  
+
+ul {
     width: 100%;
-    color:#000000; 
+    color: #000000;
     list-style: none;
     /* ul 태그 안 내용 한줄로 표기 */
 }
-#headerWeb li {   
+
+#headerWeb li {
     font-size: 14pt;
     font-weight: 600;
     text-align: center;
@@ -33,8 +36,9 @@ ul {
     float: left;
     margin: 5px 0;
     border-radius: 20px;
-     /* header 글자 사이 간격 */
+    /* header 글자 사이 간격 */
 }
+
 #headerWeb li:hover {
     background-color: #d8def0;
 }
@@ -45,25 +49,24 @@ a {
     /* ul 안에 하이퍼링크 줄 제거 및 색깔 고정*/
 }
 
-body {   
+body {
     margin: 0 auto;
-    width: 1180px; 
+    width: 1180px;
     /* 몸통 부분 크기 및 배경 이미지 */
 }
 
-#nav {   
-    float:left;
-    width: 100%; 
+#nav {
+    float: left;
+    width: 100%;
     text-align: center;
     font-family: 'SUITE', sans-serif;
     font-size: 48px;
-    line-height: 50px; 
+    line-height: 50px;
 }
 
-.imgcenter{
+.imgcenter {
     width: 100%;
 }
-
 
 #Web hr {
     width: 100%;
@@ -73,4 +76,10 @@ body {
     float: left;
     background-color: black;
     border: none;
+}
+
+#gongBAck {
+    width: 100%;
+    float: left;
+    height: 150px;
 }
