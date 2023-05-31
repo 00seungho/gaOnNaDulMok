@@ -119,6 +119,7 @@ window.onload = function () {
                 content: iwContent
             });
             infowindow.open(map, marker);
+            document.getElementById("first").style.backgroundColor = "yellow";
             moveMap(data[a].Y좌표, data[a].X좌표);
         }
     }
@@ -165,14 +166,15 @@ window.onload = function () {
 
                             else {
                                 var samhang = Math.floor((dataItem.itemList[i].exps1) / 60);
+                                var samhang2 = Math.floor((dataItem.itemList[i].exps2) / 60)+"분 남았습니다.";
                                 var samsamhong = samhang > 0 ? samhang + "분 남았습니다." : "곧 도착합니다";
                                 firstfound.innerHTML += "<h2>버스 이름: " + dataItem.itemList[i].busRouteAbrv + "</h2>" //버스명 먼저출력
                                 firstfound.innerHTML += "<h3>첫번째 예정도착 시간: " +  samsamhong + "</h3>"//버스 시간
-                                firstfound.innerHTML += "<h3>두번째 예정도착 시간: " + samsamhong + "</h3>"//버스 시간
+                                firstfound.innerHTML += "<h3>두번째 예정도착 시간: " + samhang2 + "</h3>"//버스 시간
                                 firstfound.innerHTML += "<h3>혼잡여부: " + honjob(dataItem.itemList[i].reride_Num1) + "</h3>"
                                 firstfoundmobile.innerHTML += "<h2>버스 이름: " + dataItem.itemList[i].busRouteAbrv + "</h2>"
                                 firstfoundmobile.innerHTML += "<h3>첫번째 예정도착 시간: " + samsamhong + "</h3>"//버스 시간
-                                firstfoundmobile.innerHTML += "<h3>두번째 예정도착 시간: " + samsamhong + "</h3>"//버스 시간
+                                firstfoundmobile.innerHTML += "<h3>두번째 예정도착 시간: " + samhang2 + "</h3>"//버스 시간
                                 firstfoundmobile.innerHTML += "<h3>혼잡여부: " + honjob(dataItem.itemList[i].reride_Num1) + "</h3>"
                             }
                         }
@@ -186,15 +188,17 @@ window.onload = function () {
                         }
                         else {
                             var samhang = Math.floor((dataItem.itemList.exps1) / 60);
+                            var samhang2 = Math.floor((dataItem.itemList.exps2) / 60);
+
                             var samsamhong = samhang > 0 ? samhang + "분 남았습니다." : "곧 도착합니다"  
                             firstfound.innerHTML += "<h2>버스 이름: " + dataItem.itemList.busRouteAbrv + "</h2>" //버스명 먼저출력
                             firstfound.innerHTML += "<h3>첫번째 예정도착 시간: " +samsamhong + "</h3>"//버스 시간
-                            firstfound.innerHTML += "<h3>두번째 예정도착 시간: " +samsamhong + "</h3>"//버스 시간
+                            firstfound.innerHTML += "<h3>두번째 예정도착 시간: " +samhang2 + "</h3>"//버스 시간
                             firstfound.innerHTML += "<h3>혼잡여부: " + honjob(dataItem.itemList.reride_Num1) + "</h3>"//버스 시간
 
                             firstfoundmobile.innerHTML += "<h2>버스 이름: " + dataItem.itemList.busRouteAbrv + "</h2>"
                             firstfoundmobile.innerHTML += "<h3>첫번째 예정도착 시간: " + samsamhong + "</h3>"//버스 시간
-                            firstfoundmobile.innerHTML += "<h3>두번째 예정도착 시간: "+ samsamhong + "</h3>"//버스 시간
+                            firstfoundmobile.innerHTML += "<h3>두번째 예정도착 시간: "+ samhang2 + "</h3>"//버스 시간
                             firstfoundmobile.innerHTML += "<h3>혼잡여부: " + honjob(dataItem.itemList.reride_Num1) + "</h3>"
                         }
 
@@ -243,15 +247,17 @@ window.onload = function () {
                             }
                             else{
                             var samhang = Math.floor((dataItem.itemList[i].exps1) / 60);
+                            var samhang2 = Math.floor((dataItem.itemList[i].exps2) / 60)+"분 남았습니다.";
+
                             var samsamhong = samhang > 0 ? samhang + "분 남았습니다." : "곧 도착합니다";
                             twofound.innerHTML += "<h2>버스 이름: " + dataItem.itemList[i].busRouteAbrv + "</h2>" //버스명 먼저출력
                             twofound.innerHTML += "<h3>첫번째 예정도착 시간: " + samsamhong + "</h3>"//버스 시간
-                            twofound.innerHTML += "<h3>두번째 예정도착 시간: " + samsamhong + "</h3>"//버스 시간
+                            twofound.innerHTML += "<h3>두번째 예정도착 시간: " + samhang2 + "</h3>"//버스 시간
                             twofound.innerHTML += "<h3>혼잡여부: " + honjob(dataItem.itemList[i].reride_Num1) + "</h3>"//버스 시간
 
                             twofoundmobile.innerHTML += "<h2>버스 이름: " + dataItem.itemList[i].busRouteAbrv + "</h2>"
                             twofoundmobile.innerHTML += "<h3>첫번째 예정도착 시간: " + samsamhong + "</h3>"//버스 시간
-                            twofoundmobile.innerHTML += "<h3>두번째 예정도착 시간: " + samsamhong + "</h3>"//버스 시간
+                            twofoundmobile.innerHTML += "<h3>두번째 예정도착 시간: " + samhang2 + "</h3>"//버스 시간
                             twofoundmobile.innerHTML += "<h3>혼잡여부: " + honjob(dataItem.itemList[i].reride_Num1) + "</h3>"
                         }
                         }
@@ -264,15 +270,17 @@ window.onload = function () {
                             twofoundmobile.innerHTML += "<h3>운행 종료</h3>"
                         }else{
                         var samhang = Math.floor((dataItem.itemList.exps1) / 60);
+                        var samhang2 = Math.floor((dataItem.itemList.exps2) / 60)+"분 남았습니다.";
+
                         var samsamhong = samhang > 0 ? samhang + "분 남았습니다." : "곧 도착합니다";
                         twofound.innerHTML += "<h2>버스 이름: " + dataItem.itemList.busRouteAbrv + "</h2>" //버스명 먼저출력
                         twofound.innerHTML += "<h3>첫번째 예정도착 시간: " + samsamhong + "</h3>"//버스 시간
-                        twofound.innerHTML += "<h3>두번째 예정도착 시간: " + samsamhong + "</h3>"//버스 시간
+                        twofound.innerHTML += "<h3>두번째 예정도착 시간: " + samhang2 + "</h3>"//버스 시간
                         twofound.innerHTML += "<h3>혼잡여부: " + honjob(dataItem.itemList.reride_Num1) + "</h3>"//버스 시간
 
                         twofoundmobile.innerHTML += "<h2>버스 이름: " + dataItem.itemList[i].busRouteAbrv + "</h2>"
                         twofoundmobile.innerHTML += "<h3>첫번째 예정도착 시간: " + samsamhong + "</h3>"//버스 시간
-                        twofoundmobile.innerHTML += "<h3>두번째 예정도착 시간: " + samsamhong + "</h3>"//버스 시간
+                        twofoundmobile.innerHTML += "<h3>두번째 예정도착 시간: " + samhang2 + "</h3>"//버스 시간
                         twofoundmobile.innerHTML += "<h3>혼잡여부: " + honjob(dataItem.itemList.reride_Num1) + "</h3>"
                     }
                     }
@@ -303,7 +311,7 @@ function honjob(honjobdo) {
     }
     else if (honjobdo == "1") {
         return "여유"
-    }
+    }   
     else if (honjobdo == "3") {
         return "보통"
     }
@@ -318,9 +326,10 @@ function honjob(honjobdo) {
 function hidefistWeb(){
     if(document.getElementById("first").style.backgroundColor == "yellow"){
         document.getElementById("first").style.backgroundColor = "white";
-
     }
     document.getElementById("twoth").style.backgroundColor = "yellow";
+    document.getElementById("onefind").style.backgroundColor = "white";
+    document.getElementById("towfind").style.backgroundColor = "#f1f1f1";
 
 }
 function hidesecond(){
@@ -328,6 +337,8 @@ function hidesecond(){
         document.getElementById("twoth").style.backgroundColor = "white";
     }
     document.getElementById("first").style.backgroundColor = "yellow";
+    document.getElementById("onefind").style.backgroundColor = "#f1f1f1";
+    document.getElementById("towfind").style.backgroundColor = "white";
 }
 
 
