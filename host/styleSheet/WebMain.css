@@ -45,6 +45,7 @@ a {
     color: #000000;
     /* ul 안에 하이퍼링크 줄 제거 및 색깔 고정*/
 }
+
 body {   
     margin: 0 auto;
     width: 1180px; 
@@ -59,7 +60,7 @@ body {
     font-family: 'SUITE', sans-serif;
     font-size: 48px;
     line-height: 50px;
-    background-color: white;
+    background-color: white;    
 }
 
 .imgcenter{

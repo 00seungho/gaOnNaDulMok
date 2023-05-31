@@ -1,16 +1,7 @@
 #moblie{
     display: none;
 }
-#headerWeb
-{   
-    width:100%;  
-    height: 60px;
-    border: 0px solid;
-    /* background-color: #F1F1F1;   */
-    text-align: left;  
-    float: left;
-    /* 상단 가온 박스 */
-}
+
 ul
 {  
     width: 100%;
@@ -21,12 +12,30 @@ ul
     /* ul 태그 안 내용 한줄로 표기 */
 }
 
-#headerWeb > ul > a > li
-{   
-    text-align: center;
+#headerWeb {   
+    width:100%;  
+    height: 60px;
+    border: 0px solid;
+    background-color: #e3e7f0;   
+    text-align: left;  
     float: left;
-    padding-left: 10%; 
+    /* 상단 가온 박스 */
+}
+#headerWeb li {   
+    font-size: 14pt;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    line-height: 50px;
+    width: 250px;
+    height: 50px;
+    float: left;
+    margin: 5px 0;
      /* header 글자 사이 간격 */
+}
+#headerWeb li:hover {
+    background-color: #979fb6;
 }
 
 a
@@ -39,7 +48,7 @@ body
 {   
     margin: 0 auto;
     width: 1180px; 
-    background: #FFFFFF;
+    background: #d2ebff;
     /* 몸통 부분 크기 및 배경 이미지 */
 }
 
