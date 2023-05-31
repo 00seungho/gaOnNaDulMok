@@ -136,10 +136,20 @@ window.onload = function(){
             fetch(url)
             .then(response => response.json())
             .then(data => {
-                var firstfound = document.getElementById("onefind");
-                var firstfoundmobile = 
+                var firstfound = document.getElementById("onefind"  );
+                var firstfoundmobile = document.getElementById("firstFind");
                 const dataItem = data.ServiceResult.msgBody;
-                
+                if (firstfound.childElementCount > 0) {
+                    while (firstfound.firstChild) {
+                        firstfound.removeChild(firstfound.firstChild);
+                      }
+                  }
+
+                  if (firstfoundmobile.childElementCount > 0) {
+                    while (firstfoundmobile.firstChild) {
+                        firstfoundmobile.removeChild(firstfoundmobile.firstChild);
+                      }
+                  }
 
                 if(typeof(dataItem) != "string"){
                     if(Array.isArray(dataItem.itemList)){
@@ -147,12 +157,25 @@ window.onload = function(){
                         firstfound.innerHTML += "<h2>버스 이름: "+dataItem.itemList[i].busRouteAbrv+"</h2>" //버스명 먼저출력
                         firstfound.innerHTML += "<h3>첫번째 예정도착 시간: "+Math.floor((dataItem.itemList[i].exps1)/60)+"분 남았습니다.</h3>"//버스 시간
                         firstfound.innerHTML += "<h3>두번째 예정도착 시간: "+Math.floor((dataItem.itemList[i].exps2)/60) +"분 남았습니다.</h3>"//버스 시간
+                        firstfound.innerHTML += "<h3>혼잡여부: "+honjob(dataItem.itemList[i].reride_Num1)+"</h3>"//버스 시간
+                        firstfoundmobile.innerHTML += "<h2>버스 이름: "+dataItem.itemList[i].busRouteAbrv+"</h2>"
+                        firstfoundmobile.innerHTML += "<h3>첫번째 예정도착 시간: "+Math.floor((dataItem.itemList[i].exps1)/60)+"분 남았습니다.</h3>"//버스 시간
+                        firstfoundmobile.innerHTML += "<h3>두번째 예정도착 시간: "+Math.floor((dataItem.itemList[i].exps2)/60) +"분 남았습니다.</h3>"//버스 시간
+                        firstfoundmobile.innerHTML += "<h3>혼잡여부: "+honjob(dataItem.itemList[i].reride_Num1)+"</h3>"//버스 시간
+
                     }
                 }
                 else{
                     firstfound.innerHTML += "<h2>버스 이름: "+dataItem.itemList.busRouteAbrv+"</h2>" //버스명 먼저출력
                     firstfound.innerHTML += "<h3>첫번째 예정도착 시간: "+Math.floor((dataItem.itemList.exps1)/60)+"분 남았습니다.</h3>"//버스 시간
                     firstfound.innerHTML += "<h3>두번째 예정도착 시간: "+Math.floor((dataItem.itemList.exps2)/60) +"분 남았습니다.</h3>"//버스 시간
+                    firstfound.innerHTML += "<h3>혼잡여부: "+honjob(dataItem.itemList.reride_Num1)+"</h3>"//버스 시간
+                    
+                    firstfoundmobile.innerHTML += "<h2>버스 이름: "+dataItem.itemList.busRouteAbrv+"</h2>" //버스명 먼저출력
+                    firstfoundmobile.innerHTML += "<h3>첫번째 예정도착 시간: "+Math.floor((dataItem.itemList.exps1)/60)+"분 남았습니다.</h3>"//버스 시간
+                    firstfoundmobile.innerHTML += "<h3>두번째 예정도착 시간: "+Math.floor((dataItem.itemList.exps2)/60) +"분 남았습니다.</h3>"//버스 시간
+                    firstfoundmobile.innerHTML += "<h3>혼잡여부: "+honjob(dataItem.itemList.reride_Num1)+"</h3>"//버스 시간
+
                 }
                 }
 
@@ -173,7 +196,19 @@ window.onload = function(){
             .then(data => {
                 var twofound = document.getElementById("towfind");
                 const dataItem = data.ServiceResult.msgBody;
-                
+                var twofoundmobile = document.getElementById("secondFind");
+                if (twofound.childElementCount > 0) {
+                    while (twofound.firstChild) {
+                        twofound.removeChild(twofound.firstChild);
+                      }
+                  }
+
+                  if (twofoundmobile.childElementCount > 0) {   
+                    while (twofoundmobile.firstChild) {
+                        twofoundmobile.removeChild(twofoundmobile.firstChild);
+                      }
+                  }
+
 
                 if(typeof(dataItem) != "string"){
                     if(Array.isArray(dataItem.itemList)){
@@ -181,12 +216,23 @@ window.onload = function(){
                         twofound.innerHTML += "<h2>버스 이름: "+dataItem.itemList[i].busRouteAbrv+"</h2>" //버스명 먼저출력
                         twofound.innerHTML += "<h3>첫번째 예정도착 시간: "+Math.floor((dataItem.itemList[i].exps1)/60)+"분 남았습니다.</h3>"//버스 시간
                         twofound.innerHTML += "<h3>두번째 예정도착 시간: "+Math.floor((dataItem.itemList[i].exps2)/60) +"분 남았습니다.</h3>"//버스 시간
+                        twofound.innerHTML += "<h3>혼잡여부: "+honjob(dataItem.itemList[i].reride_Num1)+"</h3>"//버스 시간
+                        
+                        twofoundmobile.innerHTML += "<h2>버스 이름: "+dataItem.itemList[i].busRouteAbrv+"</h2>" //버스명 먼저출력
+                        twofoundmobile.innerHTML += "<h3>첫번째 예정도착 시간: "+Math.floor((dataItem.itemList[i].exps1)/60)+"분 남았습니다.</h3>"//버스 시간
+                        twofoundmobile.innerHTML += "<h3>두번째 예정도착 시간: "+Math.floor((dataItem.itemList[i].exps2)/60) +"분 남았습니다.</h3>"//버스 시간
+                        twofoundmobile.innerHTML += "<h3>혼잡여부: "+honjob(dataItem.itemList[i].reride_Num1)+"</h3>"//버스 시간
                     }
                 }
                 else{
                     twofound.innerHTML += "<h2>버스 이름: "+dataItem.itemList.busRouteAbrv+"</h2>" //버스명 먼저출력
                     twofound.innerHTML += "<h3>첫번째 예정도착 시간: "+Math.floor((dataItem.itemList.exps1)/60)+"분 남았습니다.</h3>"//버스 시간
                     twofound.innerHTML += "<h3>두번째 예정도착 시간: "+Math.floor((dataItem.itemList.exps2)/60) +"분 남았습니다.</h3>"//버스 시간
+                    twofound.innerHTML += "<h3>혼잡여부: "+honjob(dataItem.itemList.reride_Num1)+"</h3>"//버스 시간
+                    twofoundmobile.innerHTML += "<h2>버스 이름: "+dataItem.itemList.busRouteAbrv+"</h2>" //버스명 먼저출력
+                    twofoundmobile.innerHTML += "<h3>첫번째 예정도착 시간: "+Math.floor((dataItem.itemList.exps1)/60)+"분 남았습니다.</h3>"//버스 시간
+                    twofoundmobile.innerHTML += "<h3>두번째 예정도착 시간: "+Math.floor((dataItem.itemList.exps2)/60) +"분 남았습니다.</h3>"//버스 시간
+                    twofoundmobile.innerHTML += "<h3>혼잡여부: "+honjob(dataItem.itemList.reride_Num1)+"</h3>"//버스 시간
                 }
                 }
 
@@ -208,3 +254,21 @@ window.onload = function(){
 
 
 
+function honjob(honjobdo){
+    console.log("혼잡여부:"+honjobdo);
+    if(honjobdo == "0"){
+        return "혼잡도 정보가 없습니다";
+    }
+    else if(honjobdo == "1"){
+        return "여유"
+    }
+    else if(honjobdo == "3"){
+        return "보통"
+    }
+    else if(honjobdo == "4"){
+        return "혼잡"
+    }
+    else{
+        return "오류";
+    }
+}
