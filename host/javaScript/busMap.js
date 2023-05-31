@@ -329,7 +329,7 @@ function hidefistWeb(){
     }
     document.getElementById("twoth").style.backgroundColor = "yellow";
     document.getElementById("onefind").style.backgroundColor = "white";
-    document.getElementById("towfind").style.backgroundColor = "#f1f1f1";
+    document.getElementById("towfind").style.backgroundColor = "#F1F1F1";
 
 }
 function hidesecond(){
@@ -337,7 +337,7 @@ function hidesecond(){
         document.getElementById("twoth").style.backgroundColor = "white";
     }
     document.getElementById("first").style.backgroundColor = "yellow";
-    document.getElementById("onefind").style.backgroundColor = "#f1f1f1";
+    document.getElementById("onefind").style.backgroundColor = "#F1F1F1";
     document.getElementById("towfind").style.backgroundColor = "white";
 }
 
