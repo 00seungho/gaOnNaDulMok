@@ -5,15 +5,14 @@
 #Web {
     width: 1180px;
     height: auto;
-    background-color: white;
 }
 #headerWeb {   
     width:100%;  
     height: 60px;
-    border: 0px solid;
-    background-color: #e3e7f0;   
+    border: none; 
     text-align: left;  
     float: left;
+    margin: 10px 0;
     /* 상단 가온 박스 */
 }
 ul {  
@@ -22,7 +21,6 @@ ul {
     list-style: none;
     /* ul 태그 안 내용 한줄로 표기 */
 }
-
 #headerWeb li {   
     font-size: 14pt;
     font-weight: 600;
@@ -34,10 +32,11 @@ ul {
     height: 50px;
     float: left;
     margin: 5px 0;
+    border-radius: 20px;
      /* header 글자 사이 간격 */
 }
 #headerWeb li:hover {
-    background-color: #979fb6;
+    background-color: #d8def0;
 }
 
 a {
@@ -49,7 +48,6 @@ a {
 body {   
     margin: 0 auto;
     width: 1180px; 
-    background: #d2ebff;
     /* 몸통 부분 크기 및 배경 이미지 */
 }
 
@@ -59,10 +57,20 @@ body {
     text-align: center;
     font-family: 'SUITE', sans-serif;
     font-size: 48px;
-    line-height: 50px;
-    background-color: white;    
+    line-height: 50px; 
 }
 
 .imgcenter{
     width: 100%;
+}
+
+
+#Web hr {
+    width: 100%;
+    height: 1px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    float: left;
+    background-color: black;
+    border: none;
 }

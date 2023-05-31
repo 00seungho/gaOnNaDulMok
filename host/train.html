@@ -59,6 +59,7 @@
             font-size: 11pt;
             font-weight: 300;
         }
+
     </style>
 </head>
 
@@ -68,7 +69,7 @@
         <div id="abody">
             <div id="logoFixed">
                 <header id="header"> <!-- js 추가해서 연결한건데 확인바람 -->
-                    <h1 onclick="window.open('index.html')" style="display: block; float: left; margin: 0 45px; font-weight: 400;">가온나들목</h1>
+                    <h1 onclick="location.href='index.html'" style="display: block; float: left; margin: 0 45px; font-weight: 400;">가온나들목</h1>
                     <button id="side_bar" type="button"></button>
                 </header>
             </div>
@@ -99,19 +100,12 @@
     
                             <script src ="javaScript/subwayAutoSeach.js"></script><!--검색 영역 스크립트 추가-->
                         </form>
-                        <div id="searchfind">
-                            </div>
-                        </div>
+                        <div id="searchfind"></div>
+                    </div>
                 </div>
-                <div id="evSelectorFieldApp" style="display: block;">
-    
-                </div>
-                <div id="wlSelectorFieldApp" style="display: none;">
-
-                </div>
-
-
-            <div class="autoWidth"></div>
+                <div id="evSelectorFieldApp" style="display: block;"></div>
+                <div id="wlSelectorFieldApp" style="display: none;"></div>
+                <div class="autoWidth"></div>
             </div>
         </div>
             
@@ -123,13 +117,13 @@
             <h3 class="textRight" style="font-size: 12pt; color: lightgray; position: reltive;line-height: 40px;">Menu</h3>
             <ul style="font-size: 11pt; margin: 0 0 20px 0;">
                 <li style="background-color: #4169e1;"><img src="imgs/app/637209.png"><div style="font-weight: 500; font-family: SUITE; color: white;">지하철 내 엘베 / 휠체어</div></li>
-                <li onclick="window.open('bus.html')"><img src="imgs/app/7577293.png"><div style="font-weight: 500; font-family: SUITE;">버스 찾기</div></li>
-                <li onclick="window.open('taxi.html')"><img src="imgs/app/7167398.png"><div style="font-weight: 500; font-family: SUITE;">이동지원차량 예약</div></li>
+                <li onclick="location.href='bus.html'"><img src="imgs/app/7577293.png"><div style="font-weight: 500; font-family: SUITE;">버스 찾기</div></li>
+                <li onclick="location.href='taxi.html'"><img src="imgs/app/7167398.png"><div style="font-weight: 500; font-family: SUITE;">이동지원차량 예약</div></li>
             </ul>
             <div id="bottom_button">
                 <hr>
                 <h3 class="textRight" style="font-size: 12pt; color: lightgray; position: relative;line-height: 40px;">Accessibility</h3>
-                <div id="sideMenuButton">
+                    <div id="sideMenuButton">
                     <button id="zoomOut" type="button"><h4>축소</h4></button>
                     <button id="zoomIn" type="button" onclick="alert('서비스 준비중입니다.')"><h4>확대</h4></button>
                 </div>
@@ -143,14 +137,14 @@
                     <button id="subway" class="bottom_bar_button"><img src="imgs/app/50724.png"><div class="hi2 hi3" style="text-align: left; font-size: 12pt; font-family: SUITE">지하철</div></button>
                 </div>
                 <div id="busButton" style="width: 100px; margin: 0 5px 0 5px; float: left;">
-                    <button onclick="window.open('bus.html')" id="bus" class="bottom_bar_button"><img src="imgs/app/7577293.png"><div class="hi1 hi3" style="text-align: left; font-size: 12pt; font-family: SUITE">버스</div></button>
-                </div>
+                    <button onclick="location.href='bus.html'" id="bus" class="bottom_bar_button"><img src="imgs/app/7577293.png"><div class="hi1 hi3" style="text-align: left; font-size: 12pt; font-family: SUITE">버스</div></button>
+            </div>
                 <div id="texiButton" style="width: 100px; margin: 0 0 0 5px; float: left;">
-                    <button onclick="window.open('taxi.html')" id="texi" class="bottom_bar_button"><img src="imgs/app/3514593.png"><div class="hi1 hi2" style="text-align: left; font-size: 12pt; font-family: SUITE">택시</div></button>
+                    <button onclick="location.href='taxi.html'" id="texi" class="bottom_bar_button"><img src="imgs/app/3514593.png"><div class="hi1 hi2" style="text-align: left; font-size: 12pt; font-family: SUITE">택시</div></button>
                 </div>
             </div>
         </bottom>
-</div>
+    </div>
 
     <!-- 웹 -->
     <div id="Web">
@@ -164,18 +158,17 @@
                 <a href="taxi.html"><li>이동지원차량</li></a>
             </ul>
         </div>
-
+        <hr>
         <div id="nav">
-            <p>지하철 교통약자 편의시설 조회</p>
+            <p> &nbsp; &nbsp; ▶ 지하철 교통약자 편의시설 조회</p>
         </div>
 
         <div id="map">
 
         </div>
         <div id="evSelectorWeb">
-            <a href="javascript:hideWl();" class="evSelectWeb">엘리베이터</a>
-            <a href="javascript:hideEv()" class="wlSelectWeb">휠체어리프트</a>
-
+            <a href="javascript:hideWl();"><button type="button" class="evSelectWeb">엘리베이터</button></a>
+            <a href="javascript:hideEv()"><button type="button" class="wlSelectWeb">휠체어리프트</button></a>
         </div>
         <div id="searchSectionWeb">
             <div id="searchFieldWeb"><!--검색 영역-->
@@ -192,17 +185,10 @@
             </div>
         </div>
 
-        <div id="evSelectorFieldWeb">
+        <div id="evSelectorFieldWeb"></div>
+        <div id="wlSelectorFieldWeb" style='display:none;'></div>
+        <div id="gongBAck"></div> <!--이거 뭔지 물어보기-->
 
-        </div>
-
-        <div id="wlSelectorFieldWeb" style='display:none;'>
-
-        </div>
-
-        <div id="gongBAck"></div>
-
-    </div>
     </div>
     
                 <!-- 웹 페이지 -->

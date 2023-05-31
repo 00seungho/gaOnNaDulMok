@@ -1,26 +1,25 @@
 #moblie{
     display: none;
 }
-@font-face {
-    font-family: 'TAEBAEKmilkyway';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
 
-.font1
-{
-    font-family: 'TAEBAEKmilkyway';
-    font-size: 31px;
+#Web {
+    width: 1180px;
+    height: auto;
 }
 #headerWeb {   
     width:100%;  
     height: 60px;
-    border: 0px solid;
-    background-color: #e3e7f0;   
+    border: none; 
     text-align: left;  
     float: left;
+    margin: 10px 0;
     /* 상단 가온 박스 */
+}
+ul {  
+    width: 100%;
+    color:#000000; 
+    list-style: none;
+    /* ul 태그 안 내용 한줄로 표기 */
 }
 #headerWeb li {   
     font-size: 14pt;
@@ -33,160 +32,169 @@
     height: 50px;
     float: left;
     margin: 5px 0;
+    border-radius: 20px;
      /* header 글자 사이 간격 */
 }
 #headerWeb li:hover {
-    background-color: #979fb6;
+    background-color: #d8def0;
 }
-ul
-{  
-    width: 100%;
-    color:#000000; 
-    margin:auto;
-    list-style: none;
-    padding-top: 1.5%;
-    /* ul 태그 안 내용 한줄로 표기 */
-}
-
-
-a
-{
+a {
     text-decoration-line: none;
     color: #000000;
     /* ul 안에 하이퍼링크 줄 제거 및 색깔 고정*/
 }
-body
-{   
+body {   
     margin: 0 auto;
     width: 1180px; 
-    background: #d2ebff;
     /* 몸통 부분 크기 및 배경 이미지 */
 }
-
-#nav
-{   
+#nav {   
     float:left;
     width: 100%; 
-    text-align: center;
-    line-height: 209px;
+    text-align: left;
+    margin: 10px 0 0 0;
+    line-height: 90px;
     font-family: 'SUITE', sans-serif;
-    font-size: 48px;
-    border: 1px solid black;
-
+    font-size: 30pt; 
 }
 /* 네비게이션 부분 공백 */
 
 /*  아래 푸터 두번쨰 박스 */
 
 /* 중간 div 안에 글자 가온나들목 */
-.font2
-{
-    font-family: 'SUIT', sans-serif;
-    font-size: 21px;
-}
 
-#searchSectionWeb{
+#searchSectionWeb {
     float: left;
     width: 100%;
     margin-top: 10px;
 }
-#map{
+#map {
     float: left;    
     width: 100%;
     height: 700px;
-    border: solid black 1px;
 }
-#searchSection{
+#searchSection {
     float: left;    
-    width: 100%;
+    width: 680px;
     height: 300px;
     border: solid black 1px;
 }
-#gongBAck{
+#gongBAck {
     width: 100%;
     float: left;
     height: 300px;
+} 
+#searchSectionWeb {
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 1000px;
 }
-#searchWeb{
-    width: 70%;
-    height: 30px;
-    border-radius: 5px 5px 5px 5px;
-    font-size: 1em;
+#searchWeb {
+    width: 600px;
+    height: 40px;
+    border-radius: 50px 0 0 50px;
+    font-size: 16pt;
+    padding: 0 0 0 1em;
+    float: left;
+    border: none;
+    box-shadow: -3px 0 3px 1px #d2d2d2;
+    margin: 0 auto;
 }
-#thin{
+#thin {
     width: 100%;
     height: 1px;
     float: left;
 }
-#searchButtonWeb{
-    width: 4%;
-    height: 32px;
+#searchButtonWeb {
+    border-radius: 0 50px 50px 0;
+    width: 80px;
+    height: 40px;
+    border: none;
+    background-color: #4169e1;
+    color: white;
+    font-size: 14pt;
+    box-shadow: 3px 0 3px 1px #d2d2d2;
 }
-.autocomplete-itemSubWeb{
-    background-color: #F5f5f5;
-    width: 100%;
+.autocomplete-itemSubWeb {
+    background-color: #e7f4ff81;
+    width: 600px;
 }
-.autocompleteSubWeb{
-    width: 70%;
+.autocompleteSubWeb {
+    margin: 0 0 0 20px;
+    width: 600px;
 }
 
-#evSelectorWeb{
+#evSelectorWeb {
     float: left;
-    width: 100%;
-    margin-top: 10px;
+    width: 300px;
+    margin: 40px 0 10px 30px;
+    box-shadow: 0px 0 5px 3px #d2d2d2;
+    border-radius: 50px;
 }   
 
 /* 엘베선택버튼 */
 .evSelectWeb {
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-	background-color:#ffffff;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#666666;
-	font-size:17px;
-	font-weight:bold;
-	padding:12px 27px;
+	color: white;
+	background-color: #4169e1;
+	border-radius: 50px 0 0 50px;
+	display: block;
+	cursor: pointer;
+	font-size: 17px;
+	font-weight: 500;
+	width: 150px;
+    height: 50px;
 	text-decoration:none;
-}
-.evSelectWeb:hover {
-	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-	background-color:#f6f6f6;
+    border: none;
+    float: left;
 }
 .evSelectWeb:active {
-	position:relative;
-	top:1px;
+    background-color:#f6f6f6;
+    color: #4169e1;
 }
 /* 휠체어리프트선택버튼 */
 .wlSelectWeb {
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-	background-color:#ffffff;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#666666;
-	font-size:17px;
-	font-weight:bold;
-	padding:12px 27px;
+	color: white;
+	background-color: #4169e1;
+	border-radius: 0 50px 50px 0;
+	display: block;
+	cursor: pointer;
+	font-size: 17px;
+	font-weight: 500;
+    width: 150px;
+    height: 50px;
+    float: left;
+	padding: 12px 27px;
 	text-decoration:none;
-    margin-left: 2%;
-}
-.wlSelectWeb:hover {
-	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-	background-color:#f6f6f6;
+    border: none;
 }
 .wlSelectWeb:active {
-	position:relative;
-	top:1px;
+	background-color:#f6f6f6;
+    color: #4169e1;
 }
-#evSelectorFieldWeb{
+
+#evSelectorFieldWeb {
     float: left;
 }
-#wlSelectorFieldWeb{
+#wlSelectorFieldWeb {
     float: left;
 }
         
+#Web hr {
+    width: 100%;
+    height: 1px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    float: left;
+    background-color: black;
+    border: none;
+}
+mark{
+    background-color: rgb(193, 231, 231);
+}
+
+#gongBAck{
+    width: 100%;
+    float: left;
+    height: 150px;
+}
