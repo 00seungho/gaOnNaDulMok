@@ -22,10 +22,10 @@ $(function(){
             "backgroundColor":"#EFEFEF",
             "color":"black",
             "zIndex":"30"
-        })
+        });
 
-        $('#elevator').css({"display":"block"});
-        $('#wheelchair_lift').css({"display":"none"});
+        $('#evSelectorFieldApp').css({"display":"block"});
+        $('#wlSelectorFieldApp').css({"display":"none"});
     });
     /* 휠체어 리프트 */
     $('#liftBut').on("click", function(){
@@ -38,10 +38,40 @@ $(function(){
             "backgroundColor":"#EFEFEF",
             "color":"black",
             "zIndex":"30"
-        })
+        });
 
-        $('#wheelchair_lift').css({"display":"block"});
-        $('#elevator').css({"display":"none"});
+        $('#wlSelectorFieldApp').css({"display":"block"});
+        $('#evSelectorFieldApp').css({"display":"none"});
     });
 
+
+    /* 웹 */
+
+    $('.evSelectWeb').on("click", function(){
+        $(this).css({
+            "backgroundColor":"#EFEFEF",
+            "color":"#f6f6f6"
+        });
+        $('.wlSelectWeb').css({
+            "backgroundColor":"#f6f6f6",
+            "color":"#4169e1"
+        });
+
+        $('#evSelectorFieldApp').css({"display":"block"});
+        $('#wlSelectorFieldApp').css({"display":"none"});
+    });
+
+    $('.wlSelectWeb').on("click", function(){
+        $(this).css({
+            "backgroundColor":"#EFEFEF",
+            "color":"#f6f6f6"
+        });
+        $('.evSelectWeb').css({
+            "backgroundColor":"#f6f6f6",
+            "color":"#4169e1"
+        });
+
+        $('#wlSelectorFieldApp').css({"display":"block"});
+        $('#evSelectorFieldApp').css({"display":"none"});
+    });
 });

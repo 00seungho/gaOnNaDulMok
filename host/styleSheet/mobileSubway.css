@@ -359,4 +359,16 @@ button > div {
     color: white;
 }
 
+#searchFindAllSubWebEvApp {
+    margin: 0 0 0 30px;
+    float :left;
+}
 
+#wlSelectorFieldApp {
+    display: none;
+}
+#evSelectorFieldApp {
+    margin: 10px 10px; 
+    float: left; 
+    display: block;
+}

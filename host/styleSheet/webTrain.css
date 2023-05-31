@@ -148,14 +148,10 @@ body {
     border: none;
     float: left;
 }
-.evSelectWeb:active {
-    background-color:#f6f6f6;
-    color: #4169e1;
-}
 /* 휠체어리프트선택버튼 */
 .wlSelectWeb {
-	color: white;
-	background-color: #4169e1;
+    background-color: #f6f6f6;
+    color: #4169e1;
 	border-radius: 0 50px 50px 0;
 	display: block;
 	cursor: pointer;
@@ -168,16 +164,14 @@ body {
 	text-decoration:none;
     border: none;
 }
-.wlSelectWeb:active {
-	background-color:#f6f6f6;
-    color: #4169e1;
-}
 
 #evSelectorFieldWeb {
     float: left;
+    display: block;
 }
 #wlSelectorFieldWeb {
     float: left;
+    display: none;
 }
         
 #Web hr {
