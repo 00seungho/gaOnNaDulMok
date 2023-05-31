@@ -41,7 +41,6 @@ window.onload = function(){
     document.getElementById('searchBus').addEventListener('keyup', function (e) {// 키보드 엔터누를 시 검색 함수 실행
         if (e.key === 'Enter') {
             searchjson("../src/bus.json",searchBarmobile.value);
-            searchfind
         }
     })  
     }
@@ -70,7 +69,7 @@ window.onload = function(){
  
 
         searchfind(`https://hifive.metainsu.co.kr/api/v1/common/sub-bus/?stid=${data[a].NODE_ID}&serverkey=NiGhn1xzYgu3Jk2dfWcsdseqg0Iufba%2FpRhl0nHbuNsDK8poZ0xTKBgyTNO0mzWieKL4TtLgCY0oTGD15kFlWw%3D%3D`);
-        searchfind(`https://hifive.metainsu.co.kr/api/v1/common/sub-bus/?stid=${data[c].NODE_ID}&serverkey=NiGhn1xzYgu3Jk2dfWcsdseqg0Iufba%2FpRhl0nHbuNsDK8poZ0xTKBgyTNO0mzWieKL4TtLgCY0oTGD15kFlWw%3D%3D`); 
+        searchfind2(`https://hifive.metainsu.co.kr/api/v1/common/sub-bus/?stid=${data[c].NODE_ID}&serverkey=NiGhn1xzYgu3Jk2dfWcsdseqg0Iufba%2FpRhl0nHbuNsDK8poZ0xTKBgyTNO0mzWieKL4TtLgCY0oTGD15kFlWw%3D%3D`); 
         newmarker(a,data);
         newmarker2(c,data);   
     })
@@ -137,28 +136,62 @@ window.onload = function(){
             fetch(url)
             .then(response => response.json())
             .then(data => {
-                var searchbusall = document.getElementById("busFieldWeb");
-
+                var firstfound = document.getElementById("onefind");
+                var firstfoundmobile = 
                 const dataItem = data.ServiceResult.msgBody;
                 
 
                 if(typeof(dataItem) != "string"){
                     if(Array.isArray(dataItem.itemList)){
                     for(var i=0; i<dataItem.itemList.length; i++){ 
-                        searchbusall.innerHTML += "<h2>버스 이름: "+dataItem.itemList[i].busRouteAbrv+"</h2>" //버스명 먼저출력
-                        searchbusall.innerHTML += "<h3>첫번째 예정도착 시간: "+Math.floor((dataItem.itemList[i].exps1)/60)+"분 남았습니다.</h3>"//버스 시간
-                        searchbusall.innerHTML += "<h3>두번째 예정도착 시간: "+Math.floor((dataItem.itemList[i].exps2)/60) +"분 남았습니다.</h3>"//버스 시간
+                        firstfound.innerHTML += "<h2>버스 이름: "+dataItem.itemList[i].busRouteAbrv+"</h2>" //버스명 먼저출력
+                        firstfound.innerHTML += "<h3>첫번째 예정도착 시간: "+Math.floor((dataItem.itemList[i].exps1)/60)+"분 남았습니다.</h3>"//버스 시간
+                        firstfound.innerHTML += "<h3>두번째 예정도착 시간: "+Math.floor((dataItem.itemList[i].exps2)/60) +"분 남았습니다.</h3>"//버스 시간
                     }
                 }
                 else{
-                    searchbusall.innerHTML += "<h2>버스 이름: "+dataItem.itemList.busRouteAbrv+"</h2>" //버스명 먼저출력
-                    searchbusall.innerHTML += "<h3>첫번째 예정도착 시간: "+Math.floor((dataItem.itemList.exps1)/60)+"분 남았습니다.</h3>"//버스 시간
-                    searchbusall.innerHTML += "<h3>두번째 예정도착 시간: "+Math.floor((dataItem.itemList.exps2)/60) +"분 남았습니다.</h3>"//버스 시간
+                    firstfound.innerHTML += "<h2>버스 이름: "+dataItem.itemList.busRouteAbrv+"</h2>" //버스명 먼저출력
+                    firstfound.innerHTML += "<h3>첫번째 예정도착 시간: "+Math.floor((dataItem.itemList.exps1)/60)+"분 남았습니다.</h3>"//버스 시간
+                    firstfound.innerHTML += "<h3>두번째 예정도착 시간: "+Math.floor((dataItem.itemList.exps2)/60) +"분 남았습니다.</h3>"//버스 시간
                 }
                 }
 
             else{
-                searchbusall.innerHTML += "<h2>버스를 찾을 수 없습니다.</h2>" //버스명 먼저출력
+                firstfound.innerHTML += "<h2>버스를 찾을 수 없습니다.</h2>" //버스명 먼저출력
+
+            }
+
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        var searchfind2 = function(url){ 
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                var twofound = document.getElementById("towfind");
+                const dataItem = data.ServiceResult.msgBody;
+                
+
+                if(typeof(dataItem) != "string"){
+                    if(Array.isArray(dataItem.itemList)){
+                    for(var i=0; i<dataItem.itemList.length; i++){ 
+                        twofound.innerHTML += "<h2>버스 이름: "+dataItem.itemList[i].busRouteAbrv+"</h2>" //버스명 먼저출력
+                        twofound.innerHTML += "<h3>첫번째 예정도착 시간: "+Math.floor((dataItem.itemList[i].exps1)/60)+"분 남았습니다.</h3>"//버스 시간
+                        twofound.innerHTML += "<h3>두번째 예정도착 시간: "+Math.floor((dataItem.itemList[i].exps2)/60) +"분 남았습니다.</h3>"//버스 시간
+                    }
+                }
+                else{
+                    twofound.innerHTML += "<h2>버스 이름: "+dataItem.itemList.busRouteAbrv+"</h2>" //버스명 먼저출력
+                    twofound.innerHTML += "<h3>첫번째 예정도착 시간: "+Math.floor((dataItem.itemList.exps1)/60)+"분 남았습니다.</h3>"//버스 시간
+                    twofound.innerHTML += "<h3>두번째 예정도착 시간: "+Math.floor((dataItem.itemList.exps2)/60) +"분 남았습니다.</h3>"//버스 시간
+                }
+                }
+
+            else{
+                twofound.innerHTML += "<h2>버스를 찾을 수 없습니다.</h2>" //버스명 먼저출력
 
             }
 
