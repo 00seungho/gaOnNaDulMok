@@ -76,8 +76,8 @@
                     <h2 style="margin: 20px 3% 15px 5%;">버스 정류장 현황</h2>
 
                     <div id='busBut'>
-                        <button type="button" id="busBut1" onclick="">위치1</button>
-                        <button type="button" id="busBut2"onclick="">위치2</button>
+                        <button type="button" id="busBut1" onclick="hidesecondmobile();">위치1</button>
+                        <button type="button" id="busBut2"onclick="hidefristmobile();">위치2</button>
                     </div>
 
                     <!-- 검색어 입력창   -->
@@ -186,8 +186,8 @@
 
         </div>
         <div id="busSelectorWeb">
-            <a href="#"><button type="button" class="bus1SelectWeb">위치1</button></a>
-            <a href="#"><button type="button" class="bus2SelectWeb">위치2</button></a>
+            <a href="javascript:hidefistWeb();"><button type="button" class="bus1SelectWeb">위치1</button></a>
+            <a href="javascript:hidesecond();"><button type="button" class="bus2SelectWeb">위치2</button></a>
         </div>
         <div id="searchSectionWeb">
             <div id="searchFieldWeb"><!--검색 영역-->

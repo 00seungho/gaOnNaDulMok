@@ -88,7 +88,7 @@ window.onload = function () {
             });
             marker2.position = markerPosition
             marker2.setMap(map);
-            var iwContent2 = '<div style="padding:5px; width="auto";">' + data[a].정류소명 + '</div>'
+            var iwContent2 = '<div id="twoth" style="padding:5px; width="auto";">' + data[a].정류소명 + '</div>'
             var iwPosition2 = new kakao.maps.LatLng(data[a].Y좌표, data[a].X좌표); //인포윈도우 표시 위치입니다"
             infowindow2 = new kakao.maps.InfoWindow({
                 position: iwPosition2,
@@ -112,7 +112,7 @@ window.onload = function () {
             });
             marker.position = markerPosition
             marker.setMap(map);
-            var iwContent = '<div style="padding:5px; width="auto";>' + data[a].정류소명 + '</div>'
+            var iwContent = '<div id="first" style="padding:5px; width="auto";>' + data[a].정류소명 + '</div>'
             var iwPosition = new kakao.maps.LatLng(data[a].Y좌표, data[a].X좌표); //인포윈도우 표시 위치입니다"
             infowindow = new kakao.maps.InfoWindow({
                 position: iwPosition,
@@ -316,16 +316,39 @@ function honjob(honjobdo) {
 }
 
 function hidefistWeb(){
-    
+    if(document.getElementById("first").style.backgroundColor == "yellow"){
+        document.getElementById("first").style.backgroundColor = "white";
+
+    }
+    document.getElementById("twoth").style.backgroundColor = "yellow";
+
 }
 function hidesecond(){
-
+    if(document.getElementById("twoth").style.backgroundColor == "yellow"){
+        document.getElementById("twoth").style.backgroundColor = "white";
+    }
+    document.getElementById("first").style.backgroundColor = "yellow";
 }
 
 
 function hidefristmobile(){
+    if(document.getElementById("first").style.backgroundColor == "yellow"){
+        document.getElementById("first").style.backgroundColor = "white";
+
+    }
+    document.getElementById("firstFind").style.display = "none"
+    document.getElementById("secondFind").style.display = "block"
+    document.getElementById("twoth").style.backgroundColor = "yellow";
 
 }
+
 function hidesecondmobile(){
+    if(document.getElementById("twoth").style.backgroundColor == "yellow"){
+        document.getElementById("twoth").style.backgroundColor = "white";
+
+    }
+    document.getElementById("firstFind").style.display = "block"
+    document.getElementById("secondFind").style.display = "none"
+    document.getElementById("first").style.backgroundColor = "yellow";
 
 }
